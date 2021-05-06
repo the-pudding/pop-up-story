@@ -1,12 +1,8 @@
 <script>
     export let data;
-
     import {groups, sort, ascending} from "d3-array";
 
-
     let dataByYear = groups(data, d => d.year).sort(ascending)
-
-    console.log(dataByYear);
 </script>
 
 <section id="blockchart">
@@ -48,31 +44,36 @@
 
     .year {
         width: 100%;
-        height: 40px;
+        height: 30px;
         display: flex;
         flex-direction: row;
-        margin: 0 0 1rem 0;
+        margin: 0 0 0.5rem 0;
     }
 
     .year p {
         width: 3rem;
+        margin: 0;
     }
 
     .year-wrapper {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         width: calc(100% - 3rem);
     }
 
     .song {
-        width: 6px;
-        margin: 0 1px;
-        height: 50px;
-        background-color: var(--gray-light);
+        width: 5px;
+        height: 30px;
+        background-color: rgba(255, 255, 255, 0.8);
     }
 
     .song-highlight {
         background-color: red;
+    }
+
+    .song:hover {
+        outline: 2px solid var(--off-black);
     }
 
 </style>

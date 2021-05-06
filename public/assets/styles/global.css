@@ -76,5 +76,18 @@
 }
 
 .prose span {
-	background-color: var(--off-white);
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 0.25rem;
+	padding: 0rem 2rem 0rem 0.25rem;
+	background-image: url("../images/volume-2.svg");
+	background-position: bottom 0.125rem right 0.25rem;
+	background-repeat: no-repeat;
+}
+
+.prose span:hover {
+	background-color: rgba(255, 255, 255, 1);
+}
+
+body {
+	background: linear-gradient(180deg, rgba(243, 210, 255, 0.5) 0%, rgba(255, 241, 116, 0.5) 49.48%, rgba(96, 245, 255, 0.5) 100%)
 }

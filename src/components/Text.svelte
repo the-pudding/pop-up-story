@@ -2,6 +2,7 @@
     export let copy;
     import BlockChart from "./BlockChart.svelte";
     import data from "../data/sheet.csv";
+    import Icon from "./helpers/Icon.svelte";
 </script>
 
 <section id="text">
