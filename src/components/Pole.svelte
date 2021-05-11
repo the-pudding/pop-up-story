@@ -32,6 +32,7 @@
         position: absolute;
         top: 0;
         right: 6rem;
+        pointer-events: none;
     }
 
     div {
