@@ -45,7 +45,7 @@
     }
 </script>
 
-{#if sectionNum == 2}
+{#if sectionNum == 1}
 <section id="text"
     use:inView
     on:enter={() => showChapstick()}
@@ -57,7 +57,7 @@
         {/each}
     </div>
 </section>
-{:else if sectionNum == 4}
+{:else if sectionNum == 2}
 <section id="text"
     use:inView
     on:enter={() => animationSequence()}
