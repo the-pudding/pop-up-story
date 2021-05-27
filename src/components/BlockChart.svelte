@@ -82,7 +82,7 @@
     }
 
     .step p {
-        background-color: rgba(255, 255, 255, 0.75);
+        background-color: rgba(255, 255, 255, 0.95);
         font-size: 1.5rem;	
         padding: 1rem;
         box-shadow: 0.25rem 0.25rem 2rem rgba(var(--off-black), 0.125);	
@@ -122,17 +122,18 @@
     }
 
     .song {
-        width: 5px;
+        width: 4px;
         height: 30px;
-        background-color: rgba(255, 255, 255, 0.8);
+        background: rgba(255,255,255,0.5);
     }
 
     .song-highlight {
-        background-color: red;
+        background-color: cyan;
+        outline: 2px solid var(--off-black);
     }
 
     .song:hover {
-        outline: 2px solid var(--off-black);
+        background-color: yellow;
     }
 
 </style>

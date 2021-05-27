@@ -102,7 +102,7 @@
 <Text copy="{copy.prose5}" section=5/>
 <SmallChart data="{data}" />
 <Text copy="{copy.prose6}" section=6/>
-<Text copy="{copy.method}" section="method"/>
+<Text copy="{copy.method}" section=7/>
 
 
 <audio bind:this="{audioEl}" src=""> </audio>

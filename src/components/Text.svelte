@@ -46,7 +46,7 @@
 </script>
 
 {#if sectionNum == 1}
-<section id="text"
+<section class="text"
     use:inView
     on:enter={() => showChapstick()}
     on:exit={() => showChapstick()}
@@ -58,7 +58,7 @@
     </div>
 </section>
 {:else if sectionNum == 2}
-<section id="text"
+<section class="text"
     use:inView
     on:enter={() => animationSequence()}
     on:exit={() => animationSequence()}
@@ -69,8 +69,17 @@
         {/each}
     </div>
 </section>
+{:else if sectionNum == 7}
+<section class="method">
+    <h3>Methods & Notes</h3>
+    <div class="prose">
+        {#each copy as {value}}
+            <p class>{@html value}</p>
+        {/each}
+    </div>
+</section>
 {:else}
-<section id="text">
+<section class="text">
     <div class="prose">
         {#each copy as {value}}
             <p class>{@html value}</p>
@@ -88,5 +97,20 @@
     p {
         font-size: 1.5rem;
         margin: 2rem 0;
+    }
+
+    .method {
+        padding: 5rem 0 0 0;
+    }
+
+    h3 {
+        max-width: 40em;
+        margin: 0 auto;
+        font-size: 1.25rem;
+        font-weight: 700; 
+    }
+
+    .method p {
+        font-size: 1rem;
     }
 </style>

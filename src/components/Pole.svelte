@@ -18,7 +18,7 @@
 
 <section id="pole">
     <div>
-        <div class="line" style="height: {h}px;"></div>
+        <div class="line" style="height: {h*1.75}px;"></div>
         <div class="lil-nas-x" style="transform: translate(0,{y + padding}px)">
             <img src="assets/images/lilnasx.png">
         </div>
