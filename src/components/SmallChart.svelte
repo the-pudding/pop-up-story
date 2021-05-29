@@ -9,19 +9,13 @@
     dataQueerArtists = dataQueerArtists.sort((a,b) => ascending(a.relationshipType, b.relationshipType))
     let dataQueerSpotlight = groups(dataQueerArtists, d => d.artistID)
     let dataSpotlightCount = rollup(dataQueerArtists, v => v.length, d => d.artistID)
-    console.log(dataQueerSpotlight)
+
+    function songClick() {
+        console.log(this);
+    }
 </script>
 
 <section id="smallchart">
-    <!-- <div class="wrapper">
-        {#each dataQueerArtists as song, i}
-            {#if song.relationshipType == "Both" || song.relationshipType == "Queer"}
-                <div class="song song-highlight"></div>
-            {:else}
-                <div class="song"></div>
-            {/if}
-        {/each}
-    </div> -->
     <div class="key">
         <div class="key-block">
             <div class="block same-gender"></div>
@@ -49,13 +43,13 @@
                 <div class="songs">
                     {#each artist[1] as song, i}
                         {#if song.relationshipType == "Both" || song.relationshipType == "Queer"}
-                            <div class="song song-queer"></div>
+                            <div class="song song-queer" on:click={songClick}></div>
                         {:else if song.relationshipType == "Straight"}
-                            <div class="song song-straight"></div>
+                            <div class="song song-straight" on:click={songClick}></div>
                         {:else if song.relationshipType == "Unspecified"}
-                            <div class="song song-unspecified"></div>
+                            <div class="song song-unspecified" on:click={songClick}></div>
                         {:else}
-                            <div class="song song-none"></div>
+                            <div class="song song-none" on:click={songClick}></div>
                         {/if}
                     {/each}
                 </div>
@@ -74,21 +68,13 @@
         margin: 0 auto;
     }
 
-    .wrapper {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-        padding: 0 1rem;
-    }
-
     .song {
         width: 4px;
         height: 30px;
         background: var(--gray-light);
     }
 
-    .song-highlight, .song-queer {
+    .song-queer {
         outline: none;
         background-color: cyan;
     }

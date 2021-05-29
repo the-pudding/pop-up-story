@@ -157,3 +157,7 @@ body {
 		transform: translate(10vw, 100vh) rotateZ(360deg);
 	}
 }
+
+.song-highlight.is-highlighted {
+	background-color: yellow;
+}

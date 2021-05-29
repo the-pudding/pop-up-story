@@ -3,9 +3,12 @@
     import {selection, select, selectAll} from "d3-selection";
     import {groups, sort, ascending} from "d3-array";
     import copy from "../data/doc.json";
+import { select_value } from 'svelte/internal';
 
     export let data;
     let dataByYear = groups(data, d => d.year).sort(ascending);
+
+    console.log(copy.prose4[0].song)
 </script>
 
 <section id="blockchart">
@@ -33,9 +36,14 @@
             </div>
         </div>
         <div class='scroll__text'>
-                {#each copy.prose4 as {value}, i}
+                {#each copy.prose4 as value, i}
                     <div class="step" data-step="{i}" id="step-{i}">
-                        <p class>{@html value}</p>
+                        <p class>{@html value.song}
+                            {#if value.lyrics !== undefined}
+                            <br>
+                            <span class="lyrics">{@html value.lyrics}</span>
+                            {/if}
+                        </p>
                     </div>
                 {/each}
         </div>
@@ -45,7 +53,7 @@
 
 <style>
     #blockchart {
-        max-width: 50em;
+        max-width: 60em;
         margin: 0 auto;
     }
 
@@ -89,6 +97,11 @@
         line-height: 1.75;
     }
 
+    .lyrics {
+        font-style: italic;
+        font-size: 1.25rem;
+    }
+
     .tooltip {
         position: absolute;
     }
@@ -117,14 +130,17 @@
     .year-wrapper {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         width: calc(100% - 3rem);
     }
 
     .song {
-        width: 4px;
-        height: 30px;
+        width: 0.25rem;
+        margin: 0 0.125rem;
+        height: 2rem;
         background: rgba(255,255,255,0.5);
+        pointer-events: none;
+        transition: width 0.5s ease-in;
+        background-size: 2rem 2rem;
     }
 
     .song-highlight {
@@ -132,8 +148,9 @@
         outline: 2px solid var(--off-black);
     }
 
-    .song:hover {
-        background-color: yellow;
+    .is-highlighted {
+        width: 2rem;
+        background-size: 2rem 2rem;
     }
 
 </style>

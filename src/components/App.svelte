@@ -24,6 +24,7 @@
   let audioEl;
   let songSpans;
   let songPlaying = false;
+  let songHighlights;
 
   function playSong(e) {
     const songId = this.id
@@ -74,6 +75,24 @@
 
   function handleStepEnter(response) {
     scrollStep.classed('is-active', (d, i) => i === response.index);
+
+    renderStep(response.index)
+  }
+
+  function renderStep(index) {
+    songHighlights.classed("is-highlighted", false);
+    songHighlights.style("background-image", "none");
+    const song = songHighlights.filter((d, i) => i ==index)
+    song.classed("is-highlighted", true)
+
+    if (index == 0) { song.style('background-image', `url('assets/images/ikissedagirl.jpg')`) }
+    if (index == 1) { song.style('background-image', `url('assets/images/pokerface.jpg')`) }
+    if (index == 2) { song.style('background-image', `url('assets/images/ifyouseekamy.jpg')`) }
+    if (index == 3) { song.style('background-image', `url('assets/images/samelove.jpg')`) }
+    if (index == 4) { song.style('background-image', `url('assets/images/girlcrush.jpg')`) }
+    if (index == 5) { song.style('background-image', `url('assets/images/badatlove.jpg')`) }
+    if (index == 6) { song.style('background-image', `url('assets/images/bartiercardi.jpg')`) }
+    if (index == 7) { song.style('background-image', `url('assets/images/money.jpg')`) }
   }
 
   // MOUNT
@@ -81,7 +100,8 @@
     songSpans = selectAll('.song-snippet');
     songSpans.on("click", playSong);
 
-    scrollStep = selectAll('.step');
+    songHighlights = selectAll(".song-highlight")
+    scrollStep = selectAll(".step");
     scrollDimensions();
     scrollSetup();
 	});

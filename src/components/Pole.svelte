@@ -9,7 +9,9 @@
 
     onMount(() => {
 		h = Math.max(
-            document.body.clientHeight, document.documentElement.clientHeight
+            document.body.clientHeight, 
+            document.body.scrollHeight,
+            document.body.offsetHeight
         );
 	});
 </script>
