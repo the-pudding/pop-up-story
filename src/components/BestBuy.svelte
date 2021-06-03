@@ -1,15 +1,32 @@
 <script>
+        import { fly } from 'svelte/transition';
+        import inView from "../actions/inView.js";
+        import "intersection-observer";
+
+        let dvdWidth;
+        let bestbuyWidth;
+        let carWidth;
+        let visible = true;
+
+        function toggleVisible() {
+            visible = !visible
+        }   
 </script>
 
-<section id="bestbuy">
-    <div class="left-scene">
-        <div class="flag"></div>
-        <div class="dvd off-screen"></div>
-        <div class="building off-screen"></div>
-    </div>
-    <div class="right-scene">
-        <div class="car"></div>
-    </div>
+<section id="bestbuy"
+    use:inView
+    on:enter={() => toggleVisible()}
+    on:exit={() => toggleVisible()}>
+    {#if visible}
+        <div class="left-scene">
+            <div class="flag"></div>
+            <div transition:fly="{{ x: -dvdWidth, duration: 1000, delay: 1000 }}" class="dvd" bind:clientWidth={dvdWidth}></div>
+            <div transition:fly="{{ x: -bestbuyWidth, duration: 1000 }}" class="building" bind:clientWidth={bestbuyWidth}></div>
+        </div>
+        <div class="right-scene">
+            <div transition:fly="{{ x: carWidth*5, duration: 3000, delay: 0 }}" class="car" bind:clientWidth={carWidth}></div>
+        </div>
+    {/if}
 </section>
 
 <style>
@@ -28,35 +45,27 @@
         height: 400px;
         background-size: contain;
         background-repeat: no-repeat;
-        transition-duration: 1s; 
     }
 
     .dvd {
         position: absolute;
+        left: 0;
+        top: 0;
         background-image: url("assets/images/dvd.jpg");
         width: 100px;
         height: 100px;
         background-size: contain;
         background-repeat: no-repeat;
-        transition-duration: 1s;  
-        transition-delay: 0.5s;
     }
 
-    .building.off-screen {
-        transform: translate(-100%, 0);
-    }
-
-    .building.on-screen {
-        transform: translate(0, 0);
-    }
-
-    .dvd.off-screen {
-        transform: translate(-100%, 0);
-        top: 100px;
-    }
-
-    .dvd.on-screen {
-        top: 0px;
-        transform: translate(200px, 0);
+    .car {
+        position: absolute;
+        left: 400px;
+        bottom: 0;
+        background-image: url("assets/images/sunfire.png");
+        width: 250px;
+        height: 150px;
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 </style>

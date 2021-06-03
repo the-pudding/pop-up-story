@@ -9,9 +9,24 @@
     dataQueerArtists = dataQueerArtists.sort((a,b) => ascending(a.relationshipType, b.relationshipType))
     let dataQueerSpotlight = groups(dataQueerArtists, d => d.artistID)
     let dataSpotlightCount = rollup(dataQueerArtists, v => v.length, d => d.artistID)
+    let songTitleText;
+    let songLyricText;
 
-    function songClick() {
-        console.log(this);
+    // MOUNT
+    onMount(() => {
+        songTitleText = selectAll("#smallchart .title")
+    });
+
+    function songClick(e) {
+        console.log(e.toElement.dataset);
+        const clickArtistNoSpaces = (e.toElement.dataset.artist).replace(/\s/g, '');
+        const clickSong = e.toElement.dataset.song;
+        const clickLyrics = e.toElement.dataset.lyrics;
+
+        const songText = select(`#${clickArtistNoSpaces} .title`)
+
+        console.log(songText);
+        songText.text(`${clickSong}`)
     }
 </script>
 
@@ -37,19 +52,19 @@
     <div class="cards">
         {#each dataQueerSpotlight as artist, i}
             {#if artist[1].length > 4}
-            <div class="card">
+            <div class="card" id="card-{artist[0].replace(/\s/g, '')}">
                 <div class="img-wrapper"></div>
                 <p>{artist[0]}</p>
                 <div class="songs">
                     {#each artist[1] as song, i}
                         {#if song.relationshipType == "Both" || song.relationshipType == "Queer"}
-                            <div class="song song-queer" on:click={songClick}></div>
+                            <div class="song song-queer" data-artist={song.artist} data-song={song.song} data-lyrics={song.sampleLyrics} on:click={songClick}></div>
                         {:else if song.relationshipType == "Straight"}
-                            <div class="song song-straight" on:click={songClick}></div>
+                            <div class="song song-straight" data-artist={song.artist} data-song={song.song} data-lyrics={song.sampleLyrics} on:click={songClick}></div>
                         {:else if song.relationshipType == "Unspecified"}
-                            <div class="song song-unspecified" on:click={songClick}></div>
+                            <div class="song song-unspecified" data-artist={song.artist} data-song={song.song} data-lyrics={song.sampleLyrics} on:click={songClick}></div>
                         {:else}
-                            <div class="song song-none" on:click={songClick}></div>
+                            <div class="song song-none" data-artist={song.artist} data-song={song.song} data-lyrics={song.sampleLyrics} on:click={songClick}></div>
                         {/if}
                     {/each}
                 </div>

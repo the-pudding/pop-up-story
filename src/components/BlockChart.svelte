@@ -3,12 +3,10 @@
     import {selection, select, selectAll} from "d3-selection";
     import {groups, sort, ascending} from "d3-array";
     import copy from "../data/doc.json";
-import { select_value } from 'svelte/internal';
+    import { select_value } from 'svelte/internal';
 
     export let data;
     let dataByYear = groups(data, d => d.year).sort(ascending);
-
-    console.log(copy.prose4[0].song)
 </script>
 
 <section id="blockchart">
