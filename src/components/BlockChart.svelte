@@ -1,7 +1,7 @@
 <script>
     import { onMount } from 'svelte';
-    import {select, selectAll} from "d3-selection";
-    import {groups, sort, ascending} from "d3-array";
+    import {select, selectAll} from "d3";
+    import {groups, sort, ascending} from "d3";
     import copy from "../data/doc.json";
     import { select_value } from 'svelte/internal';
 
@@ -36,12 +36,13 @@
         <div class='scroll__text'>
                 {#each copy.prose4 as value, i}
                     <div class="step" data-step="{i}" id="step-{i}">
-                        <p class>{@html value.song}
+                        <div class="step-container">
+                            <p class="song-year">{@html value.year}</p>
+                            <p class="song-song">{@html value.song}</p>
                             {#if value.lyrics !== undefined}
-                            <br>
-                            <span class="lyrics">{@html value.lyrics}</span>
+                            <p class="song-lyrics">{@html value.lyrics}</p>
                             {/if}
-                        </p>
+                        </div>
                     </div>
                 {/each}
         </div>
@@ -64,6 +65,7 @@
         position: sticky;
         top: 3rem;
         right: 0;
+        margin-left: 2rem;
         transform: translate3d(0,0,0)
     }
 
@@ -74,7 +76,6 @@
         width: 100%;
         padding: 0 2rem;
         margin: 1rem auto;
-        pointer-events: none;
         z-index: 1000;
     }
 
@@ -87,17 +88,28 @@
 		opacity: 0.5; 
     }
 
-    .step p {
+    .step-container {
         background-color: rgba(255, 255, 255, 0.95);
-        font-size: 1.5rem;	
-        padding: 1rem;
-        box-shadow: 0.25rem 0.25rem 2rem rgba(var(--off-black), 0.125);	
-        line-height: 1.75;
+        padding: 2rem;
+        box-shadow: 0.25rem 0.25rem 2rem rgba(var(--off-black), 0.125);
     }
 
-    .lyrics {
+    .song-year {
+        font-size: 1.25rem;	
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .song-song {
+        font-size: 1.5rem;	
+        line-height: 1.75;
+        margin: 0;
+    }
+
+    .song-lyrics {
         font-style: italic;
         font-size: 1.25rem;
+        margin: 0;
     }
 
     .tooltip {
@@ -105,7 +117,7 @@
     }
 
     .ranking {
-        width: calc(100% - 3rem);
+        width: calc(100% - 10rem);
         margin: 0 0 0 3rem;
         display: flex;
         flex-direction: row;
@@ -142,7 +154,7 @@
     }
 
     .song-highlight {
-        background-color: cyan;
+        background-color: yellow;
         outline: 2px solid var(--off-black);
     }
 

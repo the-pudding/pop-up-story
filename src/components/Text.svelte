@@ -13,7 +13,7 @@
     
     import { onMount } from 'svelte';
     import inView from "../actions/inView.js";
-    import {select, selectAll} from "d3-selection";
+    import {select, selectAll} from "d3";
 
     onMount(() => {
         chapstickDivs = selectAll("#chapstick div");

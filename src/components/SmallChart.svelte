@@ -1,32 +1,32 @@
 <script>
     import { onMount } from 'svelte';
-    import {select, selectAll} from "d3-selection";
-    import {groups, sort, ascending, filter, rollup} from "d3-array";
-    import copy from "../data/doc.json";
+    import {selectAll} from "d3";
+    import {groups, ascending} from "d3";
 
     export let data;
     let dataQueerArtists = data.filter(d => d.queerFlag == 1);
     dataQueerArtists = dataQueerArtists.sort((a,b) => ascending(a.relationshipType, b.relationshipType))
     let dataQueerSpotlight = groups(dataQueerArtists, d => d.artistID)
-    let dataSpotlightCount = rollup(dataQueerArtists, v => v.length, d => d.artistID)
-    let songTitleText;
-    let songLyricText;
+    let songs;
+
+    $: console.log(dataQueerSpotlight)
 
     // MOUNT
     onMount(() => {
-        songTitleText = selectAll("#smallchart .title")
+    
     });
 
-    function songClick(e) {
-        console.log(e.toElement.dataset);
-        const clickArtistNoSpaces = (e.toElement.dataset.artist).replace(/\s/g, '');
-        const clickSong = e.toElement.dataset.song;
-        const clickLyrics = e.toElement.dataset.lyrics;
+    function songClick(artist, song, i) {
+        artist[2] = song.song;
+        artist[3] = song.sampleLyrics;
+        dataQueerSpotlight = dataQueerSpotlight;
 
-        const songText = select(`#${clickArtistNoSpaces} .title`)
+        const artistNoSpaces = artist[0].replace(/\s/g, '')
+        songs = selectAll(`#card-${artistNoSpaces} .song`)
+        songs.classed("selected", false);
 
-        console.log(songText);
-        songText.text(`${clickSong}`)
+        const clickedItem = event.target;
+        clickedItem.classList.add("selected")
     }
 </script>
 
@@ -39,6 +39,10 @@
         <div class="key-block">
             <div class="block opposite-gender"></div>
             <p>Opposite-gender</p>
+        </div>
+        <div class="key-block">
+            <div class="block nb-relationship"></div>
+            <p>Non-binary artist/Masc gender</p>
         </div>
         <div class="key-block">
             <div class="block unspecified-gender"></div>
@@ -57,21 +61,28 @@
                 <p>{artist[0]}</p>
                 <div class="songs">
                     {#each artist[1] as song, i}
-                        {#if song.relationshipType == "Both" || song.relationshipType == "Queer"}
-                            <div class="song song-queer" data-artist={song.artist} data-song={song.song} data-lyrics={song.sampleLyrics} on:click={songClick}></div>
-                        {:else if song.relationshipType == "Straight"}
-                            <div class="song song-straight" data-artist={song.artist} data-song={song.song} data-lyrics={song.sampleLyrics} on:click={songClick}></div>
-                        {:else if song.relationshipType == "Unspecified"}
-                            <div class="song song-unspecified" data-artist={song.artist} data-song={song.song} data-lyrics={song.sampleLyrics} on:click={songClick}></div>
+                        {#if i == 0}
+                            <div class="song selected song-{song.relationshipType}" data-artist={song.artist} data-song={song.song} data-lyrics={song.sampleLyrics}
+                                on:click={() => songClick(artist, song, i) }>
+                            </div>
                         {:else}
-                            <div class="song song-none" data-artist={song.artist} data-song={song.song} data-lyrics={song.sampleLyrics} on:click={songClick}></div>
+                        <div class="song song-{song.relationshipType}" data-artist={song.artist} data-song={song.song} data-lyrics={song.sampleLyrics}
+                            on:click={() => songClick(artist, song, i) }>
+                        </div>
                         {/if}
                     {/each}
                 </div>
-                <div class="tooltip">
-                    <p class="title">"{artist[1][0].song}"</p>
-                    <p class="lyrics">{artist[1][0].sampleLyrics}</p>
-                </div>
+                {#if artist.length > 2}
+                    <div class="tooltip">
+                        <p class="title">"{artist[2]}"</p>
+                        <p class="lyrics">{artist[3]}</p>
+                    </div>
+                {:else}
+                    <div class="tooltip">
+                        <p class="title">"{artist[1][0].song}"</p>
+                        <p class="lyrics">{artist[1][0].sampleLyrics}</p>
+                    </div>
+                {/if}
             </div>
             {/if}
         {/each}
@@ -89,7 +100,7 @@
         background: var(--gray-light);
     }
 
-    .song-queer {
+    .song-Queer, .song-Both {
         outline: none;
         background-color: cyan;
     }
@@ -98,11 +109,15 @@
         background-color: cyan;
     }
 
-    .song-straight, .opposite-gender {
+    .song-Non-Binary-Masc {
+        background-color: lime;
+    }
+
+    .song-Opposite, .opposite-gender {
         background-color: yellow;
     }
 
-    .song-unspecified, .unspecified-gender {
+    .song-Unspecified, .unspecified-gender {
         background-color: magenta;
     }
 
@@ -110,7 +125,11 @@
         background: var(--gray-light);
     }
 
-    .song:hover {
+    .nb-relationship {
+        background: lime;
+    }
+
+    .song:hover, .song.selected {
         outline: 2px solid var(--off-black);
     }
     
@@ -157,7 +176,6 @@
         padding: 2rem;
         display: flex;
         flex-direction: column;
-        justify-content: center;
     }
     .img-wrapper {
         width: 5rem;

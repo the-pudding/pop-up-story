@@ -12,11 +12,11 @@
   import copy from "../data/doc.json";
   import data from "../data/data.csv";
   import previews from "../data/song-previews.csv";
-  import {select, selectAll} from "d3-selection";
-  import {filter} from "d3-array";
+  import {select, selectAll} from "d3";
   import inView from "../actions/inView.js";
   import "intersection-observer";
   import scrollama from "scrollama";
+  import { fly } from 'svelte/transition';
 
   let section;
 
@@ -33,6 +33,14 @@
 
     const songUrl = previews.filter(d => d.shortname == songId)[0].preview
     audioEl.src = songUrl;
+
+    const songTitleText = select("#song-title");
+    const songTitle = previews.filter(d => d.shortname == songId)[0].title;
+    songTitleText.text(songTitle);
+    const songArtistText = select("#song-artist");
+    const songArtist = previews.filter(d => d.shortname == songId)[0].artist;
+    songArtistText.text(songArtist)
+
 
     if (songPlaying) {
       audioEl.pause();
@@ -124,9 +132,54 @@
 <Text copy="{copy.prose6}" section=6/>
 <Text copy="{copy.method}" section=7/>
 
+<div class="playing">
+  {#if songPlaying}
+  <div transition:fly="{{ y: -200, duration: 1000 }}" class="disco-drop">
+    <img src="assets/images/discoball.gif" alt="spinning disco ball">
+    <div class="details">
+      <p class="playing-intro">Now Playing</p>
+      <p id="song-title">"I Kissed a Girl"</p>
+      <p>by <span class="song-artist">Katy Perry</span></p>
+    </div>
+  </div>
+  {/if}
 
-<audio bind:this="{audioEl}" src="">
-  <track kind="captions">
-</audio>
+  <audio bind:this="{audioEl}" src="">
+    <track kind="captions">
+  </audio>
+</div>
 
 <Footer />
+
+<style>
+  .playing {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5rem;
+  }
+
+  .disco-drop {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .playing img {
+    width: 50px;
+    height: 58px;
+    margin: 0 0.5rem;
+  }
+
+  .details {
+    margin: 0.5rem 0 0 0;
+  }
+
+  .details p {
+    margin: 0;
+    font-size: 0.75rem;
+  }
+
+  .playing-intro {
+    font-weight: 700;
+  }
+</style>

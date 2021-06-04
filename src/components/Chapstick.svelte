@@ -1,6 +1,6 @@
 <script>
     import { onMount } from 'svelte';
-    import {select, selectAll} from "d3-selection";
+    import {select, selectAll} from "d3";
     import inView from "../actions/inView.js";
 
     let y;
@@ -38,6 +38,7 @@
         justify-content: space-around;
         flex-wrap: wrap;
         display: none;
+        overflow-x: hidden;
     }
 
     div { 

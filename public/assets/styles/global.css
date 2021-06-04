@@ -109,9 +109,12 @@
 	background-size: 0 2px, 100% 2px;
 }
 
+.gender-highlight {
+	background-color: yellow;
+}
+
 body {
 	background: linear-gradient(180deg, rgba(255, 0, 255, 0.4) 0%, rgba(255, 255, 0, 0.4) 50%, rgba(0, 255, 255, 0.4) 100%);
-	overflow-x: hidden;
 }
 
 .animation {

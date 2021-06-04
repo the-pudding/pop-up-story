@@ -8,11 +8,13 @@
     let h;
 
     onMount(() => {
-		h = Math.max(
-            //document.body.clientHeight, 
-            document.body.scrollHeight,
-            //document.body.offsetHeight
-        );
+        setInterval(() => {
+            h = Math.max(
+                document.body.clientHeight, 
+                document.body.scrollHeight,
+                document.body.offsetHeight
+            );
+        }, 2000)
 	});
 </script>
 
@@ -20,7 +22,7 @@
 
 <section id="pole">
     <div>
-        <div class="line" style="height: {h*1.75}px;"></div>
+        <div class="line" style="height: {h}px;"></div>
         <div class="lil-nas-x" style="transform: translate(0,{y + padding}px)">
             <img src="assets/images/lilnasx.png" alt="Lil Nas X pole dancing">
         </div>
@@ -42,7 +44,7 @@
     .line {
         position: absolute;
         width: 10px;
-        background-color: var(--off-black); 
+        background-image: linear-gradient(90deg, var(--gray), var(--gray-light), var(--gray), var(--gray-dark), var(--gray), var(--gray-light), var(--gray));
     }
 
     .lil-nas-x {
