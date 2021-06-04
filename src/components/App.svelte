@@ -12,7 +12,7 @@
   import copy from "../data/doc.json";
   import data from "../data/data.csv";
   import previews from "../data/song-previews.csv";
-  import {selection, select, selectAll} from "d3-selection";
+  import {select, selectAll} from "d3-selection";
   import {filter} from "d3-array";
   import inView from "../actions/inView.js";
   import "intersection-observer";
@@ -125,6 +125,8 @@
 <Text copy="{copy.method}" section=7/>
 
 
-<audio bind:this="{audioEl}" src=""> </audio>
+<audio bind:this="{audioEl}" src="">
+  <track kind="captions">
+</audio>
 
 <Footer />

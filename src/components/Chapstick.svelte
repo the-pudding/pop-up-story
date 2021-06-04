@@ -1,6 +1,6 @@
 <script>
     import { onMount } from 'svelte';
-    import {selection, select, selectAll} from "d3-selection";
+    import {select, selectAll} from "d3-selection";
     import inView from "../actions/inView.js";
 
     let y;

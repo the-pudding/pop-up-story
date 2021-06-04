@@ -1,6 +1,6 @@
 <script>
     import { onMount } from 'svelte';
-    import {selection, select, selectAll} from "d3-selection";
+    import {select, selectAll} from "d3-selection";
     import {groups, sort, ascending} from "d3-array";
     import copy from "../data/doc.json";
     import { select_value } from 'svelte/internal';

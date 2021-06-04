@@ -22,7 +22,7 @@
     <div>
         <div class="line" style="height: {h*1.75}px;"></div>
         <div class="lil-nas-x" style="transform: translate(0,{y + padding}px)">
-            <img src="assets/images/lilnasx.png">
+            <img src="assets/images/lilnasx.png" alt="Lil Nas X pole dancing">
         </div>
     </div>
 </section>
