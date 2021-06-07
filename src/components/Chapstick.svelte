@@ -41,7 +41,7 @@
     div { 
         width: 200px;
         height: 63px;
-        background-image: url("assets/images/chapstick.png");
+        background-image: url("../assets/images/chapstick.png");
         background-repeat: no-repeat;
         background-size: contain;
         opacity: 0;
