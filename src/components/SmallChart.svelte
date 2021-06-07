@@ -9,14 +9,12 @@
     let dataQueerSpotlight = groups(dataQueerArtists, d => d.artistID)
     let songs;
 
-    $: console.log(dataQueerSpotlight)
-
     // MOUNT
     onMount(() => {
     
     });
 
-    function songClick(artist, song, i) {
+    function songClick(artist, song) {
         artist[2] = song.song;
         artist[3] = song.sampleLyrics;
         dataQueerSpotlight = dataQueerSpotlight;

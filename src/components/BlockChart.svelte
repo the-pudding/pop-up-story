@@ -1,9 +1,6 @@
 <script>
-    import { onMount } from 'svelte';
-    import {select, selectAll} from "d3";
     import {groups, sort, ascending} from "d3";
     import copy from "../data/doc.json";
-    import { select_value } from 'svelte/internal';
 
     export let data;
     let dataByYear = groups(data, d => d.year).sort(ascending);

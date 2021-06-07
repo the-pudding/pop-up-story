@@ -1,7 +1,5 @@
 <script>
     import { onMount } from 'svelte';
-    import {select, selectAll} from "d3";
-    import inView from "../actions/inView.js";
 
     let y;
     let innerHeight;

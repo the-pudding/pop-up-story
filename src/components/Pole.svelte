@@ -1,9 +1,7 @@
 <script>
     import { onMount } from 'svelte';
-    import inView from "../actions/inView.js";
 
     let y;
-    let innerHeight;
     let padding = 200;
     let h;
 
