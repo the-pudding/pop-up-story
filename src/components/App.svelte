@@ -114,8 +114,8 @@
 
     songHighlights = selectAll(".song-highlight")
     scrollStep = selectAll(".step");
-    scrollDimensions();
     scrollSetup();
+    scrollDimensions();
 	});
 
 </script>
