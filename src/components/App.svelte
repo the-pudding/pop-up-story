@@ -1,6 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import Meta from "./Meta.svelte";
+  import Title from "./Title.svelte";
   import Text from "./Text.svelte";
   import Pole from "./Pole.svelte";
   import Chapstick from "./Chapstick.svelte";
@@ -126,6 +127,7 @@
 
 <Pole />
 <Chapstick />
+<Title copy="{copy.meta}" />
 <Text copy="{copy.prose1}" section=1/>
 <BestBuy />
 <Text copy="{copy.prose2}" section=2/>
@@ -135,6 +137,11 @@
 <SmallChart data="{data}" />
 <Text copy="{copy.prose6}" section=6/>
 <Text copy="{copy.method}" section=7/>
+<div class="playlist">
+  <iframe src="https://open.spotify.com/embed/playlist/3g0RrpYM6zZ7d4nfP3XeEh" width="480" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+</div>
+
 
 <div class="playing">
   {#if songPlaying}
@@ -185,5 +192,12 @@
 
   .playing-intro {
     font-weight: 700;
+  }
+
+  .playlist {
+    margin: 0 auto;
+    max-width: 40rem;
+    display: flex;
+    justify-self: center;
   }
 </style>

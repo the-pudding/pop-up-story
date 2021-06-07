@@ -1,5 +1,6 @@
 <script>
     import {groups, sort, ascending} from "d3";
+import { validate_each_argument } from "svelte/internal";
     import copy from "../data/doc.json";
 
     export let data;
@@ -34,10 +35,9 @@
                 {#each copy.prose4 as value, i}
                     <div class="step" data-step="{i}" id="step-{i}">
                         <div class="step-container">
-                            <p class="song-year">{@html value.year}</p>
                             <p class="song-song">{@html value.song}</p>
                             {#if value.lyrics !== undefined}
-                            <p class="song-lyrics">{@html value.lyrics}</p>
+                                <p class="song-lyrics">{@html value.lyrics}</p>
                             {/if}
                         </div>
                     </div>
@@ -106,7 +106,7 @@
     .song-lyrics {
         font-style: italic;
         font-size: 1.25rem;
-        margin: 0;
+        margin: 2rem 0 0 0;
     }
 
     .tooltip {

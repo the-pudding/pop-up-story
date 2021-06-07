@@ -3,8 +3,6 @@
     export let section;
 
     let sectionNum = parseInt(section);
-    let visibleChapstick = false;
-    let chapstickDivs;
 
     let visibleBestBuy = false;
     let buildingDiv;
@@ -16,17 +14,10 @@
     import {select, selectAll} from "d3";
 
     onMount(() => {
-        chapstickDivs = selectAll("#chapstick div");
         buildingDiv = selectAll("#bestbuy .left-scene .building");
         dvdDiv = selectAll("#bestbuy .dvd");
         flagDiv = selectAll("#bestbuy .flag");
 	});
-
-    function showChapstick() {
-        visibleChapstick = !visibleChapstick
-        if (visibleChapstick) { chapstickDivs.classed("animation", true) }
-        else { chapstickDivs.classed("animation", false) }
-    }
 
     function animationSequence() {
         if (visibleBestBuy) { 
@@ -45,19 +36,7 @@
     }
 </script>
 
-{#if sectionNum == 1}
-<section class="text"
-    use:inView
-    on:enter={() => showChapstick()}
-    on:exit={() => showChapstick()}
->
-    <div class="prose">
-        {#each copy as {value}}
-            <p class>{@html value}</p>
-        {/each}
-    </div>
-</section>
-{:else if sectionNum == 2}
+{#if sectionNum == 2}
 <section class="text"
     use:inView
     on:enter={() => animationSequence()}

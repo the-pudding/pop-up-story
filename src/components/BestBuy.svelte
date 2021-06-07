@@ -6,9 +6,10 @@
         let dvdWidth;
         let bestbuyWidth;
         let carWidth;
-        let visible = true;
+        let visible = false;
 
         function toggleVisible() {
+            console.log(visible)
             visible = !visible
         }   
 </script>
@@ -17,7 +18,7 @@
     use:inView
     on:enter={() => toggleVisible()}
     on:exit={() => toggleVisible()}>
-    {#if visible}
+    {#if !visible}
         <div class="left-scene">
             <div class="flag"></div>
             <div transition:fly="{{ x: -dvdWidth, duration: 1000, delay: 1000 }}" class="dvd" bind:clientWidth={dvdWidth}></div>
@@ -40,7 +41,7 @@
 
     .building {
         position: absolute;
-        background-image: url("assets/images/bestbuy.png");
+        background-image: url("../assets/images/bestbuy.png");
         width: 400px;
         height: 400px;
         background-size: contain;
@@ -51,7 +52,7 @@
         position: absolute;
         left: 0;
         top: 0;
-        background-image: url("assets/images/dvd.jpg");
+        background-image: url("../assets/images/dvd.jpg");
         width: 100px;
         height: 100px;
         background-size: contain;
@@ -62,7 +63,7 @@
         position: absolute;
         left: 400px;
         bottom: 0;
-        background-image: url("assets/images/sunfire.png");
+        background-image: url("../assets/images/sunfire.png");
         width: 250px;
         height: 150px;
         background-size: contain;

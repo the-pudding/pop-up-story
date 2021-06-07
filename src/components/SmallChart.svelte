@@ -73,12 +73,12 @@
                 {#if artist.length > 2}
                     <div class="tooltip">
                         <p class="title">"{artist[2]}"</p>
-                        <p class="lyrics">{artist[3]}</p>
+                        <p class="lyrics">🎵{artist[3]}🎵</p>
                     </div>
                 {:else}
                     <div class="tooltip">
                         <p class="title">"{artist[1][0].song}"</p>
-                        <p class="lyrics">{artist[1][0].sampleLyrics}</p>
+                        <p class="lyrics">🎵{artist[1][0].sampleLyrics}🎵</p>
                     </div>
                 {/if}
             </div>
@@ -137,6 +137,9 @@
         flex-direction: row;
         margin: 0 auto;
         justify-content: center;
+        position: sticky;
+        height: 3rem;
+        top: 0;
     }
 
     .key-block {
@@ -201,7 +204,7 @@
     }
 
     .tooltip .title {
-        font-weight: 500;
+        font-weight: 700;
         font-size: 1rem;
     }
 

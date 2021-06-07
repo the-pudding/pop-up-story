@@ -1,5 +1,7 @@
 :root {
 	--sans: "National 2 Web", Helvetica, Arial, sans-serif;
+	--narrow: "National 2 Narrow Web", Helvetica, Arial, sans-serif;
+	--anton: "Anton", Helvetica, Arial, sans-serif;
 	--serif: "Tiempos Text Web", Georgia, Times, serif;
 	--mono: Menlo, Consolas, Monaco, "Courier New", monospace;
 	
@@ -79,23 +81,29 @@
 	vertical-align: middle;
 }
 
-.prose span {
-	background-color: rgba(255, 255, 255, 0.8);
+.song-snippet {
+	background-color: rgba(255, 255, 255, 0.35);
 	border-radius: 0.25rem;
-	padding: 0rem 2rem 0rem 0.25rem;
+	padding: 0.125rem 2rem 0.125rem 0.25rem;
 	background-image: url("../images/volume-2.svg");
-	background-position: bottom 0.125rem right 0.25rem;
+	background-position: bottom 0.25rem right 0.25rem;
 	background-repeat: no-repeat;
 	white-space: pre-wrap;
+	white-space: nowrap;
 	/* box-decoration-break: clone;
 	-webkit-box-decoration-break: clone; */
 }
 
-.prose span:hover {
+#blockchart .song-snippet {
+	border: 1px solid var(--off-black);
+	margin: 0 0.25rem
+}
+
+.song-snippet:hover {
 	background-color: rgba(255, 255, 255, 1);
 }
 
-.prose a {
+.prose a, #title a {
 	color: var(--off-black);
 	text-decoration: none;
 	background: linear-gradient(90deg, magenta, magenta), linear-gradient(90deg, magenta, yellow, cyan);
@@ -106,6 +114,10 @@
 }
 
 .prose a:hover {
+	background-size: 0 2px, 100% 2px;
+}
+
+#title a:hover {
 	background-size: 0 2px, 100% 2px;
 }
 
