@@ -25,6 +25,9 @@
   let songSpans;
   let songPlaying = false;
   let songHighlights;
+  let scrollContainer;
+  let scrollGraphic;
+  let scrollText;
 
   function playSong(e) {
     const songId = this.id
@@ -56,9 +59,6 @@
 
   // SCROLL
   const scroller = scrollama();
-  const scrollContainer = select('#scroll');
-  const scrollGraphic = scrollContainer.select('.scroll__graphic');
-  const scrollText = scrollContainer.select('.scroll__text');
   let scrollStep;
 
   function scrollDimensions() {
@@ -70,6 +70,10 @@
   }
 
   function scrollSetup() {
+    scrollContainer = select('#scroll');
+    scrollGraphic = scrollContainer.select('.scroll__graphic');
+    scrollText = scrollContainer.select('.scroll__text');
+
     scroller.setup({
       container: '#scroll', // our outermost scrollytelling element
       graphic: '.scroll__graphic', // the graphic
