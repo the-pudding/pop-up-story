@@ -12,6 +12,22 @@
 
 /*
 ********************
+	Anton
+********************
+*/
+
+@font-face {
+	font-family: 'Anton';
+	font-style: normal;
+	font-stretch: normal;
+	font-display: swap;
+	font-weight: 400;
+	src: url('../pudding-fonts/anton/anton-v10-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		 url('../pudding-fonts/anton/anton-v10-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+/*
+********************
 	National
 ********************
 */
@@ -42,7 +58,7 @@
 ********************
 */
 
-/*
+
 @font-face {
 	font-family: 'National 2 Narrow Web';
 	src: url('../pudding-fonts/national/National2NarrowWeb-Extralight.woff2') format('woff2'),
@@ -73,7 +89,7 @@
 	font-display: swap;
 }
 
-/*
+
 @font-face {
 	font-family: 'National 2 Narrow Web';
 	src: url('../pudding-fonts/national/National2NarrowWeb-Black.woff2') format('woff2'),
@@ -83,7 +99,7 @@
 	font-stretch: normal;
 	font-display: swap;
 }
-*/
+
 
 /*
 ********************
