@@ -14,12 +14,9 @@
   import data from "../data/data.csv";
   import previews from "../data/song-previews.csv";
   import {select, selectAll, groups, ascending} from "d3";
-  import inView from "../actions/inView.js";
   import "intersection-observer";
   import scrollama from "scrollama";
   import { fly } from 'svelte/transition';
-
-  let section;
 
   // AUDIO
   let audioEl;
@@ -45,8 +42,6 @@
   function playSong(e) {
     const songId = this.id
 
-    this.style.backgroundImage = `url("assets/images/volume-x.svg")`
-
     songData = previews.filter(d => d.shortname == songId)[0];
 
     songUrl = songData.preview
@@ -55,15 +50,17 @@
     songTitle = songData.title;
     songArtist = songData.artist;
 
+    console.log(songSpans);
+
     if (songPlaying) {
       audioEl.pause();
-      songSpans.style.backgroundImage = `url("assets/images/volume-x.svg")`;
-      this.style.backgroundImage = `url("assets/images/volume-2.svg")`;
+      songSpans.classed("spanplay", false);
+      this.classList.remove("spanplay")
     }
     else {
       audioEl.play();
-      songSpans.style.backgroundImage = `url("assets/images/volume-2.svg")`;
-      this.style.backgroundImage = `url("assets/images/volume-x.svg")`
+      songSpans.classed("spanplay", false);
+      this.classList.add("spanplay")
     }
 
     songPlaying = !songPlaying;
