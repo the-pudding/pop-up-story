@@ -33,6 +33,7 @@
         top: 0;
         right: 6rem;
         pointer-events: none;
+        z-index: 100;
     }
 
     div {
@@ -50,5 +51,21 @@
         right: -75px;
         height: 150px;
         width: 150px;
+    }
+
+    @media only screen and (max-width: 400px) {
+        #pole {
+            right: 3rem;
+        }
+
+        .line {
+            width: 5px;
+        }
+
+        .lil-nas-x {
+            right: -50px;
+            height: 100px;
+            width: 100px;
+        }
     }
 </style>

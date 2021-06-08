@@ -28,28 +28,14 @@
 <section id="smallchart">
     <div class="key">
         {#if type == "cis"}
-        <div class="key-block">
             <p class="same-gender">Same- & opposite-gender lyrics</p>
-        </div>
-        <div class="key-block">
             <p class="opposite-gender">Opposite-gender lyrics only</p>
-        </div>
-        <div class="key-block">
             <p class="unspecified-gender">Unspecified gender lyricss</p>
-        </div>
-        <div class="key-block">
             <p class="no-relationship">No relationship lyrics</p>
-        </div>
         {:else}
-        <div class="key-block">
             <p class="nb-relationship">Masculine pronoun lyrics</p>
-        </div>
-        <div class="key-block">
             <p class="unspecified-gender">Unspecified gender lyricss</p>
-        </div>
-        <div class="key-block">
             <p class="no-relationship">No relationship lyrics</p>
-        </div>
         {/if}
     </div>
     <div class="cards">
@@ -101,11 +87,11 @@
 
     .song-Queer, .song-Both {
         outline: none;
-        background-color: cyan;
+        background-color: yellow;
     }
 
     .same-gender {
-        background-color: cyan;
+        background-color: yellow;
     }
 
     .song-Non-Binary-Masc {
@@ -113,7 +99,7 @@
     }
 
     .song-Opposite, .opposite-gender {
-        background-color: yellow;
+        background-color: cyan;
     }
 
     .song-Unspecified, .unspecified-gender {
@@ -133,22 +119,15 @@
     }
     
     .key {
-        max-width: 60rem;
+        width: 100%;
         display: flex;
         flex-direction: row;
         margin: 0 auto;
         justify-content: center;
         position: sticky;
-        height: 3rem;
+        height: 2.5rem;
         top: 0;
-    }
-
-    .key-block {
-        margin: 0;
-        width: 25rem;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        flex-wrap: wrap;
     }
 
     .block {
@@ -160,8 +139,9 @@
     .key p {
         margin: 0;
         padding: 0.5rem 0;
-        width: 100%;
+        width: 25%;
         text-align: center;
+        font-weight: 700;
     }
 
     .cards {
@@ -171,12 +151,12 @@
         width: 100%;
         padding: 0 1rem;
         max-width: 60rem;
-        margin: 0 auto;
+        margin: 2rem auto;
         justify-content: center;
     }
 
     .card {
-        width: 15rem;
+        max-width: 15rem;
         background-color: rgba(255, 255, 255, 0.5);
         margin: 1rem;
         padding: 2rem;
@@ -206,6 +186,7 @@
 
     .card .song {
         margin: 0 0.125rem;
+        cursor: pointer;
     }
 
     .tooltip .title {
@@ -219,4 +200,10 @@
         font-size: 1rem;
     }
 
+    @media only screen and (max-width: 400px) {
+        .key p {
+            width: 50%;
+            font-size: 0.65rem;
+        }
+    }
 </style>

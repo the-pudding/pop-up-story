@@ -9,7 +9,6 @@
         let visible = false;
 
         function toggleVisible() {
-            console.log(visible)
             visible = !visible
         }   
 </script>

@@ -71,6 +71,7 @@
     .prose {
         max-width: 40em;
         margin: 0 auto;
+        padding: 0 1rem;
     }
 
     p {
@@ -83,13 +84,20 @@
     }
 
     h3 {
-        max-width: 40em;
+        max-width: 32em;
         margin: 0 auto;
         font-size: 1.25rem;
         font-weight: 700; 
+        padding: 0 1rem;
     }
 
     .method p {
         font-size: 1rem;
+    }
+
+    @media only screen and (max-width: 400px) {
+        p {
+            font-size: 1.25rem;
+        }
     }
 </style>

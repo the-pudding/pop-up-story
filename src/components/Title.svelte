@@ -34,8 +34,9 @@
 
 <style>
    #title {
-        max-width: 40em;
+        max-width: 45em;
         margin: 0 auto 5rem auto;
+        padding: 1rem;
    }
 
    h1 {
@@ -51,4 +52,10 @@
    .byline-bold {
        font-weight: 700;
    }
+
+   @media only screen and (max-width: 400px) {
+        h1 {
+            font-size: 5.25rem;
+        }
+    }
 </style>

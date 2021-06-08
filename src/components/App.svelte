@@ -36,30 +36,33 @@
   let dataNBArtists = dataFiltered.filter(d => d.gender == "nb");
   let dataQueerSpotlight = groups(dataQueerArtists, d => d.artistID);
   let dataNBSpotlight = groups(dataNBArtists, d => d.artistID);
-  console.log(dataFiltered)
+
+  let songData;
+  let songUrl;
+  let songTitle;
+  let songArtist;
 
   function playSong(e) {
     const songId = this.id
 
     this.style.backgroundImage = `url("assets/images/volume-x.svg")`
 
-    const songUrl = previews.filter(d => d.shortname == songId)[0].preview
+    songData = previews.filter(d => d.shortname == songId)[0];
+
+    songUrl = songData.preview
     audioEl.src = songUrl;
 
-    const songTitleText = select("#song-title");
-    const songTitle = previews.filter(d => d.shortname == songId)[0].title;
-    songTitleText.text(songTitle);
-    const songArtistText = select("#song-artist");
-    const songArtist = previews.filter(d => d.shortname == songId)[0].artist;
-    songArtistText.text(songArtist)
-
+    songTitle = songData.title;
+    songArtist = songData.artist;
 
     if (songPlaying) {
       audioEl.pause();
-      this.style.backgroundImage = `url("assets/images/volume-2.svg")`
+      songSpans.style.backgroundImage = `url("assets/images/volume-x.svg")`;
+      this.style.backgroundImage = `url("assets/images/volume-2.svg")`;
     }
     else {
       audioEl.play();
+      songSpans.style.backgroundImage = `url("assets/images/volume-2.svg")`;
       this.style.backgroundImage = `url("assets/images/volume-x.svg")`
     }
 
@@ -159,8 +162,17 @@
     <img src="assets/images/discoball.gif" alt="spinning disco ball">
     <div class="details">
       <p class="playing-intro">Now Playing</p>
-      <p id="song-title">"I Kissed a Girl"</p>
-      <p>by <span class="song-artist">Katy Perry</span></p>
+      <p id="song-title">"{songTitle}"</p>
+      <p>by <span class="song-artist">{songArtist}</span></p>
+    </div>
+  </div>
+  {:else}
+  <div class="disco-drop display-none">
+    <img src="assets/images/discoball.gif" alt="spinning disco ball">
+    <div class="details">
+      <p class="playing-intro">Now Playing</p>
+      <p id="song-title">"{songTitle}"</p>
+      <p>by <span class="song-artist">{songArtist}</span></p>
     </div>
   </div>
   {/if}
@@ -183,6 +195,10 @@
   .disco-drop {
     display: flex;
     flex-direction: row;
+  }
+
+  .display-none {
+    display: none;
   }
 
   .playing img {

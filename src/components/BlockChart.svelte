@@ -160,4 +160,34 @@ import { validate_each_argument } from "svelte/internal";
         background-size: 2rem 2rem;
     }
 
+    @media only screen and (max-width: 400px) {
+        .scroll__graphic {
+            margin: 0;
+            padding: 0 1rem;
+        }
+
+        .ranking {
+            width: calc(100% - 3.5rem);
+            margin: 0 0 0 2.25rem;
+            font-size: 0.75rem; 
+        }
+        .year p {
+            font-size: 0.75rem;
+            width: 2.25rem;
+        }
+        .song {
+            width: 1px;
+            margin: 0 1px;
+        }
+        .is-highlighted {
+            width: 2rem;
+        }
+        .song-song {
+            font-size: 1.25rem;
+        }
+
+        .song-lyrics {
+            font-size: 1rem;
+        }
+    }
 </style>
