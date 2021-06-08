@@ -2,7 +2,7 @@
     import { onMount } from 'svelte';
 
     let y;
-    let padding = 200;
+    let padPos = 200;
     let h;
 
     onMount(() => {
@@ -21,9 +21,7 @@
 <section id="pole">
     <div>
         <div class="line" style="height: {h}px;"></div>
-        <div class="lil-nas-x" style="transform: translate(0,{y + padding}px)">
-            <img src="assets/images/lilnasx.png" alt="Lil Nas X pole dancing">
-        </div>
+        <div class="lil-nas-x" style="transform: translate(0,{y + padPos}px)"></div>
     </div>
 </section>
 
@@ -48,9 +46,21 @@
 
     .lil-nas-x {
         position: absolute;
-        right: -75px;
+        background: url("../assets/images/lilnasx_drawing.png") 0 0;
+        background-size: cover;
+        right: -78px;
+        top: 0;
         height: 150px;
         width: 150px;
+        animation: poleCycle 2s steps(3) infinite;
+    }
+
+    .with-animation {
+        animation: poleCycle 2s steps(3) infinite;
+    }
+
+    @keyframes poleCycle {
+        100%   { background-position: 0 -450px ;}
     }
 
     @media only screen and (max-width: 400px) {

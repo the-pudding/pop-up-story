@@ -3,41 +3,36 @@
     export let section;
 
     let sectionNum = parseInt(section);
-
-    let visibleBestBuy = false;
-    let buildingDiv;
-    let dvdDiv;
-    let flagDiv;
     
     import { onMount } from 'svelte';
     import inView from "../actions/inView.js";
     import {select, selectAll} from "d3";
+    
+    let poleDancing = false;
+    let lilNasX;
+    let padPos = -200;
 
     onMount(() => {
-        buildingDiv = selectAll("#bestbuy .left-scene .building");
-        dvdDiv = selectAll("#bestbuy .dvd");
-        flagDiv = selectAll("#bestbuy .flag");
+        lilNasX = select("#pole .lil-nas-x")
 	});
 
     function animationSequence() {
-        if (visibleBestBuy) { 
-            buildingDiv.classed("on-screen", true) 
-            buildingDiv.classed("off-screen", false) 
-            dvdDiv.classed("on-screen", true) 
-            dvdDiv.classed("off-screen", false) 
+        console.log(poleDancing, lilNasX)
+
+        if (poleDancing) {
+            lilNasX.classed("with-animation", true)
         }
-        else { 
-            buildingDiv.classed("on-screen", false) 
-            buildingDiv.classed("off-screen", true)
-            dvdDiv.classed("on-screen", false) 
-            dvdDiv.classed("off-screen", true)  
+        else {
+            lilNasX.classed("with-animation", false) 
         }
-        visibleBestBuy = !visibleBestBuy
+        
+        poleDancing = !poleDancing;
     }
 </script>
 
-{#if sectionNum == 2}
-<section class="text"
+
+{#if sectionNum == 3}
+<section class="text" id="text-{sectionNum}"
     use:inView
     on:enter={() => animationSequence()}
     on:exit={() => animationSequence()}

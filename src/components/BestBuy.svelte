@@ -19,8 +19,8 @@
     on:exit={() => toggleVisible()}>
     {#if !visible}
         <div class="left-scene">
-            <div class="flag"></div>
-            <div transition:fly="{{ x: -dvdWidth, duration: 1000, delay: 1000 }}" class="dvd" bind:clientWidth={dvdWidth}></div>
+            <div transition:fly="{{ y: 200, duration: 1000, delay: 2000 }}" class="flag"></div>
+            <div transition:fly="{{ x: -dvdWidth*5, duration: 1000, delay: 1000 }}" class="dvd" bind:clientWidth={dvdWidth}></div>
             <div transition:fly="{{ x: -bestbuyWidth, duration: 1000 }}" class="building" bind:clientWidth={bestbuyWidth}></div>
         </div>
         <div class="right-scene">
@@ -40,7 +40,7 @@
 
     .building {
         position: absolute;
-        background-image: url("../assets/images/bestbuy.png");
+        background-image: url("../assets/images/bestbuy_drawing.png");
         width: 400px;
         height: 400px;
         background-size: contain;
@@ -49,20 +49,31 @@
 
     .dvd {
         position: absolute;
-        left: 0;
+        left: 300px;
         top: 0;
-        background-image: url("../assets/images/dvd.jpg");
+        background-image: url("../assets/images/dvd_drawing.png");
         width: 100px;
         height: 100px;
         background-size: contain;
         background-repeat: no-repeat;
     }
 
+    .flag {
+        position: absolute;
+        left: 50px;
+        top: -150px;
+        background-image: url("../assets/images/flag_drawing.png");
+        width: 125px;
+        height: 266px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
     .car {
         position: absolute;
-        left: 400px;
+        left: 350px;
         bottom: 0;
-        background-image: url("../assets/images/sunfire.png");
+        background-image: url("../assets/images/sunfire_drawing.png");
         width: 250px;
         height: 150px;
         background-size: contain;

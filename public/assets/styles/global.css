@@ -205,6 +205,14 @@ body {
 	z-index: 1000;
 }
 
+.with-animation {
+	animation: poleCycle 2s steps(3) infinite;
+}
+
+@keyframes poleCycle {
+	100%   { background-position: 0 -450px ;}
+}
+
 @media only screen and (max-width: 400px) {
 	.song-snippet {
 		background-position: bottom 0.125rem right 0.25rem;
