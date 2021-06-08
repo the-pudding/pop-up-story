@@ -13,7 +13,7 @@
   import copy from "../data/doc.json";
   import data from "../data/data.csv";
   import previews from "../data/song-previews.csv";
-  import {select, selectAll} from "d3";
+  import {select, selectAll, groups, ascending} from "d3";
   import inView from "../actions/inView.js";
   import "intersection-observer";
   import scrollama from "scrollama";
@@ -29,6 +29,14 @@
   let scrollContainer;
   let scrollGraphic;
   let scrollText;
+
+  let dataFiltered = data.filter(d => d.queerFlag == 1);
+  dataFiltered = dataFiltered.sort((a,b) => ascending(a.relationshipType, b.relationshipType));
+  let dataQueerArtists = dataFiltered.filter(d => d.gender !== "nb");
+  let dataNBArtists = dataFiltered.filter(d => d.gender == "nb");
+  let dataQueerSpotlight = groups(dataQueerArtists, d => d.artistID);
+  let dataNBSpotlight = groups(dataNBArtists, d => d.artistID);
+  console.log(dataFiltered)
 
   function playSong(e) {
     const songId = this.id
@@ -134,9 +142,11 @@
 <Text copy="{copy.prose3}" section=3/>
 <BlockChart data="{data}" />
 <Text copy="{copy.prose5}" section=5/>
-<SmallChart data="{data}" />
+<SmallChart data="{dataQueerSpotlight}" type="cis" />
 <Text copy="{copy.prose6}" section=6/>
-<Text copy="{copy.method}" section=7/>
+<SmallChart data="{dataNBSpotlight}" type="nb" />
+<Text copy="{copy.prose7}" section=7/>
+<Text copy="{copy.method}" section=8/>
 <div class="playlist">
   <iframe src="https://open.spotify.com/embed/playlist/3g0RrpYM6zZ7d4nfP3XeEh" width="480" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 

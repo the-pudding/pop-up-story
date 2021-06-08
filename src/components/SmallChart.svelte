@@ -1,12 +1,9 @@
 <script>
     import { onMount } from 'svelte';
     import {selectAll} from "d3";
-    import {groups, ascending} from "d3";
 
     export let data;
-    let dataQueerArtists = data.filter(d => d.queerFlag == 1);
-    dataQueerArtists = dataQueerArtists.sort((a,b) => ascending(a.relationshipType, b.relationshipType))
-    let dataQueerSpotlight = groups(dataQueerArtists, d => d.artistID)
+    export let type;
     let songs;
 
     // MOUNT
@@ -17,7 +14,7 @@
     function songClick(artist, song) {
         artist[2] = song.song;
         artist[3] = song.sampleLyrics;
-        dataQueerSpotlight = dataQueerSpotlight;
+        data = data;
 
         const artistNoSpaces = artist[0].replace(/\s/g, '')
         songs = selectAll(`#card-${artistNoSpaces} .song`)
@@ -30,29 +27,33 @@
 
 <section id="smallchart">
     <div class="key">
+        {#if type == "cis"}
         <div class="key-block">
-            <div class="block same-gender"></div>
-            <p>Same-gender</p>
+            <p class="same-gender">Same- & opposite-gender lyrics</p>
         </div>
         <div class="key-block">
-            <div class="block opposite-gender"></div>
-            <p>Opposite-gender</p>
+            <p class="opposite-gender">Opposite-gender lyrics only</p>
         </div>
         <div class="key-block">
-            <div class="block nb-relationship"></div>
-            <p>Non-binary artist/Masc gender</p>
+            <p class="unspecified-gender">Unspecified gender lyricss</p>
         </div>
         <div class="key-block">
-            <div class="block unspecified-gender"></div>
-            <p>Unspecified gender</p>
+            <p class="no-relationship">No relationship lyrics</p>
+        </div>
+        {:else}
+        <div class="key-block">
+            <p class="nb-relationship">Masculine pronoun lyrics</p>
         </div>
         <div class="key-block">
-            <div class="block no-relationship"></div>
-            <p>No relationship</p>
+            <p class="unspecified-gender">Unspecified gender lyricss</p>
         </div>
+        <div class="key-block">
+            <p class="no-relationship">No relationship lyrics</p>
+        </div>
+        {/if}
     </div>
     <div class="cards">
-        {#each dataQueerSpotlight as artist, i}
+        {#each data as artist, i}
             {#if artist[1].length > 4}
             <div class="card" id="card-{artist[0].replace(/\s/g, '')}">
                 <div class="img-wrapper"></div>
@@ -143,7 +144,8 @@
     }
 
     .key-block {
-        margin: 0 1rem;
+        margin: 0;
+        width: 25rem;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -157,6 +159,9 @@
 
     .key p {
         margin: 0;
+        padding: 0.5rem 0;
+        width: 100%;
+        text-align: center;
     }
 
     .cards {

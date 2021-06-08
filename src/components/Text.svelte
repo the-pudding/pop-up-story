@@ -48,7 +48,7 @@
         {/each}
     </div>
 </section>
-{:else if sectionNum == 7}
+{:else if sectionNum == 8}
 <section class="method">
     <h3>Methods & Notes</h3>
     <div class="prose">
