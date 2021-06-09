@@ -43,7 +43,7 @@
             {#if artist[1].length > 4}
             <div class="card" id="card-{artist[0].replace(/\s/g, '')}">
                 <div class="img-wrapper">
-                    <img src="../assets/images/{artist[0].replace(/[^A-Z0-9]/ig, '')}.png" alt="{artist[0]} portrait">
+                    <img src="./assets/images/{artist[0].replace(/[^A-Z0-9]/ig, '').toLowerCase()}.png" alt="{artist[0]} portrait">
                 </div>
                 <p>{artist[0]}</p>
                 <div class="songs">
