@@ -42,7 +42,9 @@
         {#each data as artist, i}
             {#if artist[1].length > 4}
             <div class="card" id="card-{artist[0].replace(/\s/g, '')}">
-                <div class="img-wrapper"></div>
+                <div class="img-wrapper">
+                    <img src="../assets/images/{artist[0].replace(/[^A-Z0-9]/ig, '')}.png" alt="{artist[0]} portrait">
+                </div>
                 <p>{artist[0]}</p>
                 <div class="songs">
                     {#each artist[1] as song, i}
@@ -164,11 +166,9 @@
         flex-direction: column;
     }
     .img-wrapper {
-        width: 5rem;
-        height: 5rem;
-        background-color: var(--gray-light);
+        width: 8rem;
+        height: 8rem;
         margin: 0 auto;
-        border-radius: 50%;
     }
 
     .card p {
