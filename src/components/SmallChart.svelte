@@ -34,7 +34,7 @@
             <p class="no-relationship">No relationship lyrics</p>
         {:else}
             <p class="nb-relationship">Masculine pronoun lyrics</p>
-            <p class="unspecified-gender">Unspecified gender lyricss</p>
+            <p class="unspecified-gender">Unspecified gender lyrics</p>
             <p class="no-relationship">No relationship lyrics</p>
         {/if}
     </div>
