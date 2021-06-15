@@ -86,7 +86,8 @@
 	border-radius: 0.25rem;
 	padding: 0.25rem 0.5rem;
 	box-decoration-break: clone;
-    -webkit-box-decoration-break: clone
+    -webkit-box-decoration-break: clone;
+	cursor: pointer;
 }
 
 .song-snippet:after {
