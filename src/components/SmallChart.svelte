@@ -166,6 +166,10 @@
         margin: 0 auto;
     }
 
+    .img-wrapper:hover {
+        transform: rotate(10deg);
+    }
+
     .card p {
         font-weight: 700;
         text-align: center;

@@ -213,6 +213,7 @@
 
   .details {
     margin: 0.5rem 0 0 0;
+    max-width: 15rem;
   }
 
   .details p {
