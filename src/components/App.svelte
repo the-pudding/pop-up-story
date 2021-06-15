@@ -92,13 +92,20 @@
       debug: false, // display the trigger offset for testing
     })
     .onStepEnter(handleStepEnter)
+    // .onStepExit(handleStepExit)
   }
 
   function handleStepEnter(response) {
     scrollStep.classed('is-active', (d, i) => i === response.index);
-
     renderStep(response.index)
   }
+
+  // function handleStepExit(response) {
+  //   if (index == 0) { 
+  //     songHighlights.classed("is-highlighted", false)
+  //     songHighlights.style("background-image", "none")
+  //   }
+  // }
 
   function renderStep(index) {
     songHighlights.classed("is-highlighted", false);

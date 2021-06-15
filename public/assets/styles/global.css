@@ -151,7 +151,7 @@ body {
 }
 
 .animation {
-	animation: rain 7s infinite linear;  
+	animation: rain 7s infinite linear;
 }
 
 .dvd.on-screen {
@@ -172,26 +172,18 @@ body {
 
 @keyframes rain {
 	0% {
-		width: 200px;
-		height: 63px;
 		opacity: 0;
 		transform: translate(0, 0vh) rotateZ(0deg);
 	}
 	25% {
-		width: 200px;
-		height: 63px;
 		opacity: 1;
 		transform: translate(0, 25vh) rotateZ(90deg);
 	}
 	75% {
-		width: 200px;
-		height: 63px;
 		opacity: 1;
 		transform: translate(5vw, 75vh) rotateZ(270deg);
 	}
 	100% {
-		width: 200px;
-		height: 63px;
 		opacity: 0;
 		transform: translate(10vw, 100vh) rotateZ(360deg);
 	}
@@ -207,6 +199,26 @@ body {
 
 .with-animation {
 	animation: poleCycle 2s steps(3) infinite;
+}
+
+.same-gender, .both-gender {
+	background-color: yellow;
+}
+
+.opposite-gender {
+	background-color: cyan;
+}
+
+.unspecified-gender {
+	background-color: magenta;
+}
+
+.no-relationship {
+	background: var(--gray-light);
+}
+
+.nb-relationship {
+	background: lime;
 }
 
 @keyframes poleCycle {

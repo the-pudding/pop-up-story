@@ -6,11 +6,6 @@
     export let type;
     let songs;
 
-    // MOUNT
-    onMount(() => {
-    
-    });
-
     function songClick(artist, song) {
         artist[2] = song.song;
         artist[3] = song.sampleLyrics;
@@ -41,7 +36,7 @@
     <div class="cards">
         {#each data as artist, i}
             {#if artist[1].length > 4}
-            <div class="card" id="card-{artist[0].replace(/\s/g, '')}">
+            <div class="card" id="card-{artist[0].replace(/[^A-Z0-9]/ig, '')}">
                 <div class="img-wrapper">
                     <img src="./assets/images/{artist[0].replace(/[^A-Z0-9]/ig, '').toLowerCase()}.png" alt="{artist[0]} portrait">
                 </div>
@@ -62,12 +57,12 @@
                 {#if artist.length > 2}
                     <div class="tooltip">
                         <p class="title">"{artist[2]}"</p>
-                        <p class="lyrics">🎵{artist[3]}🎵</p>
+                        <p class="lyrics">🎵{@html artist[3]}🎵</p>
                     </div>
                 {:else}
                     <div class="tooltip">
                         <p class="title">"{artist[1][0].song}"</p>
-                        <p class="lyrics">🎵{artist[1][0].sampleLyrics}🎵</p>
+                        <p class="lyrics">🎵{@html artist[1][0].sampleLyrics}🎵</p>
                     </div>
                 {/if}
             </div>

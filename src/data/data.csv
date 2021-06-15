@@ -24,12 +24,12 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2008,23,Madonna Featuring Justin Timberlake & Timbaland,4 Minutes,mixed,0,0,,,
 2008,24,P!nk,So What,woman,0,0,,,
 2008,25,Finger Eleven,Paralyzer,man,0,0,,,
-2008,26,Fergie,Clumsy,woman,1,0,Opposite,"First time that I saw your eyes, Boy, you looked right through me, mmm, mmm",The Black Eyed Peas/Fergie
+2008,26,Fergie,Clumsy,woman,1,0,Opposite,"First time that I saw your eyes, <span class=opposite-gender>Boy</span>, you looked right through me, mmm, mmm",The Black Eyed Peas/Fergie
 2008,27,Jason Mraz,I'm Yours,man,1,0,Unspecified,,Adam Lambert
 2008,28,Jesse McCartney,Leavin',man,0,0,,,
 2008,29,Kardinal Offishall Featuring Akon,Dangerous,man,0,0,,,
 2008,30,Jordin Sparks,Tattoo,woman,0,0,,,
-2008,31,Miley Cyrus,See You Again,nb,1,0,Unspecified,,Ava Max
+2008,31,Miley Cyrus,See You Again,nb,1,0,Unspecified,"I knew <span class=unspecified-gender>you</span> were somethin' special, When you spoke my name",Miley Cyrus
 2008,32,Metro Station,Shake It,man,0,0,,,
 2008,33,OneRepublic,Stop And Stare,man,0,0,,,
 2008,34,Sean Kingston,Take You There,man,0,0,,,
@@ -76,7 +76,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2008,75,The-Dream,I Luv Your Girl,man,0,0,,,
 2008,76,David Archuleta,Crush,man,0,0,,,
 2008,77,Plies Featuring Akon,Hypnotized,man,0,0,,,
-2008,78,Fergie,Big Girls Don't Cry,woman,1,0,Unspecified,"And I'm gonna miss you like a child misses their blanket, But I've got to get a move on with my life",The Black Eyed Peas/Fergie
+2008,78,Fergie,Big Girls Don't Cry,woman,1,0,Unspecified,"And I'm gonna miss <span class=unspecified-gender>you</span> like a child misses their blanket, But I've got to get a move on with my life",The Black Eyed Peas/Fergie
 2008,79,Kanye West Featuring T-Pain,Good Life,man,0,0,,,
 2008,80,Britney Spears,Womanizer,woman,0,0,,,
 2008,81,Taylor Swift,Love Story,woman,0,0,,,
@@ -90,7 +90,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2008,89,Keyshia Cole,I Remember,woman,0,0,,,
 2008,90,Kanye West Featuring Dwele,Flashing Lights,man,0,0,,,
 2008,91,Lil Wayne Featuring Bobby Valentino & Kidd Kidd,Mrs. Officer,man,0,0,,,
-2008,92,Miley Cyrus,7 Things,nb,1,0,Unspecified,"And the seventh thing I hate the most that you do, You make me love you",Miley Cyrus
+2008,92,Miley Cyrus,7 Things,nb,1,0,Unspecified,"And the seventh thing I hate the most that <span class=unspecified-gender>you</span> do, <span class=unspecified-gender>You</span> make me love you",Miley Cyrus
 2008,93,Trace Adkins,You're Gonna Miss This,man,0,0,,,
 2008,94,Gavin Rossdale,Love Remains The Same,man,1,0,Unspecified,,Gavin Rossdale
 2008,95,Daughtry,Feels Like Tonight,man,0,0,,,
@@ -99,10 +99,10 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2008,98,Santana Featuring Chad Kroeger,Into The Night,man,0,0,,,
 2008,99,Keyshia Cole,Heaven Sent,woman,0,0,,,
 2008,100,2 Pistols Featuring T-Pain & Tay Dizm,She Got It,man,0,0,,,
-2009,1,The Black Eyed Peas,Boom Boom Pow,mixed,1,0,Opposite,"When I step inside the room, Them girls go apeshit, mmm",The Black Eyed Peas/Fergie
-2009,2,Lady Gaga,Poker Face,woman,1,1,Both,"No, he can't read my poker face, (She's got me like nobody)",Lady Gaga
-2009,3,Lady Gaga Featuring Colby O'Donis,Just Dance,mixed,1,0,Opposite,"A dizzy twister dance, can't find my drink or man",Lady Gaga
-2009,4,The Black Eyed Peas,I Gotta Feeling,mixed,1,0,Opposite,"Fill up my cup, mazel tov, Look at her dancing, just take it off",The Black Eyed Peas/Fergie
+2009,1,The Black Eyed Peas,Boom Boom Pow,mixed,1,0,Opposite,"When I step inside the room, Them <span class=opposite-gender>girls</span> go apeshit, mmm",The Black Eyed Peas/Fergie
+2009,2,Lady Gaga,Poker Face,woman,1,1,Both,"No, <span class=both-gender>he</span> can't read my poker face, (<span class=both-gender>She's</span> got me like nobody)",Lady Gaga
+2009,3,Lady Gaga Featuring Colby O'Donis,Just Dance,mixed,1,0,Opposite,"A dizzy twister dance, can't find my drink or <span class=opposite-gender>man</span>",Lady Gaga
+2009,4,The Black Eyed Peas,I Gotta Feeling,mixed,1,0,Opposite,"Fill up my cup, mazel tov, Look at <span class=opposite-gender>her</span> dancing, just take it off",The Black Eyed Peas/Fergie
 2009,5,Taylor Swift,Love Story,woman,0,0,,,
 2009,6,Flo Rida,Right Round,man,0,0,,,
 2009,7,Jason Mraz,I'm Yours,man,1,0,Unspecified,,Jason Mraz
@@ -133,7 +133,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2009,32,Kevin Rudolf Featuring Lil Wayne,Let It Rock,man,0,0,,,
 2009,33,Sean Kingston,Fire Burning,man,0,0,,,
 2009,34,Jason Derulo,Whatcha Say,man,0,0,,,
-2009,35,Lady Gaga,LoveGame,woman,1,0,Opposite,"The story of us, it always starts the same, With a boy and a girl and a - huh! - and a game",Lady Gaga
+2009,35,Lady Gaga,LoveGame,woman,1,0,Opposite,"The story of us, it always starts the same, With a <span class=opposite-gender>boy</span> and a girl and a - huh! - and a game",Lady Gaga
 2009,36,Katy Perry,Waking Up In Vegas,woman,0,0,,,
 2009,37,Jeremih,Birthday Sex,man,0,0,,,
 2009,38,P!nk,Sober,woman,0,0,,,
@@ -151,7 +151,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2009,50,The Pussycat Dolls,I Hate This Part,woman,0,0,,,
 2009,51,Nickelback,Gotta Be Somebody,man,0,0,,,
 2009,52,P!nk,Please Don't Leave Me,woman,0,0,,,
-2009,53,Lady Gaga,Paparazzi,woman,1,0,Opposite,"Promise I'll be kind, But I won't stop until that boy is mine",Lady Gaga
+2009,53,Lady Gaga,Paparazzi,woman,1,0,Opposite,"Promise I'll be kind, But I won't stop until that <span class=opposite-gender>boy</span> is mine",Lady Gaga
 2009,54,Akon Featuring Colby O'Donis & Kardinal Offishall,Beautiful,man,0,0,,,
 2009,55,Coldplay,Viva La Vida,man,0,0,,,
 2009,56,Akon,Right Now (Na Na Na),man,0,0,,,
@@ -199,14 +199,14 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2009,98,Jim Jones & Ron Browz Featuring Juelz Santana,Pop Champagne,man,0,0,,,
 2009,99,Maxwell,Pretty Wings,man,0,0,,,
 2009,100,The Fray,Never Say Never,man,0,0,,,
-2010,1,Ke$ha,TiK ToK,woman,1,0,Opposite,"I'm talkin' about errbody gettin' crunk, crunk, Boys try to touch my junk, junk",Kesha
+2010,1,Ke$ha,TiK ToK,woman,1,0,Opposite,"I'm talkin' about errbody gettin' crunk, crunk, <span class=opposite-gender>Boys</span> try to touch my junk, junk",Kesha
 2010,2,Lady Antebellum,Need You Now,mixed,0,0,,,
 2010,3,Train,"Hey, Soul Sister",man,0,0,,,
 2010,4,Katy Perry Featuring Snoop Dogg,California Gurls,mixed,0,0,,,
 2010,5,Usher Featuring will.i.am,OMG,man,0,0,,,
 2010,6,B.o.B Featuring Hayley Williams,Airplanes,mixed,0,0,,,
 2010,7,Eminem Featuring Rihanna,Love The Way You Lie,mixed,0,0,,,
-2010,8,Lady Gaga,Bad Romance,woman,1,0,Unspecified,"I want your horror, I want your design, ‘Cause you’re a criminal as long as you’re mine",Lady Gaga
+2010,8,Lady Gaga,Bad Romance,woman,1,0,Unspecified,"I want <span class=unspecified-gender>your</span> horror, I want <span class=unspecified-gender>your</span> design, ‘Cause <span class=unspecified-gender>you’re</span> a criminal as long as <span class=unspecified-gender>you’re</span> mine",Lady Gaga
 2010,9,Taio Cruz,Dynamite,man,0,0,,,
 2010,10,Taio Cruz Featuring Ludacris,Break Your Heart,man,0,0,,,
 2010,11,B.o.B Featuring Bruno Mars,Nothin' On You,man,0,0,,,
@@ -214,11 +214,11 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2010,13,Young Money Featuring Lloyd,BedRock,man,0,0,,,
 2010,14,Jason Derulo,In My Head,man,0,0,,,
 2010,15,Rihanna,Rude Boy,woman,0,0,,,
-2010,16,Lady Gaga Featuring Beyonce,Telephone,woman,1,0,Opposite,"Boy, the way you blowing up my phone, Won't make me leave no faster",Lady Gaga
+2010,16,Lady Gaga Featuring Beyonce,Telephone,woman,1,0,Opposite,"<span class=opposite-gender>Boy</span>, the way you blowing up my phone, Won't make me leave no faster",Lady Gaga
 2010,17,Katy Perry,Teenage Dream,woman,0,0,,,
 2010,18,Bruno Mars,Just The Way You Are,man,0,0,,,
 2010,19,Mike Posner,Cooler Than Me,man,0,0,,,
-2010,20,The Black Eyed Peas,Imma Be,mixed,1,0,Unspecified,"I'mma be on the next level, I'mma be rockin' over that bass treble",The Black Eyed Peas/Fergie
+2010,20,The Black Eyed Peas,Imma Be,mixed,1,0,Unspecified,"<span class=unspecified-gender>I'mma</span> be on the next level, <span class=unspecified-gender>I'mma</span> be rockin' over that bass treble",The Black Eyed Peas/Fergie
 2010,21,Jay-Z + Alicia Keys,Empire State Of Mind,mixed,0,0,,,
 2010,22,Usher Featuring Pitbull,DJ Got Us Fallin' In Love,man,0,0,,,
 2010,23,Travie McCoy Featuring Bruno Mars,Billionaire,man,0,0,,,
@@ -226,12 +226,12 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2010,25,Iyaz,Replay,man,0,0,,,
 2010,26,David Guetta Featuring Akon,Sexy Chick,man,0,0,,,
 2010,27,The Script,Breakeven,man,0,0,,,
-2010,28,Ke$ha,Your Love Is My Drug,woman,1,0,Opposite,"What you've got, boy, is hard to find, I think about it all the time",Kesha
-2010,29,The Black Eyed Peas,I Gotta Feeling,mixed,1,0,Opposite,"Fill up my cup, mazel tov, Look at her dancing, just take it off",The Black Eyed Peas/Fergie
+2010,28,Ke$ha,Your Love Is My Drug,woman,1,0,Opposite,"What you've got, <span class=opposite-gender>boy</span>, is hard to find, I think about it all the time",Kesha
+2010,29,The Black Eyed Peas,I Gotta Feeling,mixed,1,0,Opposite,"Fill up my cup, mazel tov, Look at <span class=opposite-gender>her</span> dancing, just take it off",The Black Eyed Peas/Fergie
 2010,30,Owl City,Fireflies,man,0,0,,,
 2010,31,Trey Songz Featuring Fabolous,Say Aah,man,0,0,,,
 2010,32,Drake,Find Your Love,man,0,0,,,
-2010,33,Lady Gaga,Alejandro,woman,1,0,Opposite,"And all those flames that burned before him, Now he's gotta firefight, gotta cool the bad",Lady Gaga
+2010,33,Lady Gaga,Alejandro,woman,1,0,Opposite,"And all those flames that burned before <span class=opposite-gender>him</span>, Now <span class=opposite-gender>he's</span> gotta firefight, gotta cool the bad",Lady Gaga
 2010,34,Jason Derulo,Ridin' Solo,man,0,0,,,
 2010,35,Nelly,Just A Dream,man,0,0,,,
 2010,36,Ludacris,How Low,man,0,0,,,
@@ -249,20 +249,20 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2010,48,Kris Allen,Live Like We're Dying,man,0,0,,,
 2010,49,Rihanna Featuring Jeezy,Hard,mixed,0,0,,,
 2010,50,Jay-Z + Mr. Hudson,Young Forever,man,0,0,,,
-2010,51,Ke$ha Featuring 3OH!3,Blah Blah Blah,mixed,1,0,Opposite,"I don't really care where you live at, Just turn around boy, let me hit that",Kesha
+2010,51,Ke$ha Featuring 3OH!3,Blah Blah Blah,mixed,1,0,Opposite,"I don't really care where you live at, Just turn around <span class=opposite-gender>boy</span>, let me hit that",Kesha
 2010,52,Trey Songz Featuring Nicki Minaj,Bottoms Up,woman,0,0,,,
 2010,53,Jay Sean Featuring Sean Paul & Lil Jon,Do You Remember,man,0,0,,,
 2010,54,OneRepublic,All The Right Moves,man,0,0,,,
 2010,55,Orianthi,According To You,woman,0,0,,,
 2010,56,Ludacris Featuring Nicki Minaj,My Chick Bad,mixed,0,0,,,
 2010,57,Taylor Swift,You Belong With Me,woman,0,0,,,
-2010,58,The Black Eyed Peas,Meet Me Halfway,mixed,1,0,Opposite,"Girl, I travel 'round the world and even sail the seven seas, Across the universe and all the other galaxies",The Black Eyed Peas/Fergie
-2010,59,Ke$ha,Take It Off,woman,1,0,Unspecified,"And they turn me on when they take it off, When they take it off, everybody take it off",Kesha
+2010,58,The Black Eyed Peas,Meet Me Halfway,mixed,1,0,Opposite,"<span class=opposite-gender>Girl</span>, I travel 'round the world and even sail the seven seas, Across the universe and all the other galaxies",The Black Eyed Peas/Fergie
+2010,59,Ke$ha,Take It Off,woman,1,0,Unspecified,"And <span class=unspecified-gender>they</span> turn me on when <span class=unspecified-gender>they</span> take it off, When <span class=unspecified-gender>they</span> take it off, <span class=unspecified-gender>everybody</span> take it off",Kesha
 2010,60,Drake,Over,man,0,0,,,
 2010,61,Neon Trees,Animal,mixed,1,0,Unspecified,,Neon Trees
 2010,62,Maroon 5,Misery,man,0,0,,,
 2010,63,B.o.B Featuring Rivers Cuomo,Magic,man,0,0,,,
-2010,64,Lady Gaga,Paparazzi,woman,1,0,Opposite,"Promise I'll be kind, But I won't stop until that boy is mine",Lady Gaga
+2010,64,Lady Gaga,Paparazzi,woman,1,0,Opposite,"Promise I'll be kind, But I won't stop until that <span class=opposite-gender>boy</span> is mine",Lady Gaga
 2010,65,New Boyz Featuring Ray J,Tie Me Down,man,0,0,,,
 2010,66,Nicki Minaj,Your Love,woman,0,0,,,
 2010,67,Miley Cyrus,Party In The U.S.A.,nb,1,0,X,"I hopped off the plane at LAX, With a dream and my cardigan",Miley Cyrus
@@ -271,9 +271,9 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2010,70,Shontelle,Impossible,woman,0,0,,,
 2010,71,"Drake Featuring Kanye West, Lil Wayne & Eminem",Forever,man,0,0,,,
 2010,72,Boys Like Girls Featuring Taylor Swift,Two Is Better Than One,mixed,0,0,,,
-2010,73,3OH!3 Featuring Ke$ha,My First Kiss,mixed,1,0,Opposite,"She won't ever get enough once she gets a little touch, If I had it my way, you know that I'd make her say",Kesha
+2010,73,3OH!3 Featuring Ke$ha,My First Kiss,mixed,1,0,Opposite,"<span class=opposite-gender>She</span> won't ever get enough once <span class=opposite-gender>she</span> gets a little touch, If I had it my way, you know that I'd make <span class=opposite-gender>her</span> say",Kesha
 2010,74,Kelly Clarkson,Already Gone,woman,0,0,,,
-2010,75,The Black Eyed Peas,Rock That Body,mixed,1,0,Opposite,"All of my super, superfly ladies, Yeah, you could be big boned, long as you feel like you on",The Black Eyed Peas/Fergie
+2010,75,The Black Eyed Peas,Rock That Body,mixed,1,0,Opposite,"All of my super, superfly <span class=opposite-gender>ladies</span>, Yeah, you could be big boned, long as you feel like you on",The Black Eyed Peas/Fergie
 2010,76,OneRepublic,Secrets,man,0,0,,,
 2010,77,Selena Gomez & The Scene,Naturally,mixed,0,0,,,
 2010,78,Alicia Keys,Un-Thinkable (I'm Ready),woman,0,0,,,
@@ -308,7 +308,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2011,7,CeeLo Green,Forget You,man,0,0,,,
 2011,8,Nicki Minaj,Super Bass,woman,0,0,,,
 2011,9,Maroon 5 Featuring Christina Aguilera,Moves Like Jagger,mixed,0,0,,,
-2011,10,The Black Eyed Peas,Just Can't Get Enough,mixed,1,0,Opposite,"Boy, I think about it every night and day, I'm addicted, wanna jam inside your love",The Black Eyed Peas/Fergie
+2011,10,The Black Eyed Peas,Just Can't Get Enough,mixed,1,0,Opposite,"<span class=opposite-gender>Boy</span>, I think about it every night and day, I'm addicted, wanna jam inside your love",The Black Eyed Peas/Fergie
 2011,11,Jennifer Lopez Featuring Pitbull,On The Floor,mixed,0,0,,,
 2011,12,Rihanna,S&M,woman,0,0,,,
 2011,13,Foster The People,Pumped Up Kicks,man,0,0,,,
@@ -327,15 +327,15 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2011,26,Bruno Mars,The Lazy Song,man,0,0,,,
 2011,27,Britney Spears,Till The World Ends,woman,0,0,,,
 2011,28,Lupe Fiasco,The Show Goes On,man,0,0,,,
-2011,29,Lady Gaga,The Edge Of Glory,woman,1,0,Opposite,I need a man that thinks it right when it's so wrong,Lady Gaga
-2011,30,Ke$ha,We R Who We R,woman,1,0,Opposite,"We’re sellin' our clothes, sleepin' in cars, Dressin' it down, hittin' on dudes hard",Kesha
+2011,29,Lady Gaga,The Edge Of Glory,woman,1,0,Opposite,I need a <span class=opposite-gender>man</span> that thinks it right when it's so wrong,Lady Gaga
+2011,30,Ke$ha,We R Who We R,woman,1,0,Opposite,"We’re sellin' our clothes, sleepin' in cars, Dressin' it down, hittin' on <span class=opposite-gender>dudes</span> hard",Kesha
 2011,31,Wiz Khalifa,Black And Yellow,man,0,0,,,
 2011,32,Hot Chelle Rae,Tonight Tonight,man,0,0,,,
 2011,33,Ke$ha,Blow,woman,1,0,X,"Go-go-go-go insane, go insane, Throw some glitter, make it rain on 'em",Kesha
 2011,34,Bad Meets Evil Featuring Bruno Mars,Lighters,man,0,0,,,
 2011,35,The Band Perry,If I Die Young,mixed,0,0,,,
 2011,36,Gym Class Heroes Featuring Adam Levine,Stereo Hearts,man,0,0,,,
-2011,37,The Black Eyed Peas,The Time (Dirty Bit),mixed,1,0,Opposite,"Yeah, it's hot in hurrrr, The temperaturrrre, Has got these ladies, Gettin' freaky-urrrr",The Black Eyed Peas/Fergie
+2011,37,The Black Eyed Peas,The Time (Dirty Bit),mixed,1,0,Opposite,"Yeah, it's hot in hurrrr, The temperaturrrre, Has got these <span class=opposite-gender>ladies</span>, Gettin' freaky-urrrr",The Black Eyed Peas/Fergie
 2011,38,Diddy - Dirty Money Featuring Skylar Grey,Coming Home,mixed,0,0,,,
 2011,39,Pitbull Featuring T-Pain,Hey Baby (Drop It To The Floor),man,0,0,,,
 2011,40,Rihanna,Only Girl (In The World),woman,0,0,,,
@@ -369,7 +369,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2011,68,Jason Aldean With Kelly Clarkson,Don't You Wanna Stay,mixed,0,0,,,
 2011,69,Rihanna Featuring Calvin Harris,We Found Love,mixed,0,0,,,
 2011,70,Keri Hilson,Pretty Girl Rock,woman,0,0,,,
-2011,71,Lady Gaga,You And I,woman,1,0,Opposite,"Something, something about my cool Nebraska guy, Yeah, there's something about, baby, you and I",Lady Gaga
+2011,71,Lady Gaga,You And I,woman,1,0,Opposite,"Something, something about my cool Nebraska <span class=opposite-gender>guy</span>, Yeah, there's something about, baby, you and I",Lady Gaga
 2011,72,Far*East Movement Featuring Cataracs & Dev,Like A G6,mixed,0,0,,,
 2011,73,David Guetta Featuring Usher,Without You,man,0,0,,,
 2011,74,Taylor Swift,Back To December,woman,0,0,,,
@@ -409,7 +409,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2012,8,Rihanna Featuring Calvin Harris,We Found Love,mixed,0,0,,,
 2012,9,Nicki Minaj,Starships,woman,0,0,,,
 2012,10,One Direction,What Makes You Beautiful,man,0,0,,,
-2012,11,Flo Rida Featuring Sia,Wild Ones,mixed,1,0,Opposite,"I don't care tonight, She don't care we like",Sia
+2012,11,Flo Rida Featuring Sia,Wild Ones,mixed,1,0,Opposite,"I don't care tonight, <span class=opposite-gender>She</span> don't care we like",Sia
 2012,12,Adele,Set Fire To The Rain,woman,0,0,,,
 2012,13,LMFAO,Sexy And I Know It,man,0,0,,,
 2012,14,fun.,Some Nights,man,0,0,,,
@@ -422,7 +422,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2012,21,Rihanna,Where Have You Been,woman,0,0,,,
 2012,22,Neon Trees,Everybody Talks,mixed,1,0,Opposite,,Neon Trees
 2012,23,Drake Featuring Rihanna,Take Care,mixed,0,0,,,
-2012,24,David Guetta Featuring Sia,Titanium,mixed,1,0,Unspecified,"You shoot me down, but I won't fall, I am titanium",Sia
+2012,24,David Guetta Featuring Sia,Titanium,mixed,1,0,Unspecified,"<span class=unspecified-gender>You</span> shoot me down, but I won't fall, I am titanium",Sia
 2012,25,Jason Mraz,I Won't Give Up,man,1,0,Unspecified,,Jason Mraz
 2012,26,Bruno Mars,It Will Rain,man,0,0,,,
 2012,27,"Kanye West, Big Sean, Pusha T, 2 Chainz",Mercy,man,0,0,,,
@@ -437,7 +437,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2012,36,Maroon 5 Featuring Christina Aguilera,Moves Like Jagger,mixed,0,0,,,
 2012,37,P!nk,Blow Me (One Last Kiss),woman,0,0,,,
 2012,38,Owl City & Carly Rae Jepsen,Good Time,mixed,0,0,,,
-2012,39,Demi Lovato,Give Your Heart A Break,nb,1,0,Unspecified,"So let me give your heart a break, give your heart a break",Demi Lovato
+2012,39,Demi Lovato,Give Your Heart A Break,nb,1,0,Unspecified,"So let me give <span class=unspecified-gender>your</span> heart a break, give <span class=unspecified-gender>your</span> heart a break",Demi Lovato
 2012,40,Jay Z Kanye West,Ni**as in Paris,man,0,0,,,
 2012,41,Katy Perry,The One That Got Away,woman,0,0,,,
 2012,42,Calvin Harris,Feel So Close,man,0,0,,,
@@ -483,7 +483,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2012,82,Toby Keith,Red Solo Cup,man,0,0,,,
 2012,83,Selena Gomez & The Scene,Love You Like A Love Song,mixed,0,0,,,
 2012,84,Chris Brown,Turn Up The Music,man,0,0,,,
-2012,85,Ke$ha,Die Young,woman,1,0,Unspecified,"I hear your heart beat to the beat of the drums, Oh, what a shame that you came here with someone",Kesha
+2012,85,Ke$ha,Die Young,woman,1,0,Unspecified,"I hear <span class=unspecified-gender>your</span> heart beat to the beat of the drums, Oh, what a shame that <span class=unspecified-gender>you</span> came here with <span class=unspecified-gender>someone</span>",Kesha
 2012,86,T-Pain Featuring Wiz Khalifa & Lily Allen,5 O'Clock,mixed,0,0,,,
 2012,87,Christina Perri,A Thousand Years,woman,0,0,,,
 2012,88,Jason Aldean,Take A Little Ride,man,0,0,,,
@@ -516,7 +516,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2013,15,Lorde,Royals,woman,0,0,,,
 2013,16,Taylor Swift,I Knew You Were Trouble.,woman,0,0,,,
 2013,17,Miley Cyrus,We Can't Stop,nb,1,0,X,Can't you see it's we who own the night? Can't you see it's we who 'bout that life?,Miley Cyrus
-2013,18,Miley Cyrus,Wrecking Ball,nb,1,0,Unspecified,"All I wanted was to break your walls, All you ever did was wreck me",Miley Cyrus
+2013,18,Miley Cyrus,Wrecking Ball,nb,1,0,Unspecified,"All I wanted was to break <span class=unspecified-gender>your</span> walls, All <span class=unspecified-gender>you</span> ever did was wreck me",Miley Cyrus
 2013,19,Avicii,Wake Me Up!,man,0,0,,,
 2013,20,Justin Timberlake Featuring JAY Z,Suit & Tie,man,0,0,,,
 2013,21,Anna Kendrick,Cups (Pitch Perfect's When I'm Gone),woman,0,0,,,
@@ -548,7 +548,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2013,47,Imagine Dragons,It's Time,man,0,0,,,
 2013,48,J. Cole Featuring Miguel,Power Trip,man,0,0,,,
 2013,49,Alicia Keys Featuring Nicki Minaj,Girl On Fire,woman,0,0,,,
-2013,50,Demi Lovato,Heart Attack,nb,1,0,Non-Binary-Masc,"Never put my love out on the line, Never said ""yes"" to the right guy",Demi Lovato
+2013,50,Demi Lovato,Heart Attack,nb,1,0,Non-Binary-Masc,"Never put my love out on the line, Never said ""yes"" to the right <span class=nb-relationship>guy</span>",Demi Lovato
 2013,51,Maroon 5,Love Somebody,man,0,0,,,
 2013,52,Mumford & Sons,I Will Wait,man,0,0,,,
 2013,53,P!nk,Try,woman,0,0,,,
@@ -608,8 +608,8 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2014,7,MAGIC!,Rude,man,0,0,,,
 2014,8,Meghan Trainor,All About That Bass,woman,0,0,,,
 2014,9,Ariana Grande Featuring Iggy Azalea,Problem,woman,0,0,,,
-2014,10,Sam Smith,Stay With Me,nb,1,0,Unspecified,"Oh, won't you stay with me? 'Cause you're all I need",Sam Smith
-2014,11,Pitbull Featuring Ke$ha,Timber,mixed,1,0,Opposite,"I'm slicker than an oil spill, She say she won't, but I bet she will",Kesha
+2014,10,Sam Smith,Stay With Me,nb,1,0,Unspecified,"Oh, won't <span class=unspecified-gender>you</span> stay with me? 'Cause <span class=unspecified-gender>you're</span> all I need",Sam Smith
+2014,11,Pitbull Featuring Ke$ha,Timber,mixed,1,0,Opposite,"I'm slicker than an oil spill, <span class=opposite-gender>She</span> say <span class=opposite-gender>she</span> won't, but I bet <span class=opposite-gender>she</span> will",Kesha
 2014,12,Bastille,Pompeii,man,0,0,,,
 2014,13,Taylor Swift,Shake It Off,woman,0,0,,,
 2014,14,Nico & Vinz,Am I Wrong,man,0,0,,,
@@ -642,7 +642,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2014,41,Clean Bandit Featuring Jess Glynne,Rather Be,mixed,0,0,,,
 2014,42,Jeremih Featuring YG,Don't Tell 'Em,man,0,0,,,
 2014,43,Kid Ink Featuring Chris Brown,Show Me,man,0,0,,,
-2014,44,Miley Cyrus,Wrecking Ball,nb,1,0,Unspecified,"All I wanted was to break your walls, All you ever did was wreck me",Miley Cyrus
+2014,44,Miley Cyrus,Wrecking Ball,nb,1,0,Unspecified,"All I wanted was to break <span class=unspecified-gender>your</span> walls, All <span class=unspecified-gender>you</span> ever did was wreck me",Miley Cyrus
 2014,45,Justin Timberlake,Not A Bad Thing,man,0,0,,,
 2014,46,Katy Perry,Roar,woman,0,0,,,
 2014,47,Paramore,Ain't It Fun,mixed,0,0,,,
@@ -698,7 +698,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2014,97,Drake,0 To 100 / The Catch Up,man,0,0,,,
 2014,98,Lee Brice,I Don't Dance,man,0,0,,,
 2014,99,Miranda Lambert Duet With Carrie Underwood,Somethin' Bad,woman,0,0,,,
-2014,100,Miley Cyrus,Adore You,nb,1,0,Non-Binary-Masc,"Know I need you more, Boy, I adore you",Miley Cyrus
+2014,100,Miley Cyrus,Adore You,nb,1,0,Non-Binary-Masc,"Know I need you more, <span class=nb-relationship>Boy</span>, I adore you",Miley Cyrus
 2015,1,Mark Ronson Featuring Bruno Mars,Uptown Funk!,man,0,0,,,
 2015,2,Ed Sheeran,Thinking Out Loud,man,0,0,,,
 2015,3,Wiz Khalifa Featuring Charlie Puth,See You Again,man,0,0,,,
@@ -724,7 +724,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2015,23,Fifth Harmony Featuring Kid Ink,Worth It,mixed,1,0,Opposite,,Fifth Harmony
 2015,24,Omarion Featuring Chris Brown & Jhene Aiko,Post To Be,mixed,0,0,,,
 2015,25,Andy Grammer,"Honey, I'm Good.",man,0,0,,,
-2015,26,Sam Smith,I'm Not The Only One,nb,1,0,Unspecified,"But when you call me baby, I know I'm not the only one",Sam Smith
+2015,26,Sam Smith,I'm Not The Only One,nb,1,0,Unspecified,"But when <span class=unspecified-gender>you</span> call me baby, I know I'm not the only one",Sam Smith
 2015,27,Selena Gomez Featuring A$AP Rocky,Good For You,mixed,0,0,,,
 2015,28,Meghan Trainor,All About That Bass,woman,0,0,,,
 2015,29,Taylor Swift,Style,woman,0,0,,,
@@ -750,13 +750,13 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2015,49,Rich Homie Quan,Flex (Ooh Ooh Ooh),man,0,0,,,
 2015,50,T-Wayne,Nasty Freestyle,man,0,0,,,
 2015,51,"Nicki Minaj Featuring Drake, Lil Wayne & Chris Brown",Only,mixed,0,0,,,
-2015,52,Sia,Elastic Heart,woman,1,0,Unspecified,"I've got thick skin and an elastic heart, But your blade it might be too sharp",Sia
-2015,53,Demi Lovato,Cool For The Summer,nb,1,0,Unspecified,Got my mind on your body and your body on my mind,Demi Lovato
+2015,52,Sia,Elastic Heart,woman,1,0,Unspecified,"I've got thick skin and an elastic heart, But <span class=unspecified-gender>your</span> blade it might be too sharp",Sia
+2015,53,Demi Lovato,Cool For The Summer,nb,1,0,Unspecified,Got my mind on <span class=unspecified-gender>your</span> body and <span class=unspecified-gender>your</span> body on my mind,Demi Lovato
 2015,54,X Ambassadors,Renegades,man,1,0,Unspecified,,X Ambassadors
 2015,55,Usher Featuring Juicy J,I Don't Mind,man,0,0,,,
 2015,56,Ariana Grande & The Weeknd,Love Me Harder,mixed,0,0,,,
 2015,57,Taylor Swift,Wildest Dreams,woman,0,0,,,
-2015,58,Sam Smith,Stay With Me,nb,1,0,Unspecified,"Oh, won't you stay with me? 'Cause you're all I need",Sam Smith
+2015,58,Sam Smith,Stay With Me,nb,1,0,Unspecified,"Oh, won't <span class=unspecified-gender>you</span> stay with me? 'Cause <span class=unspecified-gender>you're</span> all I need",Sam Smith
 2015,59,DJ Snake & AlunaGeorge,You Know You Like It,mixed,0,0,,,
 2015,60,Fall Out Boy,Uma Thurman,man,0,0,,,
 2015,61,Beyonce,7/11,woman,0,0,,,
@@ -779,7 +779,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2015,78,James Newton Howard Featuring Jennifer Lawrence,The Hanging Tree,mixed,0,0,,,
 2015,79,O.T. Genasis,CoCo,man,0,0,,,
 2015,80,"Jessie J, Ariana Grande & Nicki Minaj",Bang Bang,woman,0,0,,,
-2015,81,Sam Smith,Lay Me Down,nb,1,0,Unspecified,"Can I lay by your side, next to you, you?, And make sure you're all right",Sam Smith
+2015,81,Sam Smith,Lay Me Down,nb,1,0,Unspecified,"Can I lay by <span class=unspecified-gender>your</span> side, next to <span class=unspecified-gender>you, you</span>?, And make sure <span class=unspecified-gender>you're</span> all right",Sam Smith
 2015,82,I LOVE MAKONNEN Featuring Drake,Tuesday,man,1,0,Opposite,,I LOVE MAKONNEN
 2015,83,iLoveMemphis,Hit The Quan,man,0,0,,,
 2015,84,"Macklemore & Ryan Lewis Featuring Eric Nally, Melle Mel, Kool Moe Dee & Grandmaster Caz",Downtown,man,0,0,,,
@@ -808,7 +808,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2016,7,Adele,Hello,woman,0,0,,,
 2016,8,The Chainsmokers Featuring Daya,Don't Let Me Down,mixed,1,0,Unspecified,,Daya
 2016,9,Justin Timberlake,Can't Stop The Feeling!,man,0,0,,,
-2016,10,The Chainsmokers Featuring Halsey,Closer,mixed,1,0,Unspecified,"I know it breaks your heart, Moved to the city in a broke-down car",Halsey
+2016,10,The Chainsmokers Featuring Halsey,Closer,mixed,1,0,Unspecified,"I know it breaks <span class=unspecified-gender>your</span> heart, Moved to the city in a broke-down car",Halsey
 2016,11,Sia Featuring Sean Paul,Cheap Thrills,man,1,0,Unspecified,"Come on, come on, turn the radio on, It's Saturday and I won't be long",Sia
 2016,12,Lukas Graham,7 Years,man,0,0,,,
 2016,13,Rihanna,Needed Me,woman,0,0,,,
@@ -905,7 +905,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2017,4,Kendrick Lamar,Humble.,man,0,0,,,
 2017,5,The Chainsmokers & Coldplay,Something Just Like This,man,0,0,,,
 2017,6,Migos Featuring Lil Uzi Vert,Bad And Boujee,man,0,0,,,
-2017,7,The Chainsmokers Featuring Halsey,Closer,mixed,1,0,Unspecified,"I know it breaks your heart, Moved to the city in a broke-down car",Halsey
+2017,7,The Chainsmokers Featuring Halsey,Closer,mixed,1,0,Unspecified,"I know it breaks <span class=unspecified-gender>your</span> heart, Moved to the city in a broke-down car",Halsey
 2017,8,Sam Hunt,Body Like A Back Road,man,0,0,,,
 2017,9,Imagine Dragons,Believer,man,0,0,,,
 2017,10,Post Malone Featuring Quavo,Congratulations,man,0,0,,,
@@ -922,7 +922,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2017,21,Khalid,Location,man,0,0,,,
 2017,22,Charlie Puth,Attention,man,0,0,,,
 2017,23,Shawn Mendes,There's Nothing Holdin' Me Back,man,0,0,,,
-2017,24,Cardi B,Bodak Yellow (Money Moves),woman,1,0,Opposite,"I'll let him get what he want, he buy me Yves Saint Laurent",Cardi B
+2017,24,Cardi B,Bodak Yellow (Money Moves),woman,1,0,Opposite,"I'll let <span class=opposite-gender>him</span> get what <span class=opposite-gender>he</span> want, <span class=opposite-gender>he</span> buy me Yves Saint Laurent",Cardi B
 2017,25,Childish Gambino,Redbone,man,0,0,,,
 2017,26,Zayn / Taylor Swift,I Don't Wanna Live Forever (Fifty Shades Darker),mixed,0,0,,,
 2017,27,Kygo x Selena Gomez,It Ain't Me,mixed,0,0,,,
@@ -945,7 +945,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2017,44,Clean Bandit Featuring Sean Paul & Anne-Marie,Rockabye,mixed,1,0,X,,Anne-Marie
 2017,45,Portugal. The Man,Feel It Still,man,0,0,,,
 2017,46,DJ Snake Featuring Justin Bieber,Let Me Love You,man,0,0,,,
-2017,47,Demi Lovato,Sorry Not Sorry,nb,1,0,Unspecified,"Now, you're out here lookin' like regret, ain't too proud to beg",Demi Lovato
+2017,47,Demi Lovato,Sorry Not Sorry,nb,1,0,Unspecified,"Now, <span class=unspecified-gender>you're</span> out here lookin' like regret, ain't too proud to beg",Demi Lovato
 2017,48,21 Savage,Bank Account,man,0,0,,,
 2017,49,Justin Timberlake,Can't Stop The Feeling!,man,0,0,,,
 2017,50,J Balvin & Willy William Featuring Beyonce,Mi Gente,mixed,0,0,,,
@@ -957,7 +957,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2017,56,Post Malone Featuring 21 Savage,Rockstar,man,0,0,,,
 2017,57,Brett Young,In Case You Didn't Know,man,0,0,,,
 2017,58,twenty one pilots,Heathens,man,0,0,,,
-2017,59,Halsey,Now Or Never,woman,1,0,Unspecified,"Wishin' you were 'round with me, But you're in a different town than me",Halsey
+2017,59,Halsey,Now Or Never,woman,1,0,Unspecified,"Wishin' <span class=unspecified-gender>you</span> were 'round with me, But <span class=unspecified-gender>you're</span> in a different town than me",Halsey
 2017,60,Amine,Caroline,man,0,0,,,
 2017,61,Ayo & Teo,Rolex,man,0,0,,,
 2017,62,Kendrick Lamar,DNA.,man,0,0,,,
@@ -965,7 +965,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2017,64,Rae Sremmurd,Swang,man,0,0,,,
 2017,65,Drake,Passionfruit,man,0,0,,,
 2017,66,Kendrick Lamar Featuring Rihanna,Loyalty.,mixed,0,0,,,
-2017,67,Kesha,Praying,woman,1,0,Unspecified,"’Cause you brought the flames and you put me through hell, I had to learn how to fight for myself",Kesha
+2017,67,Kesha,Praying,woman,1,0,Unspecified,"’Cause <span class=unspecified-gender>you</span> brought the flames and <span class=unspecified-gender>you</span> put me through hell, I had to learn how to fight for myself",Kesha
 2017,68,Travis Scott,Goosebumps,man,0,0,,,
 2017,69,Maroon 5 Featuring Future,Cold,man,0,0,,,
 2017,70,D.R.A.M. Featuring Lil Yachty,Broccoli,man,0,0,,,
@@ -975,7 +975,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2017,74,"Calvin Harris Featuring Pharrell Williams, Katy Perry & Big Sean",Feels,mixed,0,0,,,
 2017,75,Jon Bellion,All Time Low,man,0,0,,,
 2017,76,Luke Combs,Hurricane,man,0,0,,,
-2017,77,Sam Smith,Too Good At Goodbyes,nb,1,0,Unspecified,"Even when I mean the most to you, In case you go and leave me in the dirt",Sam Smith
+2017,77,Sam Smith,Too Good At Goodbyes,nb,1,0,Unspecified,"Even when I mean the most to <span class=unspecified-gender>you</span>, In case <span class=unspecified-gender>you</span> go and leave me in the dirt",Sam Smith
 2017,78,Khalid,Young Dumb & Broke,man,0,0,,,
 2017,79,Playboi Carti,Magnolia,man,0,0,,,
 2017,80,SZA Featuring Travis Scott,Love Galore,mixed,0,0,,,
@@ -987,7 +987,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2017,86,Migos Featuring Gucci Mane,Slippery,man,0,0,,,
 2017,87,Harry Styles,Sign Of The Times,man,0,0,,,
 2017,88,Adele,Water Under The Bridge,woman,0,0,,,
-2017,89,Miley Cyrus,Malibu,nb,1,0,Unspecified,"But here I am, next to you, The sky's more blue in Malibu",Miley Cyrus
+2017,89,Miley Cyrus,Malibu,nb,1,0,Unspecified,"But here I am, next to <span class=unspecified-gender>you</span>, The sky's more blue in Malibu",Miley Cyrus
 2017,90,Marian Hill,Down,mixed,0,0,,,
 2017,91,Cheat Codes Featuring Demi Lovato,No Promises,mixed,1,0,Unspecified,"I just wanna dive in the water, with you, Baby, we can't see the bottom",Demi Lovato
 2017,92,Shawn Mendes,Treat You Better,man,0,0,,,
@@ -1005,14 +1005,14 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2018,4,Camila Cabello Featuring Young Thug,Havana,mixed,0,0,,,
 2018,5,Post Malone Featuring 21 Savage,Rockstar,man,0,0,,,
 2018,6,Post Malone Featuring Ty Dolla $ign,Psycho,man,0,0,,,
-2018,7,"Cardi B, Bad Bunny & J Balvin",I Like It,mixed,1,0,Opposite,"Drop the top and blow the brains, woo, Oh, he's so handsome, what's his name? Yeah",Cardi B
+2018,7,"Cardi B, Bad Bunny & J Balvin",I Like It,mixed,1,0,Opposite,"Drop the top and blow the brains, woo, Oh, <span class=opposite-gender>he's</span> so handsome, what's <span class=opposite-gender>his</span> name? Yeah",Cardi B
 2018,8,"Zedd, Maren Morris & Grey",The Middle,mixed,0,0,,,
 2018,9,Drake,In My Feelings,man,0,0,,,
-2018,10,Maroon 5 Featuring Cardi B,Girls Like You,mixed,1,0,Opposite,"Cause girls like you, Run 'round with guys like me",Cardi B
+2018,10,Maroon 5 Featuring Cardi B,Girls Like You,mixed,1,0,Opposite,"Cause girls like you, Run 'round with <span class=opposite-gender>guys</span> like me",Cardi B
 2018,11,Drake,Nice For What,man,0,0,,,
 2018,12,Juice WRLD,Lucid Dreams,man,0,0,,,
 2018,13,Post Malone,Better Now,man,0,0,,,
-2018,14,Bruno Mars & Cardi B,Finesse,mixed,1,0,Opposite,My big fat ass got all them boys hooked,Cardi B
+2018,14,Bruno Mars & Cardi B,Finesse,mixed,1,0,Opposite,My big fat ass got all them <span class=opposite-gender>boys</span> hooked,Cardi B
 2018,15,Ella Mai,Boo'd Up,woman,0,0,,,
 2018,16,Dua Lipa,New Rules,woman,0,0,,,
 2018,17,XXXTENTACION,Sad!,man,0,0,,,
@@ -1025,14 +1025,14 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2018,24,Taylor Swift,Delicate,woman,0,0,,,
 2018,25,Lil Baby & Drake,Yes Indeed,man,0,0,,,
 2018,26,Marshmello & Anne-Marie,Friends,mixed,1,0,Opposite,,Anne-Marie
-2018,27,Halsey,Bad At Love,woman,1,1,Both,"Got a girl with California eyes, And I thought that she could really be the one this time",Halsey
+2018,27,Halsey,Bad At Love,woman,1,1,Both,"Got a <span class=same-gender>girl</span> with California eyes, And I thought that <span class=same-gender>she</span> could really be the one this time",Halsey
 2018,28,Tyga Featuring Offset,Taste,man,0,0,,,
 2018,29,NF,Let You Down,man,0,0,,,
-2018,30,G-Eazy Featuring A$AP Rocky & Cardi B,No Limit,mixed,1,0,Opposite,"Put a white boy on Sazón, I might turn G-Eazy out",Cardi B
+2018,30,G-Eazy Featuring A$AP Rocky & Cardi B,No Limit,mixed,1,0,Opposite,"Put a white <span class=opposite-gender>boy</span> on Sazón, I might turn G-Eazy out",Cardi B
 2018,31,6ix9ine Featuring Nicki Minaj & Murda Beatz,FEFE,mixed,0,0,,,
 2018,32,Dan + Shay,Tequila,man,0,0,,,
 2018,33,Portugal. The Man,Feel It Still,man,0,0,,,
-2018,34,"Migos, Nicki Minaj & Cardi B",MotorSport,mixed,1,0,Opposite,"I told him the other day, Man, we should sell that porn",Cardi B
+2018,34,"Migos, Nicki Minaj & Cardi B",MotorSport,mixed,1,0,Opposite,"I told <span class=opposite-gender>him</span> the other day, <span class=opposite-gender>Man</span>, we should sell that porn",Cardi B
 2018,35,Lauv,I Like Me Better,man,0,0,,,
 2018,36,5 Seconds Of Summer,Youngblood,man,0,0,,,
 2018,37,Imagine Dragons,Whatever It Takes,man,0,0,,,
@@ -1043,26 +1043,26 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2018,42,Travis Scott,Sicko Mode,man,0,0,,,
 2018,43,Migos Featuring Drake,Walk It Talk It,man,0,0,,,
 2018,44,Lil Pump,Gucci Gang,man,0,0,,,
-2018,45,G-Eazy & Halsey,Him & I,mixed,1,0,Opposite,"He said ""be true,"" I swear I'll try, In the end, it's him and I",Halsey
+2018,45,G-Eazy & Halsey,Him & I,mixed,1,0,Opposite,"<span class=opposite-gender>He</span> said ""be true,"" I swear I'll try, In the end, it's <span class=opposite-gender>him</span> and I",Halsey
 2018,46,Shawn Mendes,In My Blood,man,0,0,,,
 2018,47,Kendrick Lamar & SZA,All The Stars,mixed,0,0,,,
 2018,48,Migos,Stir Fry,man,0,0,,,
-2018,49,Sam Smith,Too Good At Goodbyes,nb,1,0,Unspecified,"Even when I mean the most to you, In case you go and leave me in the dirt",Sam Smith
+2018,49,Sam Smith,Too Good At Goodbyes,nb,1,0,Unspecified,"Even when I mean the most to <span class=unspecified-gender>you</span>, In case <span class=unspecified-gender>you</span> go and leave me in the dirt",Sam Smith
 2018,50,Kendrick Lamar Featuring Zacari,Love.,man,0,0,,,
 2018,51,Childish Gambino,This Is America,man,0,0,,,
 2018,52,Drake,Nonstop,man,0,0,,,
 2018,53,Kane Brown,Heaven,man,0,0,,,
-2018,54,Cardi B,Bodak Yellow (Money Moves),woman,1,0,Opposite,"I'll let him get what he want, he buy me Yves Saint Laurent",Cardi B
+2018,54,Cardi B,Bodak Yellow (Money Moves),woman,1,0,Opposite,"I'll let <span class=opposite-gender>him</span> get what <span class=opposite-gender>he</span> want, <span class=opposite-gender>he</span> buy me Yves Saint Laurent",Cardi B
 2018,55,Lil Dicky Featuring Chris Brown,Freaky Friday,man,0,0,,,
 2018,56,6ix9ine,Gummo,man,0,0,,,
 2018,57,Rich The Kid,Plug Walk,man,0,0,,,
 2018,58,Maroon 5,Wait,man,0,0,,,
-2018,59,Cardi B,Be Careful,woman,1,0,Opposite,"The only man, baby, I adore, I gave you everything, what's mine is yours",Cardi B
+2018,59,Cardi B,Be Careful,woman,1,0,Opposite,"The only <span class=opposite-gender>man</span>, baby, I adore, I gave you everything, what's mine is yours",Cardi B
 2018,60,Selena Gomez X Marshmello,Wolves,mixed,0,0,,,
-2018,61,Cardi B Featuring 21 Savage,Bartier Cardi,mixed,1,1,Both,"I got your bitch and she naked, Ice on the cake when I bake it",Cardi B
+2018,61,Cardi B Featuring 21 Savage,Bartier Cardi,mixed,1,1,Both,"I got your <span class=same-gender>bitch</span> and <span class=same-gender>she</span> naked, Ice on the cake when I bake it",Cardi B
 2018,62,Ariana Grande,God Is A Woman,woman,0,0,,,
 2018,63,"YG Featuring 2 Chainz, Big Sean & Nicki Minaj",Big Bank,mixed,0,0,,,
-2018,64,Demi Lovato,Sorry Not Sorry,nb,1,0,Unspecified,"Now, you're out here lookin' like regret, ain't too proud to beg",Demi Lovato
+2018,64,Demi Lovato,Sorry Not Sorry,nb,1,0,Unspecified,"Now, <span class=unspecified-gender>you're</span> out here lookin' like regret, ain't too proud to beg",Demi Lovato
 2018,65,Charlie Puth,How Long,man,0,0,,,
 2018,66,MAX Featuring gnash,Lights Down Low,man,0,0,,,
 2018,67,Khalid,Young Dumb & Broke,man,0,0,,,
@@ -1075,7 +1075,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2018,74,A$AP Ferg Featuring Nicki Minaj,Plain Jane,mixed,0,0,,,
 2018,75,Miguel Featuring Travis Scott,Sky Walker,man,0,0,,,
 2018,76,Thomas Rhett,Marry Me,man,0,0,,,
-2018,77,"benny blanco, Halsey & Khalid",Eastside,mixed,1,0,Opposite,"He used to meet me on the Eastside, In the city where the sun don't set",Halsey
+2018,77,"benny blanco, Halsey & Khalid",Eastside,mixed,1,0,Opposite,"<span class=opposite-gender>He</span> used to meet me on the Eastside, In the city where the sun don't set",Halsey
 2018,78,The Weeknd,Call Out My Name,man,0,0,,,
 2018,79,"Jay Rock, Kendrick Lamar, Future & James Blake",King's Dead,man,0,0,,,
 2018,80,Marshmello & Bastille,Happier,man,0,0,,,
@@ -1101,7 +1101,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2018,100,Imagine Dragons,Believer,man,0,0,,,
 2019,1,Lil Nas X Featuring Billy Ray Cyrus,Old Town Road,man,1,0,Opposite,,Lil Nas X
 2019,2,Post Malone & Swae Lee,Sunflower (Spider-Man: Into The Spider-Verse),man,0,0,,,
-2019,3,Halsey,Without Me,woman,1,0,Unspecified,"Said I'd catch you if you fall (Fall), And if they laugh, then fuck 'em all (All)",Halsey
+2019,3,Halsey,Without Me,woman,1,0,Unspecified,"Said I'd catch <span class=unspecified-gender>you</span> if <span class=unspecified-gender>you</span> fall (Fall), And if they laugh, then fuck 'em all (All)",Halsey
 2019,4,Billie Eilish,Bad Guy,woman,0,0,,,
 2019,5,Post Malone,Wow.,man,0,0,,,
 2019,6,Marshmello & Bastille,Happier,man,0,0,,,
@@ -1112,15 +1112,15 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2019,11,Panic! At The Disco,High Hopes,man,1,0,X,,Panic! At The Disco/Brendon Urie
 2019,12,Ariana Grande,"Thank U, Next",woman,0,0,,,
 2019,13,Lizzo,Truth Hurts,woman,1,0,Opposite,,Lizzo
-2019,14,Sam Smith & Normani,Dancing With A Stranger,mixed,1,0,Non-Binary-Masc,"I wasn't even going out tonight, But, boy, I need to get you off of my mind",Sam Smith
+2019,14,Sam Smith & Normani,Dancing With A Stranger,nb,1,0,Non-Binary-Masc,"I wasn't even going out tonight, But, <span class=nb-relationship>boy</span>, I need to get you off of my mind",Sam Smith
 2019,15,Shawn Mendes & Camila Cabello,Senorita,mixed,0,0,,,
 2019,16,Ed Sheeran & Justin Bieber,I Don't Care,man,0,0,,,
-2019,17,"benny blanco, Halsey & Khalid",Eastside,mixed,1,0,Opposite,"He used to meet me on the Eastside, In the city where the sun don't set",Halsey
+2019,17,"benny blanco, Halsey & Khalid",Eastside,mixed,1,0,Opposite,"<span class=opposite-gender>He</span> used to meet me on the Eastside, In the city where the sun don't set",Halsey
 2019,18,Meek Mill Featuring Drake,Going Bad,man,0,0,,,
-2019,19,Lady Gaga & Bradley Cooper,Shallow,mixed,1,0,Opposite,"Tell me something, boy, Aren't you tired tryna fill that void?",Lady Gaga
+2019,19,Lady Gaga & Bradley Cooper,Shallow,mixed,1,0,Opposite,"Tell me something, <span class=opposite-gender>boy</span>, Aren't you tired tryna fill that void?",Lady Gaga
 2019,20,Khalid,Better,man,0,0,,,
 2019,21,Chris Brown Featuring Drake,No Guidance,man,0,0,,,
-2019,22,Maroon 5 Featuring Cardi B,Girls Like You,mixed,1,0,Opposite,"Cause girls like you, Run 'round with guys like me",Cardi B
+2019,22,Maroon 5 Featuring Cardi B,Girls Like You,mixed,1,0,Opposite,"Cause girls like you, Run 'round with <span class=opposite-gender>guys</span> like me",Cardi B
 2019,23,Ava Max,Sweet But Psycho,woman,1,0,X,,Ava Max
 2019,24,DaBaby,Suge,man,0,0,,,
 2019,25,J. Cole,Middle Child,man,0,0,,,
@@ -1135,8 +1135,8 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2019,34,Drake Featuring Rick Ross,Money In The Grave,man,0,0,,,
 2019,35,Dan + Shay,Speechless,man,0,0,,,
 2019,36,Ariana Grande,"Break Up With Your Girlfriend, I'm Bored",woman,0,0,,,
-2019,37,Cardi B & Bruno Mars,Please Me,mixed,1,0,Opposite,"Gotta celebrate, do you man look good? Better put him away",Cardi B
-2019,38,Cardi B,Money,woman,1,1,Both,"Walk out Follie's with a bitch, Bring a thottie to the whip",Cardi B
+2019,37,Cardi B & Bruno Mars,Please Me,mixed,1,0,Opposite,"Gotta celebrate, do you <span class=opposite-gender>man</span> look good? Better put <span class=opposite-gender>him</span> away",Cardi B
+2019,38,Cardi B,Money,woman,1,1,Both,"Walk out Follie's with a <span class=same-gender>bitch</span>, Bring a <span class=same-gender>thottie</span> to the whip",Cardi B
 2019,39,Taylor Swift,You Need To Calm Down,woman,0,0,,,
 2019,40,Lil Nas X,Panini,man,1,0,X,,Lil Nas X
 2019,41,A Boogie Wit da Hoodie,Look Back At It,man,0,0,,,
@@ -1155,7 +1155,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2019,54,Dean Lewis,Be Alright,man,0,0,,,
 2019,55,Mustard & Migos,Pure Water,man,0,0,,,
 2019,56,Blanco Brown,The Git Up,man,0,0,,,
-2019,57,"DJ Snake Featuring Selena Gomez, Ozuna & Cardi B",Taki Taki,mixed,1,0,Opposite,"He said he wanna to touch it, and tease it, and squeeze it",Cardi B
+2019,57,"DJ Snake Featuring Selena Gomez, Ozuna & Cardi B",Taki Taki,mixed,1,0,Opposite,"<span class=opposite-gender>He</span> said <span class=opposite-gender>he</span> wanna to touch it, and tease it, and squeeze it",Cardi B
 2019,58,Ellie Goulding X Diplo Featuring Swae Lee,Close To Me,mixed,0,0,,,
 2019,59,Calboy,Envy Me,man,0,0,,,
 2019,60,Lauren Daigle,You Say,woman,0,0,,,
@@ -1167,7 +1167,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2019,66,YNW Melly,Murder On My Mind,man,0,0,,,
 2019,67,Billie Eilish,When The Party's Over,woman,0,0,,,
 2019,68,City Girls,Act Up,woman,0,0,,,
-2019,69,"Cardi B, Bad Bunny & J Balvin",I Like It,mixed,1,0,Opposite,"Drop the top and blow the brains, woo, Oh, he's so handsome, what's his name? Yeah",Cardi B
+2019,69,"Cardi B, Bad Bunny & J Balvin",I Like It,mixed,1,0,Opposite,"Drop the top and blow the brains, woo, Oh, <span class=opposite-gender>he's</span> so handsome, what's <span class=opposite-gender>his</span> name? Yeah",Cardi B
 2019,70,SHAED,Trampoline,mixed,1,0,X,,
 2019,71,Flipp Dinero,Leave Me Alone,man,0,0,,,
 2019,72,Ariana Grande,Breathin,woman,0,0,,,
@@ -1181,7 +1181,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2019,80,Ella Mai,Trip,woman,0,0,,,
 2019,81,Lee Brice,Rumor,man,0,0,,,
 2019,82,A Boogie Wit da Hoodie Featuring 6ix9ine,Swervin,man,0,0,,,
-2019,83,Sam Smith,How Do You Sleep?,nb,1,0,Unspecified,"Baby, how do you sleep when you lie to me? All that shame and all that danger",Sam Smith
+2019,83,Sam Smith,How Do You Sleep?,nb,1,0,Unspecified,"Baby, how do <span class=unspecified-gender>you</span> sleep when <span class=unspecified-gender>you</span> lie to me? All that shame and all that danger",Sam Smith
 2019,84,Lil Baby & DaBaby,Baby,man,0,0,,,
 2019,85,Thomas Rhett,Look What God Gave Her,man,0,0,,,
 2019,86,Kane Brown,Good As You,man,0,0,,,
@@ -1222,7 +1222,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2020,21,Lewis Capaldi,Before You Go,man,0,0,,,
 2020,22,Trevor Daniel,Falling,man,0,0,,,
 2020,23,Dan + Shay & Justin Bieber,"10,000 Hours",man,0,0,,,
-2020,24,Cardi B Featuring Megan Thee Stallion,WAP,woman,1,0,Opposite,"He got a beard, well, I'm tryna wet it, I let him taste it, now he diabetic",Cardi B
+2020,24,Cardi B Featuring Megan Thee Stallion,WAP,woman,1,0,Opposite,"<span class=opposite-gender>He</span> got a beard, well, I'm tryna wet it, I let <span class=opposite-gender>him</span> taste it, now he diabetic",Cardi B
 2020,25,Mustard & Roddy Ricch,Ballin',man,0,0,,,
 2020,26,blackbear,Hot Girl Bummer,man,0,0,,,
 2020,27,Lil Mosey,Blueberry Faygo,man,0,0,,,
@@ -1246,7 +1246,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2020,45,Travis Scott,HIGHEST IN THE ROOM,man,0,0,,,
 2020,46,Billie Eilish,Bad Guy,woman,0,0,,,
 2020,47,24kGoldn Featuring iann dior,Mood,man,0,0,,,
-2020,48,Lady Gaga & Ariana Grande,Rain On Me,woman,1,0,Unspecified,"I didn't ask for a free ride, I only asked you to show me a real good time",Lady Gaga
+2020,48,Lady Gaga & Ariana Grande,Rain On Me,woman,1,0,Unspecified,"I didn't ask for a free ride, I only asked <span class=unspecified-gender>you</span> to show me a real good time",Lady Gaga
 2020,49,Pop Smoke Featuring Lil Baby & DaBaby,For The Night,man,0,0,,,
 2020,50,Black Eyed Peas X J Balvin,RITMO (Bad Boys For Life),mixed,0,0,,,
 2020,51,Rod Wave,Heart On Ice,man,0,0,,,
@@ -1280,7 +1280,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2020,79,Lil Baby,Sum 2 Prove,man,0,0,,,
 2020,80,Ariana Grande & Justin Bieber,Stuck With U,mixed,0,0,,,
 2020,81,Pop Smoke Featuring Lil Tjay,Mood Swings,man,0,0,,,
-2020,82,Halsey,You Should Be Sad,woman,1,0,Opposite,"No, you're not half the man you think that you are",Halsey
+2020,82,Halsey,You Should Be Sad,woman,1,0,Opposite,"No, you're not half the <span class=opposite-gender>man</span> you think that you are",Halsey
 2020,83,Pop Smoke,Dior,man,0,0,,,
 2020,84,BENEE Featuring Gus Dapperton,Supalonely,mixed,0,0,,,
 2020,85,Luke Combs,Even Though I'm Leaving,man,0,0,,,

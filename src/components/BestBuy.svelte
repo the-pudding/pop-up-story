@@ -41,42 +41,77 @@
     .building {
         position: absolute;
         background-image: url("../assets/images/bestbuy_drawing.png");
-        width: 400px;
-        height: 400px;
+        top: 0;
+        width: 40%;
+        height: 115%;
         background-size: contain;
         background-repeat: no-repeat;
     }
 
     .dvd {
         position: absolute;
-        left: 300px;
-        top: 0;
+        left: 30%;
+        bottom: 10%;
         background-image: url("../assets/images/dvd_drawing.png");
-        width: 100px;
-        height: 100px;
+        width: 10%;
+        height: 40%;
         background-size: contain;
         background-repeat: no-repeat;
     }
 
     .flag {
         position: absolute;
-        left: 50px;
-        top: -150px;
+        left: 5%;
+        top: -50%;
         background-image: url("../assets/images/flag_drawing.png");
-        width: 125px;
-        height: 266px;
+        width: 20%;
+        height: 90%;
         background-size: contain;
         background-repeat: no-repeat;
     }
 
     .car {
         position: absolute;
-        left: 350px;
+        left: 28%;
         bottom: 0;
         background-image: url("../assets/images/sunfire_drawing.png");
-        width: 250px;
-        height: 150px;
+        width: 35%;
+        height: 45%;
         background-size: contain;
         background-repeat: no-repeat;
+    }
+
+    @media only screen and (max-width: 700px) {
+        #bestbuy {
+            height: 400px;
+        }
+
+        .building {
+            width: 65%;
+            top: 10%;
+        }
+
+        .dvd {
+            left: 65%;
+            bottom: 8%;
+            width: 8%;
+        }
+
+        .flag {
+            top: -5%;
+            left: 5%;
+            width: 15%;
+        }
+
+        .car {
+            left: 50%;
+            width: 40%;
+        }
+    }
+
+    @media only screen and (max-width: 400px) { 
+        #bestbuy {
+            height: 250px;
+        }
     }
 </style>

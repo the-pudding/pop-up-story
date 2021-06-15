@@ -63,6 +63,26 @@
         100%   { background-position: 0 -450px ;}
     }
 
+    @media only screen and (max-width: 700px) {
+        #pole {
+            right: 4rem;
+        }
+
+        .line {
+            width: 7px;
+        }
+
+        .lil-nas-x {
+            right: -65px;
+            height: 125px;
+            width: 125px;
+        }
+
+        @keyframes poleCycle {
+            100%   { background-position: 0 -375px ;}
+        }
+    }
+
     @media only screen and (max-width: 400px) {
         #pole {
             right: 3rem;
@@ -76,6 +96,10 @@
             right: -50px;
             height: 100px;
             width: 100px;
+        }
+
+        @keyframes poleCycle {
+            100%   { background-position: 0 -300px ;}
         }
     }
 </style>

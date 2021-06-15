@@ -80,6 +80,11 @@ import { validate_each_argument } from "svelte/internal";
         opacity: 1;
     }
 
+    #step-8 {
+        pointer-events: none;
+        opacity: 0;
+    }
+
     .step {
         margin: 2rem auto;
 		opacity: 0.5; 

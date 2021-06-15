@@ -17,14 +17,14 @@
 </script>
 
 <section id="chapstick" style="height: {h}px;">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+    <div class="stick"></div>
+    <div class="stick"></div>
+    <div class="stick"></div>
+    <div class="stick"></div>
+    <div class="stick"></div>
+    <div class="stick"></div>
+    <div class="stick"></div>
+    <div class="stick"></div>
 </section>
 
 <style>
@@ -38,12 +38,26 @@
         overflow-x: hidden;
     }
 
-    div { 
+    .stick { 
         width: 200px;
         height: 63px;
         background-image: url("../assets/images/chapstick_drawing.png");
         background-repeat: no-repeat;
         background-size: contain;
         opacity: 0;
+    }
+
+    @media only screen and (max-width: 700px) {
+        .stick {
+            width: 150px;
+            height: 48px;
+        }
+    }
+
+    @media only screen and (max-width: 400px) {
+        .stick {
+            width: 100px;
+            height: 32px;
+        }
     }
 </style>

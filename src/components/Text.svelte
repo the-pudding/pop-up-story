@@ -17,7 +17,6 @@
 	});
 
     function animationSequence() {
-        console.log(poleDancing, lilNasX)
 
         if (poleDancing) {
             lilNasX.classed("with-animation", true)
