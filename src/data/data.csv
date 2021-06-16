@@ -74,7 +74,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2008,73,Jonas Brothers,Burnin' Up,man,0,0,,,
 2008,74,Kanye West,Love Lockdown,man,0,0,,,
 2008,75,The-Dream,I Luv Your Girl,man,0,0,,,
-2008,76,David Archuleta,Crush,man,0,0,,,
+2008,76,David Archuleta,Crush,man,1,0,,,David Archuleta
 2008,77,Plies Featuring Akon,Hypnotized,man,0,0,,,
 2008,78,Fergie,Big Girls Don't Cry,woman,1,0,Unspecified,"And I'm gonna miss <span class=unspecified-gender>you</span> like a child misses their blanket, But I've got to get a move on with my life",The Black Eyed Peas/Fergie
 2008,79,Kanye West Featuring T-Pain,Good Life,man,0,0,,,
@@ -682,7 +682,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2014,81,Lady Antebellum,Bartender,mixed,0,0,,,
 2014,82,Naughty Boy Featuring Sam Smith,La La La,mixed,1,0,Unspecified,"If our love is running out of time, I won't count the hours, rather be a coward",Sam Smith
 2014,83,Robin Thicke Featuring T.I. + Pharrell,Blurred Lines,man,0,0,,,
-2014,84,Lady Gaga Featuring R. Kelly,Do What U Want,mixed,1,0,Opposite,"You're the Marilyn, I'm the president, And I love to hear you sing (Girl)",Lady Gaga
+2014,84,Lady Gaga Featuring R. Kelly,Do What U Want,mixed,1,0,Opposite,"You're the Marilyn, I'm the president, And I love to hear you sing <span class=opposite-gender>(Girl)</span>",Lady Gaga
 2014,85,Shakira Featuring Rihanna,Can't Remember To Forget You,woman,0,0,,,
 2014,86,5 Seconds Of Summer,Amnesia,man,0,0,,,
 2014,87,T.I. Featuring Iggy Azalea,No Mediocre,mixed,0,0,,,
@@ -989,7 +989,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2017,88,Adele,Water Under The Bridge,woman,0,0,,,
 2017,89,Miley Cyrus,Malibu,nb,1,0,Unspecified,"But here I am, next to <span class=unspecified-gender>you</span>, The sky's more blue in Malibu",Miley Cyrus
 2017,90,Marian Hill,Down,mixed,0,0,,,
-2017,91,Cheat Codes Featuring Demi Lovato,No Promises,mixed,1,0,Unspecified,"I just wanna dive in the water, with you, Baby, we can't see the bottom",Demi Lovato
+2017,91,Cheat Codes Featuring Demi Lovato,No Promises,nb,1,0,Unspecified,"I just wanna dive in the water, with <span class=unspecified-gender>you</span>, Baby, we can't see the bottom",Demi Lovato
 2017,92,Shawn Mendes,Treat You Better,man,0,0,,,
 2017,93,Gucci Mane Featuring Migos,I Get The Bag,man,0,0,,,
 2017,94,Dustin Lynch,Small Town Boy,man,0,0,,,
@@ -1102,7 +1102,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2019,1,Lil Nas X Featuring Billy Ray Cyrus,Old Town Road,man,1,0,Opposite,,Lil Nas X
 2019,2,Post Malone & Swae Lee,Sunflower (Spider-Man: Into The Spider-Verse),man,0,0,,,
 2019,3,Halsey,Without Me,woman,1,0,Unspecified,"Said I'd catch <span class=unspecified-gender>you</span> if <span class=unspecified-gender>you</span> fall (Fall), And if they laugh, then fuck 'em all (All)",Halsey
-2019,4,Billie Eilish,Bad Guy,woman,0,0,,,
+2019,4,Billie Eilish,Bad Guy,woman,1,0,,,Billie Eilish
 2019,5,Post Malone,Wow.,man,0,0,,,
 2019,6,Marshmello & Bastille,Happier,man,0,0,,,
 2019,7,Ariana Grande,7 Rings,woman,0,0,,,
@@ -1165,13 +1165,13 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2019,64,"Young Thug, J. Cole & Travis Scott",The London,man,0,0,,,
 2019,65,Daddy Yankee & Katy Perry Featuring Snow,Con Calma,mixed,0,0,,,
 2019,66,YNW Melly,Murder On My Mind,man,0,0,,,
-2019,67,Billie Eilish,When The Party's Over,woman,0,0,,,
+2019,67,Billie Eilish,When The Party's Over,woman,1,0,,,Billie Eilish
 2019,68,City Girls,Act Up,woman,0,0,,,
 2019,69,"Cardi B, Bad Bunny & J Balvin",I Like It,mixed,1,0,Opposite,"Drop the top and blow the brains, woo, Oh, <span class=opposite-gender>he's</span> so handsome, what's <span class=opposite-gender>his</span> name? Yeah",Cardi B
 2019,70,SHAED,Trampoline,mixed,1,0,X,,
 2019,71,Flipp Dinero,Leave Me Alone,man,0,0,,,
 2019,72,Ariana Grande,Breathin,woman,0,0,,,
-2019,73,Billie Eilish,Bury A Friend,woman,0,0,,,
+2019,73,Billie Eilish,Bury A Friend,woman,1,0,,,Billie Eilish
 2019,74,Lil Baby,Close Friends,man,0,0,,,
 2019,75,Pinkfong,Baby Shark,mixed,0,0,,,
 2019,76,Saweetie,My Type,woman,0,0,,,
@@ -1216,7 +1216,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2020,15,Megan Thee Stallion,Savage,woman,1,0,Opposite,,Megan Thee Stallion Featuring DaBaby
 2020,16,Arizona Zervas,Roxanne,man,0,0,,,
 2020,17,Justin Bieber Featuring Quavo,Intentions,man,0,0,,,
-2020,18,Billie Eilish,Everything I Wanted,woman,0,0,,,
+2020,18,Billie Eilish,Everything I Wanted,woman,1,0,,,Billie Eilish
 2020,19,SAINt JHN,Roses,man,0,0,,,
 2020,20,Harry Styles,Watermelon Sugar,man,0,0,,,
 2020,21,Lewis Capaldi,Before You Go,man,0,0,,,
@@ -1244,7 +1244,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2020,43,Powfu Featuring beabadoobee,Death Bed,mixed,1,0,Unspecified,,beabadoobee
 2020,44,Shawn Mendes & Camila Cabello,Senorita,mixed,0,0,,,
 2020,45,Travis Scott,HIGHEST IN THE ROOM,man,0,0,,,
-2020,46,Billie Eilish,Bad Guy,woman,0,0,,,
+2020,46,Billie Eilish,Bad Guy,woman,1,0,,,Billie Eilish
 2020,47,24kGoldn Featuring iann dior,Mood,man,0,0,,,
 2020,48,Lady Gaga & Ariana Grande,Rain On Me,woman,1,0,Unspecified,"I didn't ask for a free ride, I only asked <span class=unspecified-gender>you</span> to show me a real good time",Lady Gaga
 2020,49,Pop Smoke Featuring Lil Baby & DaBaby,For The Night,man,0,0,,,

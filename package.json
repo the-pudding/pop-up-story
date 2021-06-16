@@ -43,6 +43,7 @@
   },
   "dependencies": {
     "intersection-observer": "^0.12.0",
+    "lodash": "^4.17.21",
     "scrollama": "^2.2.2"
   }
 }

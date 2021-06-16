@@ -1,17 +1,21 @@
 <script>
-    import { onMount } from 'svelte';
     import {selectAll} from "d3";
+    import inView from "../actions/inView.js";
 
     export let data;
     export let type;
     let songs;
+
+    function toggleVisible() {
+        console.log("checking")
+    }
 
     function songClick(artist, song) {
         artist[2] = song.song;
         artist[3] = song.sampleLyrics;
         data = data;
 
-        const artistNoSpaces = artist[0].replace(/\s/g, '')
+        const artistNoSpaces = artist[0].replace(/[^A-Z0-9]/ig, '')
         songs = selectAll(`#card-${artistNoSpaces} .song`)
         songs.classed("selected", false);
 
@@ -20,7 +24,9 @@
     }
 </script>
 
-<section id="smallchart">
+<section id="smallchart"
+    use:inView
+    on:enter={() => toggleVisible()}>
     <div class="key">
         {#if type == "cis"}
             <p class="same-gender">Same- & opposite-gender lyrics</p>
@@ -125,6 +131,7 @@
         height: 2.5rem;
         top: 0;
         flex-wrap: wrap;
+        z-index: 999;
     }
 
     .block {

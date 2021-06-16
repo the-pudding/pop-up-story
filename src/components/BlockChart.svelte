@@ -54,7 +54,8 @@ import { validate_each_argument } from "svelte/internal";
     }
 
     #scroll {
-        position: relative
+        position: relative;
+        width: 100%;
     }
 
     .scroll__graphic {
@@ -62,8 +63,8 @@ import { validate_each_argument } from "svelte/internal";
         position: sticky;
         top: 3rem;
         right: 0;
-        margin-left: 2rem;
-        transform: translate3d(0,0,0)
+        margin: 0 2rem 0 0;
+        padding: 0 2rem;
     }
 
     .scroll__text {
@@ -119,7 +120,7 @@ import { validate_each_argument } from "svelte/internal";
     }
 
     .ranking {
-        width: calc(100% - 10rem);
+        width: calc(100% - 3rem);
         margin: 0 0 0 3rem;
         display: flex;
         flex-direction: row;
@@ -143,11 +144,12 @@ import { validate_each_argument } from "svelte/internal";
         display: flex;
         flex-direction: row;
         width: calc(100% - 3rem);
+        justify-content: space-between;
     }
 
     .song {
-        width: 0.25rem;
-        margin: 0 0.125rem;
+        width: 4px;
+        margin: 0 2px;
         height: 2rem;
         background: rgba(255,255,255,0.5);
         pointer-events: none;
@@ -165,16 +167,38 @@ import { validate_each_argument } from "svelte/internal";
         background-size: 2rem 2rem;
     }
 
+    @media only screen and (max-width: 900px) {
+        .song {
+            width: 3px;
+            margin: 0 1px;
+        }
+
+        .is-highlighted {
+            width: 2rem;
+            background-size: 2rem 2rem;
+        }
+    }
+
+    @media only screen and (max-width: 700px) {
+        .song {
+            width: 1px;
+            margin: 0 1px;
+        }
+
+        .is-highlighted {
+            width: 2rem;
+            background-size: 2rem 2rem;
+        }
+    }
+
     @media only screen and (max-width: 400px) {
+        .ranking {
+            margin: 0 0 0 2.25rem;
+            font-size: 0.75rem;
+        }
         .scroll__graphic {
             margin: 0;
             padding: 0 1rem;
-        }
-
-        .ranking {
-            width: calc(100% - 3.5rem);
-            margin: 0 0 0 2.25rem;
-            font-size: 0.75rem; 
         }
         .year p {
             font-size: 0.75rem;

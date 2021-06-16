@@ -82,32 +82,33 @@
 }
 
 .song-snippet {
-	background-color: rgba(255, 255, 255, 0.35);
+	background-color: rgba(255, 255, 255, 0.5);
 	border-radius: 0.25rem;
 	padding: 0.25rem 0.5rem;
 	box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
 	cursor: pointer;
+	transition: background-color 0.5s linear;
 }
 
 .song-snippet:after {
-	content: url("../images/volume-2.svg");
+	content: "\01F50A";
     width: 1.25rem;
     height: 1.25rem;
     display: inline-block;
     position: relative;
-    top: 0.3rem;
+    top: 0rem;
     left: 0rem;
 	margin: 0 0.25rem;
 }
 
 .spanplay:after {
-	content: url("../images/volume-x.svg");
+	content: "\01F507";
     width: 1.25rem;
     height: 1.25rem;
     display: inline-block;
     position: relative;
-    top: 0.3rem;
+    top: 0rem;
     left: 0rem;
 	margin: 0 0.25rem;
 }
@@ -123,6 +124,11 @@
 
 .song-snippet:hover {
 	background-color: rgba(255, 255, 255, 1);
+}
+
+.song-snippet:hover:after {
+	animation: pulse 0.5s infinite linear; 
+	transform-origin: center;
 }
 
 .prose a, #title a {
@@ -169,6 +175,18 @@ body {
 
 .animation:nth-child(4n+4) {
 	animation-delay: 0.75s;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1)
+	}
+	50% {
+		transform: scale(0.75)
+	}
+	0% {
+		transform: scale(1)
+	}
 }
 
 @keyframes rain {

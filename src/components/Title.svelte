@@ -34,7 +34,7 @@
 
 <style>
    #title {
-        max-width: 45em;
+        max-width: 40em;
         margin: 0 auto 5rem auto;
         padding: 1rem;
    }
@@ -43,19 +43,38 @@
        text-transform: uppercase;
        font-weight: 700;
        font-family: var(--anton);
-       font-size: 12rem;
+       font-size: 11rem;
        margin: 0;
        padding: 0;
        line-height: 1;
+   }
+
+   h2 {
+       font-size: 2rem;
+       max-width: 35rem;
    }
 
    .byline-bold {
        font-weight: 700;
    }
 
-   @media only screen and (max-width: 400px) {
+   @media only screen and (max-width: 700px) {
+        h1 {
+            font-size: 7.5rem;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+        }
+    }
+
+   @media only screen and (max-width: 450px) {
         h1 {
             font-size: 5.25rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
         }
     }
 </style>

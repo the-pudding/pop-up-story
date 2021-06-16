@@ -13,31 +13,60 @@
   import copy from "../data/doc.json";
   import data from "../data/data.csv";
   import previews from "../data/song-previews.csv";
-  import {select, selectAll, groups, ascending} from "d3";
+  import {select, selectAll, groups, ascending, format} from "d3";
   import "intersection-observer";
   import scrollama from "scrollama";
-  import { fly } from 'svelte/transition';
+  import { fly } from "svelte/transition";
+  import _ from "lodash";
 
   // AUDIO
   let audioEl;
   let songSpans;
   let songPlaying = false;
-  let songHighlights;
+  let songData;
+  let songUrl;
+  let songTitle;
+  let songArtist;
+  
+  // SCROLL
   let scrollContainer;
   let scrollGraphic;
   let scrollText;
+  let songHighlights;
 
-  let dataFiltered = data.filter(d => d.queerFlag == 1);
+  // DATA TO PASS TO COMPONENTS
+  let duplicateID = data.map(d => ({
+    ...d,
+    songArtistCombo: stripSpecialChar(d.song + d.artist)
+  }))
+  let noDuplicates = _.uniqBy(duplicateID, "songArtistCombo")
+  let dataFiltered = noDuplicates.filter(d => d.queerFlag == 1);
   dataFiltered = dataFiltered.sort((a,b) => ascending(a.relationshipType, b.relationshipType));
   let dataQueerArtists = dataFiltered.filter(d => d.gender !== "nb");
   let dataNBArtists = dataFiltered.filter(d => d.gender == "nb");
   let dataQueerSpotlight = groups(dataQueerArtists, d => d.artistID);
   let dataNBSpotlight = groups(dataNBArtists, d => d.artistID);
 
-  let songData;
-  let songUrl;
-  let songTitle;
-  let songArtist;
+  // NUMS TO REPLACE SPANS
+  let percentSongs = ((noDuplicates.filter(d => d.lyricFlag == 1).length)/(noDuplicates.length)*100).toFixed(1);
+  let formatComma = format(",")
+  let countSGSongs = noDuplicates.filter(d => d.lyricFlag == 1).length;
+  let countSGSongsMinusKaty = countSGSongs - 1;
+  let countSongs = noDuplicates.length;
+  let countQueerArtistSongs = dataFiltered.length;
+  let countSameGenderSongs = dataFiltered.filter(d => d.lyricFlag == 1).length;
+  let countNBArtistSongs = dataNBArtists.filter(d => d.relationshipType == "Non-Binary-Masc").length;
+
+  let percentSongsSpan;
+  let countSongsSpan;
+  let countSGSongsSpan;
+  let countSGSongsMinusKatySpan;
+  let countQueerArtistSongsSpan;
+  let countSameGenderSongsSpan;
+  let countNBArtistSongsSpan;
+
+  // FUNCTIONS
+  function stripSpecialChar(text) { return text.replace(/[^A-Z0-9]/ig, '') }
 
   function playSong(e) {
     const songId = this.id
@@ -49,8 +78,6 @@
 
     songTitle = songData.title;
     songArtist = songData.artist;
-
-    console.log(songSpans);
 
     if (songPlaying) {
       audioEl.pause();
@@ -92,20 +119,20 @@
       debug: false, // display the trigger offset for testing
     })
     .onStepEnter(handleStepEnter)
-    // .onStepExit(handleStepExit)
+    .onStepExit(handleStepExit)
+  }
+
+  function handleStepExit(response) {
+    if (response.index == 0 && response.direction == "up") { 
+      songHighlights.classed("is-highlighted", false);
+      songHighlights.style("background-image", "none");
+    }
   }
 
   function handleStepEnter(response) {
     scrollStep.classed('is-active', (d, i) => i === response.index);
     renderStep(response.index)
   }
-
-  // function handleStepExit(response) {
-  //   if (index == 0) { 
-  //     songHighlights.classed("is-highlighted", false)
-  //     songHighlights.style("background-image", "none")
-  //   }
-  // }
 
   function renderStep(index) {
     songHighlights.classed("is-highlighted", false);
@@ -125,13 +152,31 @@
 
   // MOUNT
   onMount(() => {
+    // AUDIO
     songSpans = selectAll('.song-snippet');
     songSpans.on("click", playSong);
 
+    // SCROLL
     songHighlights = selectAll(".song-highlight")
     scrollStep = selectAll(".step");
     scrollSetup();
     scrollDimensions();
+
+    // NUM SPANS
+    percentSongsSpan = selectAll(".percentSongs");
+    percentSongsSpan.text(percentSongs);
+    countSGSongsSpan = selectAll(".countSGSongs");
+    countSGSongsSpan.text(countSGSongs);
+    countSGSongsMinusKatySpan = selectAll(".countSGSongsMinusKaty")
+    countSGSongsMinusKatySpan.text(countSGSongsMinusKaty);
+    countSongsSpan = selectAll(".countSongs");
+    countSongsSpan.text(formatComma(countSongs));
+    countQueerArtistSongsSpan = selectAll(".countQueerArtistSongs");
+    countQueerArtistSongsSpan.text(countQueerArtistSongs);
+    countSameGenderSongsSpan = selectAll(".countSameGenderSongs");
+    countSameGenderSongsSpan.text(countSameGenderSongs);
+    countNBArtistSongsSpan = selectAll(".countNBArtistSongsSpan");
+    countNBArtistSongsSpan.text(countNBArtistSongs);
 	});
 
 </script>
@@ -149,13 +194,13 @@
 <Text copy="{copy.prose3}" section=3/>
 <BlockChart data="{data}" />
 <Text copy="{copy.prose5}" section=5/>
-<SmallChart data="{dataQueerSpotlight}" type="cis" />
+<SmallChart data="{dataQueerSpotlight}" type="cis"/>
 <Text copy="{copy.prose6}" section=6/>
 <SmallChart data="{dataNBSpotlight}" type="nb" />
 <Text copy="{copy.prose7}" section=7/>
 <Text copy="{copy.method}" section=8/>
 <div class="playlist">
-  <iframe src="https://open.spotify.com/embed/playlist/3g0RrpYM6zZ7d4nfP3XeEh" width="480" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  <iframe src="https://open.spotify.com/embed/playlist/3g0RrpYM6zZ7d4nfP3XeEh" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
 </div>
 
@@ -194,11 +239,13 @@
     top: 0;
     left: 0;
     height: 5rem;
+    z-index: 1000;
   }
 
   .disco-drop {
     display: flex;
     flex-direction: row;
+    padding: 0 0.5rem 0.5rem 0.5rem;
   }
 
   .display-none {
@@ -219,6 +266,7 @@
   .details p {
     margin: 0;
     font-size: 0.75rem;
+    text-shadow: 0px 0px 2px white, 0px 0px 4px rgba(255, 255, 255, 0.75), 0px 0px 6px rgba(255, 255, 255, 0.5);
   }
 
   .playing-intro {
@@ -227,8 +275,15 @@
 
   .playlist {
     margin: 0 auto;
+    padding: 0 1rem;
     max-width: 40rem;
     display: flex;
     justify-self: center;
+  }
+
+  @media only screen and (max-width: 850px) {
+    .playing {
+      display: none;
+    }
   }
 </style>

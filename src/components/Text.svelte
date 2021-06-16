@@ -43,7 +43,7 @@
     </div>
 </section>
 {:else if sectionNum == 8}
-<section class="method">
+<section class="method" id="method-anchor">
     <h3>Methods & Notes</h3>
     <div class="prose">
         {#each copy as {value}}
@@ -89,7 +89,7 @@
         font-size: 1rem;
     }
 
-    @media only screen and (max-width: 400px) {
+    @media only screen and (max-width: 450px) {
         p {
             font-size: 1.25rem;
         }
