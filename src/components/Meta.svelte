@@ -1,7 +1,6 @@
 <script>
   import copy from "../data/doc.json";
 
-  console.log(copy)
   let url = "https://pudding.cool";
 </script>
 

@@ -3,12 +3,7 @@
     import inView from "../actions/inView.js";
 
     export let data;
-    export let type;
     let songs;
-
-    function toggleVisible() {
-        
-    }
 
     function songClick(artist, song) {
         artist[2] = song.song;

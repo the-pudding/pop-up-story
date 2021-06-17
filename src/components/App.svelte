@@ -44,7 +44,6 @@
   dataFiltered = dataFiltered.sort((a,b) => ascending(a.relationshipType, b.relationshipType));
   let dataQueerSpotlight = groups(dataFiltered, d => d.artistID);
   dataQueerSpotlight = dataQueerSpotlight.sort((a,b) => ascending(a[0][0], b[0][0]))
-  console.log(dataQueerSpotlight);
 
   // NUMS TO REPLACE SPANS
   let percentSongs = ((noDuplicates.filter(d => d.lyricFlag == 1).length)/(noDuplicates.length)*100).toFixed(1);
