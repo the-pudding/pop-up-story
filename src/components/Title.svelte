@@ -34,7 +34,7 @@
 
 <style>
    #title {
-        max-width: 40em;
+        max-width: 55em;
         margin: 0 auto 5rem auto;
         padding: 1rem;
    }
@@ -43,15 +43,22 @@
        text-transform: uppercase;
        font-weight: 700;
        font-family: var(--anton);
-       font-size: 11rem;
-       margin: 0;
+       font-size: 7.5rem;
+       margin: 0 0 1rem 0;
        padding: 0;
        line-height: 1;
+       text-align: center;
    }
 
    h2 {
        font-size: 2rem;
-       max-width: 35rem;
+       text-align: center;
+       max-width: 45rem;
+       margin: 0 auto;
+   }
+
+   .byline {
+       text-align: center;
    }
 
    .byline-bold {

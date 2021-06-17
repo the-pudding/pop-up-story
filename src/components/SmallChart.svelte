@@ -28,16 +28,11 @@
     use:inView
     on:enter={() => toggleVisible()}>
     <div class="key">
-        {#if type == "cis"}
-            <p class="same-gender">Same- & opposite-gender lyrics</p>
-            <p class="opposite-gender">Opposite-gender lyrics only</p>
-            <p class="unspecified-gender">Unspecified gender lyricss</p>
-            <p class="no-relationship">No relationship lyrics</p>
-        {:else}
-            <p class="nb-relationship">Masculine pronoun lyrics</p>
-            <p class="unspecified-gender">Unspecified gender lyrics</p>
-            <p class="no-relationship">No relationship lyrics</p>
-        {/if}
+        <p class="same-gender">Same- & opposite-gender lyrics</p>
+        <p class="opposite-gender">Opposite-gender lyrics only</p>
+        <p class="nb-relationship">Non-binary artist & masculine pronoun lyrics</p>
+        <p class="unspecified-gender">Unspecified gender lyrics</p>
+        <p class="no-relationship">No relationship lyrics</p>
     </div>
     <div class="cards">
         {#each data as artist, i}
@@ -46,7 +41,7 @@
                 <div class="img-wrapper">
                     <img src="./assets/images/{artist[0].replace(/[^A-Z0-9]/ig, '').toLowerCase()}.png" alt="{artist[0]} portrait">
                 </div>
-                <p>{artist[0]}</p>
+                <p class="name">{artist[0]}</p>
                 <div class="songs">
                     {#each artist[1] as song, i}
                         {#if i == 0}
@@ -142,10 +137,13 @@
 
     .key p {
         margin: 0;
-        padding: 0.5rem 0;
-        width: 25%;
-        text-align: center;
+        padding: 0.5rem 0.5rem;
+        width: 20%;
         font-weight: 700;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
     }
 
     .cards {
@@ -177,11 +175,22 @@
         transform: rotate(10deg);
     }
 
-    .card p {
+    .tooltip p {
         font-weight: 700;
         text-align: center;
         margin: 1rem 0;
         font-size: 1.25rem;
+    }
+
+    .name {
+        font-family: var(--anton);
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        text-align: center;
+        height: 4.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .songs {
@@ -206,10 +215,27 @@
         font-size: 1rem;
     }
 
-    @media only screen and (max-width: 400px) {
+    @media only screen and (max-width: 1050px) {
+        .key {
+            height: 6rem;
+        }
         .key p {
             width: 50%;
-            font-size: 0.65rem;
+        }
+    }
+
+    @media only screen and (max-width: 800px) {
+        .key p {
+            font-size: 0.8rem;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        .key {
+            height: 10rem;
+        }
+        .key p {
+            width: 100%;
         }
     }
 </style>

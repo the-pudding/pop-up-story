@@ -122,6 +122,10 @@
 	background-position: bottom 0 right 0.25rem;
 }
 
+#method-anchor p {
+	line-height: 1.5;
+}
+
 .song-snippet:hover {
 	background-color: rgba(255, 255, 255, 1);
 }
@@ -151,6 +155,7 @@
 
 body {
 	background: linear-gradient(180deg, rgba(255, 0, 255, 0.4) 0%, rgba(255, 255, 0, 0.4) 50%, rgba(0, 255, 255, 0.4) 100%);
+	overflow-x: hidden;
 }
 
 .animation {
@@ -212,10 +217,6 @@ body {
 	z-index: 1000;
 }
 
-.with-animation {
-	animation: poleCycle 2s steps(3) infinite;
-}
-
 .same-gender, .both-gender {
 	background-color: yellow;
 }
@@ -240,6 +241,20 @@ body {
 	100%   { background-position: 0 -450px ;}
 }
 
+.with-animation {
+	animation: poleCycle 2s steps(3) infinite;
+}
+
+@media only screen and (max-width: 700px) {
+	@keyframes poleCycle {
+		100%   { background-position: 0 -375px ;}
+	}
+
+	.with-animation {
+		animation: poleCycle 2s steps(3) infinite;
+	}
+}
+
 @media only screen and (max-width: 400px) {
 	.song-snippet {
 		background-position: bottom 0.125rem right 0.25rem;
@@ -247,5 +262,13 @@ body {
 	.method .song-snippet {
 		background-size: 1.25rem;
     	background-position: bottom 0.125rem right 0.5rem;
+	}
+
+	@keyframes poleCycle {
+		100%   { background-position: 0 -300px ;}
+	}
+
+	.with-animation {
+		animation: poleCycle 2s steps(3) infinite;
 	}
 }

@@ -13,7 +13,7 @@
   import copy from "../data/doc.json";
   import data from "../data/data.csv";
   import previews from "../data/song-previews.csv";
-  import {select, selectAll, groups, ascending, format} from "d3";
+  import {select, selectAll, groups, ascending, format, groupSort} from "d3";
   import "intersection-observer";
   import scrollama from "scrollama";
   import { fly } from "svelte/transition";
@@ -42,10 +42,9 @@
   let noDuplicates = _.uniqBy(duplicateID, "songArtistCombo")
   let dataFiltered = noDuplicates.filter(d => d.queerFlag == 1);
   dataFiltered = dataFiltered.sort((a,b) => ascending(a.relationshipType, b.relationshipType));
-  let dataQueerArtists = dataFiltered.filter(d => d.gender !== "nb");
-  let dataNBArtists = dataFiltered.filter(d => d.gender == "nb");
-  let dataQueerSpotlight = groups(dataQueerArtists, d => d.artistID);
-  let dataNBSpotlight = groups(dataNBArtists, d => d.artistID);
+  let dataQueerSpotlight = groups(dataFiltered, d => d.artistID);
+  dataQueerSpotlight = dataQueerSpotlight.sort((a,b) => ascending(a[0][0], b[0][0]))
+  console.log(dataQueerSpotlight);
 
   // NUMS TO REPLACE SPANS
   let percentSongs = ((noDuplicates.filter(d => d.lyricFlag == 1).length)/(noDuplicates.length)*100).toFixed(1);
@@ -55,7 +54,6 @@
   let countSongs = noDuplicates.length;
   let countQueerArtistSongs = dataFiltered.length;
   let countSameGenderSongs = dataFiltered.filter(d => d.lyricFlag == 1).length;
-  let countNBArtistSongs = dataNBArtists.filter(d => d.relationshipType == "Non-Binary-Masc").length;
 
   let percentSongsSpan;
   let countSongsSpan;
@@ -63,7 +61,6 @@
   let countSGSongsMinusKatySpan;
   let countQueerArtistSongsSpan;
   let countSameGenderSongsSpan;
-  let countNBArtistSongsSpan;
 
 
   // FUNCTIONS
@@ -146,7 +143,7 @@
   let scrollStep;
 
   function scrollDimensions() {
-    const stepHeight = Math.floor(window.innerHeight * 0.75);
+    const stepHeight = Math.floor(window.innerHeight * 1.25);
     scrollStep.style('height', stepHeight + 'px');
 
     const bodyWidth = select('body').node().offsetWidth;
@@ -223,8 +220,6 @@
     countQueerArtistSongsSpan.text(countQueerArtistSongs);
     countSameGenderSongsSpan = selectAll(".countSameGenderSongs");
     countSameGenderSongsSpan.text(countSameGenderSongs);
-    countNBArtistSongsSpan = selectAll(".countNBArtistSongsSpan");
-    countNBArtistSongsSpan.text(countNBArtistSongs);
 	});
 
 </script>
@@ -242,11 +237,9 @@
 <Text copy="{copy.prose3}" section=3/>
 <BlockChart data="{data}" />
 <Text copy="{copy.prose5}" section=5/>
-<SmallChart data="{dataQueerSpotlight}" type="cis"/>
+<SmallChart data="{dataQueerSpotlight}"/>
 <Text copy="{copy.prose6}" section=6/>
-<SmallChart data="{dataNBSpotlight}" type="nb" />
-<Text copy="{copy.prose7}" section=7/>
-<Text copy="{copy.method}" section=8/>
+<Text copy="{copy.method}" section=7/>
 <div class="playlist">
   <iframe title="Queer Lyric References Spotify Playlist" src="https://open.spotify.com/embed/playlist/3g0RrpYM6zZ7d4nfP3XeEh" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 

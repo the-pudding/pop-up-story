@@ -1,22 +1,23 @@
 <script>
-  export let title = "I Kissed a Girl & I Liked It";
-  export let description = "A story about hearing yourself represented in music for the first time and chasing that high ever since";
-  export let url = "https://pudding.cool";
+  import copy from "../data/doc.json";
+
+  console.log(copy)
+  let url = "https://pudding.cool";
 </script>
 
 <svelte:head>
-  <title>{title}</title>
+  <title>{copy.meta[0].headline}</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="description" content="{description}" />
+  <meta name="description" content="{copy.meta[0].subhed}" />
   <meta name="author" content="" />
   <meta name="news_keywords" content="" />
 
-  <meta property="og:title" content="{title}" />
+  <meta property="og:title" content="{copy.meta[0].headline}" />
   <meta property="og:site_name" content="The Pudding" />
   <meta property="og:url" content="{url}" />
-  <meta property="og:description" content="{description}" />
+  <meta property="og:description" content="{copy.meta[0].subhed}" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="en_US" />
 
@@ -28,8 +29,8 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="{url}" />
   <meta name="twitter:creator" content="@puddingviz" />
-  <meta name="twitter:title" content="{title}" />
-  <meta name="twitter:description" content="{description}" />
+  <meta name="twitter:title" content="{copy.meta[0].headline}" />
+  <meta name="twitter:description" content="{copy.meta[0].subhed}" />
   <meta name="twitter:image:src" content="{url}/assets/social/twitter.jpg" />
 
   <meta name="robots" content="max-image-preview:large" />

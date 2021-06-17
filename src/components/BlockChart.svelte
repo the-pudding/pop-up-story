@@ -1,6 +1,5 @@
 <script>
-    import {groups, sort, ascending} from "d3";
-import { validate_each_argument } from "svelte/internal";
+    import {groups, ascending, select} from "d3";
     import copy from "../data/doc.json";
 
     export let data;
@@ -11,8 +10,9 @@ import { validate_each_argument } from "svelte/internal";
     <div id="scroll">
         <div class="scroll__graphic sticky">
             <div>
+                <h3>Songs with explicit same-gender lyrics in the Billboard year-end Hot 100</h3>
                 <div class="ranking">
-                    <p>#1</p>
+                    <p>#1 ranking</p>
                     <p>#100</p>
                 </div>
                 {#each dataByYear as year, i}
@@ -50,7 +50,17 @@ import { validate_each_argument } from "svelte/internal";
 <style>
     #blockchart {
         max-width: 60em;
-        margin: 0 auto;
+        margin: 5rem auto 0 auto;
+    }
+
+    h3 {
+        font-weight: 700;
+        font-family: var(--anton);
+        max-width: 60rem;
+        padding: 0 1rem;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.5rem;
     }
 
     #scroll {
