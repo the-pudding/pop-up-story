@@ -56,9 +56,9 @@
         animation: poleCycle 2s steps(3) infinite;
     }
 
-    .with-animation {
+    /* .with-animation {
         animation: poleCycle 2s steps(3) infinite;
-    }
+    } */
 
     @keyframes poleCycle {
         100%   { background-position: 0 -450px ;}

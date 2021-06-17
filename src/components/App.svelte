@@ -248,7 +248,7 @@
 <Text copy="{copy.prose7}" section=7/>
 <Text copy="{copy.method}" section=8/>
 <div class="playlist">
-  <iframe src="https://open.spotify.com/embed/playlist/3g0RrpYM6zZ7d4nfP3XeEh" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  <iframe title="Queer Lyric References Spotify Playlist" src="https://open.spotify.com/embed/playlist/3g0RrpYM6zZ7d4nfP3XeEh" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
 </div>
 
