@@ -32,6 +32,7 @@
         right: 6rem;
         pointer-events: none;
         z-index: 100;
+        height: 100vh;
     }
 
     div {

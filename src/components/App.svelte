@@ -65,11 +65,16 @@
   let countSameGenderSongsSpan;
   let countNBArtistSongsSpan;
 
+
   // FUNCTIONS
   function stripSpecialChar(text) { return text.replace(/[^A-Z0-9]/ig, '') }
 
+  let prevEvent;
+
   function playSong(e) {
-    const songId = this.id
+    let currEvent = e.path[0];
+
+    const songId = this.id;
 
     songData = previews.filter(d => d.shortname == songId)[0];
 
@@ -79,18 +84,29 @@
     songTitle = songData.title;
     songArtist = songData.artist;
 
-    if (songPlaying) {
+    if (prevEvent == currEvent && songPlaying) {
       audioEl.pause();
       songSpans.classed("spanplay", false);
-      this.classList.remove("spanplay")
+      this.classList.remove("spanplay");
+    }
+    else if (prevEvent !== currEvent && songPlaying) {
+      audioEl.play();
+      songSpans.classed("spanplay", false);
+      this.classList.add("spanplay");
+    }
+    else if (prevEvent == currEvent && !songPlaying) {
+      audioEl.pause();
+      songSpans.classed("spanplay", false);
+      this.classList.remove("spanplay");
     }
     else {
       audioEl.play();
       songSpans.classed("spanplay", false);
-      this.classList.add("spanplay")
+      this.classList.add("spanplay");
     }
 
     songPlaying = !songPlaying;
+    prevEvent = e.path[0];
   }
 
   // SCROLL
