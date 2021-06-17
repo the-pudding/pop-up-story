@@ -7,7 +7,7 @@
     let songs;
 
     function toggleVisible() {
-        console.log("checking")
+        
     }
 
     function songClick(artist, song) {
