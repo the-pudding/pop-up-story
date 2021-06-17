@@ -84,28 +84,60 @@
     songTitle = songData.title;
     songArtist = songData.artist;
 
+    // equal + not playing
     if (prevEvent == currEvent && songPlaying) {
+      console.log(prevEvent, currEvent, "first", songPlaying)
       audioEl.pause();
       songSpans.classed("spanplay", false);
       this.classList.remove("spanplay");
+      songPlaying = !songPlaying;
+      if (songPlaying) {
+        songPlaying = !songPlaying;
+      }
+      else {
+        songPlaying = songPlaying;
+      }
     }
+    // not equal + not playing
     else if (prevEvent !== currEvent && songPlaying) {
+      console.log(prevEvent, currEvent, "second", songPlaying)
       audioEl.play();
       songSpans.classed("spanplay", false);
       this.classList.add("spanplay");
+      if (songPlaying) { songPlaying = songPlaying;
+      }
+      else {
+        songPlaying = !songPlaying;
+      }
     }
+    // equal + playing
     else if (prevEvent == currEvent && !songPlaying) {
-      audioEl.pause();
-      songSpans.classed("spanplay", false);
-      this.classList.remove("spanplay");
-    }
-    else {
+      console.log(prevEvent, currEvent, "third", songPlaying)
       audioEl.play();
       songSpans.classed("spanplay", false);
       this.classList.add("spanplay");
+      if (songPlaying) {
+        songPlaying = songPlaying;
+      }
+      else {
+        songPlaying = !songPlaying;
+      }
+    }
+    // not equal + playing
+    else {
+      console.log(prevEvent, currEvent, "fourth", songPlaying)
+      audioEl.play();
+      songSpans.classed("spanplay", false);
+      this.classList.add("spanplay");
+      songPlaying = !songPlaying;
+      if (songPlaying) {
+        songPlaying = songPlaying;
+      }
+      else {
+        songPlaying = !songPlaying;
+      }
     }
 
-    songPlaying = !songPlaying;
     prevEvent = e.path[0];
   }
 
