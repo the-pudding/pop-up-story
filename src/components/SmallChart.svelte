@@ -1,6 +1,5 @@
 <script>
     import {selectAll} from "d3";
-    import inView from "../actions/inView.js";
 
     export let data;
     let songs;
@@ -19,9 +18,7 @@
     }
 </script>
 
-<section id="smallchart"
-    use:inView
-    on:enter={() => toggleVisible()}>
+<section id="smallchart">
     <div class="key">
         <p class="same-gender">Same- & opposite-gender lyrics</p>
         <p class="opposite-gender">Opposite-gender lyrics only</p>
