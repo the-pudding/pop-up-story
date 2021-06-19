@@ -20,7 +20,7 @@
 {#if icon}
   <svg
     {...icon.attrs}
-    style="width: {width}; height: {height}; transform: rotate({rotation}deg);"
+    style="width: {width}; height: {height}; transform: translate(0.125rem, 0.125rem) rotate({rotation}deg);"
   >
     <g>
       {@html icon.contents}

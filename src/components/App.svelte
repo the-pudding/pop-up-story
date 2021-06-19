@@ -18,6 +18,7 @@
   import scrollama from "scrollama";
   import { fly } from "svelte/transition";
   import _ from "lodash";
+  import { songPlayingSTORE } from "../stores/global.js";
 
   // AUDIO
   let audioEl;
@@ -81,56 +82,52 @@
     songArtist = songData.artist;
 
     // equal + not playing
-    if (prevEvent == currEvent && songPlaying) {
-      console.log(prevEvent, currEvent, "first", songPlaying)
+    if (prevEvent == currEvent && $songPlayingSTORE) {
       audioEl.pause();
       songSpans.classed("spanplay", false);
       this.classList.remove("spanplay");
-      songPlaying = !songPlaying;
-      if (songPlaying) {
-        songPlaying = !songPlaying;
+      if ($songPlayingSTORE) {
+        songPlayingSTORE.set(false)
       }
       else {
-        songPlaying = songPlaying;
+        songPlayingSTORE.set(true)
       }
     }
     // not equal + not playing
-    else if (prevEvent !== currEvent && songPlaying) {
-      console.log(prevEvent, currEvent, "second", songPlaying)
+    else if (prevEvent !== currEvent && $songPlayingSTORE) {
       audioEl.play();
       songSpans.classed("spanplay", false);
       this.classList.add("spanplay");
-      if (songPlaying) { songPlaying = songPlaying;
+      if ($songPlayingSTORE) { 
+        songPlayingSTORE.set(true)
       }
       else {
-        songPlaying = !songPlaying;
+        songPlayingSTORE.set(false)
       }
     }
     // equal + playing
-    else if (prevEvent == currEvent && !songPlaying) {
-      console.log(prevEvent, currEvent, "third", songPlaying)
+    else if (prevEvent == currEvent && !$songPlayingSTORE) {
       audioEl.play();
       songSpans.classed("spanplay", false);
       this.classList.add("spanplay");
-      if (songPlaying) {
-        songPlaying = songPlaying;
+      if ($songPlayingSTORE) {
+        songPlayingSTORE.set(false)
       }
       else {
-        songPlaying = !songPlaying;
+        songPlayingSTORE.set(true)
       }
     }
     // not equal + playing
     else {
-      console.log(prevEvent, currEvent, "fourth", songPlaying)
       audioEl.play();
       songSpans.classed("spanplay", false);
       this.classList.add("spanplay");
-      songPlaying = !songPlaying;
-      if (songPlaying) {
-        songPlaying = songPlaying;
+      songPlayingSTORE.set(false)
+      if ($songPlayingSTORE) {
+        songPlayingSTORE.set(false)
       }
       else {
-        songPlaying = !songPlaying;
+        songPlayingSTORE.set(true)
       }
     }
 
@@ -241,12 +238,11 @@
 <Text copy="{copy.method}" section=7/>
 <div class="playlist">
   <iframe title="Queer Lyric References Spotify Playlist" src="https://open.spotify.com/embed/playlist/3g0RrpYM6zZ7d4nfP3XeEh" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-
 </div>
 
 
 <div class="playing">
-  {#if songPlaying}
+  {#if $songPlayingSTORE}
   <div transition:fly="{{ y: -200, duration: 1000 }}" class="disco-drop">
     <img src="assets/images/discoball.gif" alt="spinning disco ball">
     <div class="details">
@@ -286,10 +282,12 @@
     display: flex;
     flex-direction: row;
     padding: 0 0.5rem 0.5rem 0.5rem;
+    opacity: 1;
+    transition: opacity 0.5s linear;
   }
 
   .display-none {
-    display: none;
+    opacity: 0;
   }
 
   .playing img {

@@ -1,8 +1,30 @@
 <script>
     import {select, selectAll} from "d3";
+    import { onMount } from 'svelte';
+    import inView from "../actions/inView.js";
+    import { songPlayingSTORE } from "../stores/global.js";
 
     export let data;
     let songs;
+    let discoBall;
+
+    onMount(() => {
+        let discoBall = select(".disco-drop");
+	});
+
+    function chartBallIN() {
+        discoBall = select(".disco-drop");
+        if ($songPlayingSTORE) {
+            discoBall.classed("display-none", true)
+        }
+    }
+
+    function chartBallOUT() {
+        discoBall = select(".disco-drop");
+        if ($songPlayingSTORE) {
+            discoBall.classed("display-none", false)
+        }
+    }
 
     function songClick(artist, song) {
         artist[2] = song.song;
@@ -18,7 +40,11 @@
     }
 </script>
 
-<section id="smallchart">
+<section id="smallchart"
+    use:inView
+    on:enter={() => chartBallIN()}
+    on:exit={() => chartBallOUT()}
+>
     <div class="key">
         <p class="same-gender">Same- & opposite-gender lyrics</p>
         <p class="opposite-gender">Opposite-gender lyrics only</p>

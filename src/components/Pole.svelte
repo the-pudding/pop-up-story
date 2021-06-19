@@ -2,27 +2,17 @@
     import { onMount } from 'svelte';
     import { fly } from "svelte/transition";
     import Icon from "./helpers/Icon.svelte";
+    import {select} from "d3";
 
     let y;
     let padPos = 200;
-    let h;
-
-    onMount(() => {
-        setInterval(() => {
-            h = Math.max(
-                document.body.clientHeight, 
-                document.body.scrollHeight,
-                document.body.offsetHeight
-            );
-        }, 2000)
-	});
 </script>
 
 <svelte:window bind:scrollY={y} />
 
 <section id="pole">
     <div>
-        <div class="line" style="height: {h}px;"></div>
+        <div class="line"></div>
         <div class="lil-nas-x">
             <div transition:fly="{{ y: -200, duration: 1000 }}" class="bubble">
                 <p class="text">can’t believe i haven’t said bussy in a song yet. something has to be done about this.</p>
@@ -48,6 +38,7 @@
     .line {
         position: absolute;
         width: 10px;
+        height: 100vh;
         background-image: linear-gradient(90deg, var(--gray), var(--gray-light), var(--gray), var(--gray-dark), var(--gray), var(--gray-light), var(--gray));
     }
 
