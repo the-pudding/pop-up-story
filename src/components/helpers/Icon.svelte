@@ -32,7 +32,9 @@
   svg {
     width: 1em;
     height: 1em;
+    transform: translateY(0.125rem);
     overflow: visible;
     transform-origin: 50% 50%;
+    fill: #282828;
   }
 </style>

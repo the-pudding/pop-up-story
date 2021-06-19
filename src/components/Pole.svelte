@@ -1,6 +1,7 @@
 <script>
     import { onMount } from 'svelte';
     import { fly } from "svelte/transition";
+    import Icon from "./helpers/Icon.svelte";
 
     let y;
     let padPos = 200;
@@ -24,7 +25,8 @@
         <div class="line" style="height: {h}px;"></div>
         <div class="lil-nas-x">
             <div transition:fly="{{ y: -200, duration: 1000 }}" class="bubble">
-                <p>"One day when somebody says this, it's just gonna be 'Oh that person said this' and not even think about it." <span>— Lil Nas X</span></p>
+                <p class="text">can’t believe i haven’t said bussy in a song yet. something has to be done about this.</p>
+                <a href="https://twitter.com/LilNasX/status/1397356243560255489?s=20" target=_blank><p class="credit">Lil Nas X on <Icon name="twitter" /></p></a>
             </div>
         </div>
     </div>
@@ -35,7 +37,6 @@
         position: fixed;
         top: 0;
         right: 6rem;
-        pointer-events: none;
         z-index: 100;
         height: 100vh;
     }
@@ -63,10 +64,11 @@
 
     .bubble {
         padding: 1rem;
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(255, 255, 255, 0.7);
         position: absolute;
-        left: -100px;
-        width: 100%;
+        left: -10px;
+        top: -80px;
+        width: 110%;
         border-radius: 0.25rem;
         opacity: 0;
         transition: opacity 1s linear;
@@ -77,22 +79,23 @@
         margin: 0;
     }
 
-    .bubble span {
+    .credit {
         font-weight: 700;
     }
 
     .bubble:after {
         content: '';
         position: absolute;
-        right: 0;
-        top: 50%;
+        bottom: 0;
+        left: 50%;
         width: 0;
         height: 0;
         border: 20px solid transparent;
-        border-left-color: rgba(255, 255, 255, 0.5);
-        border-right: 0;
-        margin-top: -20px;
-        margin-right: -20px;
+        border-top-color: rgba(255, 255, 255, 0.7);
+        border-bottom: 0;
+        border-left: 0;
+        margin-left: 40px;
+        margin-bottom: -20px;
     }
 
     @keyframes poleCycle {

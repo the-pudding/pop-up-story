@@ -1,5 +1,5 @@
 <script>
-    import {selectAll} from "d3";
+    import {select, selectAll} from "d3";
 
     export let data;
     let songs;

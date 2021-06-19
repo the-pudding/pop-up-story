@@ -17,14 +17,14 @@
 </script>
 
 <section id="chapstick" style="height: {h}px;">
-    <div class="stick"></div>
-    <div class="stick"></div>
-    <div class="stick"></div>
-    <div class="stick"></div>
-    <div class="stick"></div>
-    <div class="stick"></div>
-    <div class="stick"></div>
-    <div class="stick"></div>
+    <div class="stick animation"></div>
+    <div class="stick animation"></div>
+    <div class="stick animation"></div>
+    <div class="stick animation"></div>
+    <div class="stick animation"></div>
+    <div class="stick animation"></div>
+    <div class="stick animation"></div>
+    <div class="stick animation"></div>
 </section>
 
 <style>
@@ -36,6 +36,7 @@
         justify-content: space-around;
         flex-wrap: wrap;
         overflow-x: hidden;
+        transition: opacity 0.25s linear;
     }
 
     .stick { 

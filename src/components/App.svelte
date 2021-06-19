@@ -13,7 +13,7 @@
   import copy from "../data/doc.json";
   import data from "../data/data.csv";
   import previews from "../data/song-previews.csv";
-  import {select, selectAll, groups, ascending, format, groupSort} from "d3";
+  import {select, selectAll, groups, ascending, format} from "d3";
   import "intersection-observer";
   import scrollama from "scrollama";
   import { fly } from "svelte/transition";

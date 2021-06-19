@@ -6,16 +6,16 @@
     import {selectAll} from "d3";
 
     let visibleChapstick = false;
-    let chapstickDivs;
+    let chapstick;
 
     onMount(() => {
-        chapstickDivs = selectAll("#chapstick div");
+        chapstick = selectAll("#chapstick");
 	});
 
     function showChapstick() {
         visibleChapstick = !visibleChapstick
-        if (visibleChapstick) { chapstickDivs.classed("animation", true) }
-        else { chapstickDivs.classed("animation", false) }
+        if (visibleChapstick) { chapstick.style("opacity", "1") }
+        else { chapstick.style("opacity", "0") }
     }
 </script>
 

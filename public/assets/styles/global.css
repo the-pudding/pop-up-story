@@ -135,7 +135,7 @@
 	transform-origin: center;
 }
 
-.prose a, #title a, #scroll a {
+.prose a, #title a, #scroll a, .bubble a {
 	color: var(--off-black);
 	text-decoration: none;
 	background: linear-gradient(90deg, magenta, magenta), linear-gradient(90deg, magenta, yellow, cyan);
@@ -145,7 +145,7 @@
 	transition: background-size 0.5s linear;
 }
 
-.prose a:hover, #title a:hover, #scroll a:hover {
+.prose a:hover, #title a:hover, #scroll a:hover, .bubble a:hover {
 	background-size: 0 2px, 100% 2px;
 }
 

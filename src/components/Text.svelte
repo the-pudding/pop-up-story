@@ -20,47 +20,54 @@
     function animationIn3() {
         lilNasX.classed("with-animation", true);
         lilNasX.style("top", "30vh");
-        setTimeout(function() {
-            bubble.style("opacity", 1);
-        }, 1000);
         poleDancing = !poleDancing;
     }
 
     function animationOut3() {
         if (poleDancing) {
             lilNasX.classed("with-animation", false);
-            lilNasX.style("top", "70vh");
-            bubble.style("opacity", 0);
+            lilNasX.style("top", "80vh");
+            setTimeout(function() {
+                bubble.style("opacity", 1);
+            }, 1000);
         }
     }
 
     function animationIn5() {
         lilNasX.classed("with-animation", true);
         lilNasX.style("top", "30vh");
-        bubble.select("p").text("testing")
-        setTimeout(function() {
-            bubble.style("opacity", 1);
-        }, 1000);
+        bubble.style("opacity", 0);
         poleDancing = !poleDancing;
     }
 
     function animationOut5() {
         if (poleDancing) {
             lilNasX.classed("with-animation", false);
-            lilNasX.style("top", "70vh");
-            bubble.style("opacity", 0);
+            lilNasX.style("top", "80vh");
+            bubble.style("top", "-110px");
+            bubble.select(".text").text("y’all love saying i’m being gay for success but can’t name 5 successful gay male artists in the last 10 years to save your life")
+            bubble.select("a").attr("href", "https://twitter.com/LilNasX/status/1384516504310272000?s=20")
+            setTimeout(function() {
+                bubble.style("opacity", 1);
+            }, 1000);
         }
     }
 
     function animationIn7() {
-        lilNasX.style("top", "100vh");
+        bubble.style("opacity", 0);
+        setTimeout(function() {
+            bubble.style("opacity", 1);
+            bubble.style("top", "-60px");
+        bubble.select(".text").text("happy pride month. i will be having sex with 100 lucky fans to celebrate.")
+        bubble.select("a").attr("href", "https://twitter.com/LilNasX/status/1399688353021263872")
+        }, 1000);
         poleDancing = !poleDancing;
     }
 
     function animationOut7() {
         if (poleDancing) {
-            lilNasX.classed("with-animation", false);
-            lilNasX.style("top", "70vh");
+            lilNasX.style("top", "100vh");
+            bubble.style("opacity", 0);
         }
     }
 </script>
