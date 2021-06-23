@@ -217,6 +217,10 @@ body {
 	z-index: 1000;
 }
 
+.full-height {
+	height: 100vh !important; 
+}
+
 .same-gender, .both-gender {
 	background-color: yellow;
 }
