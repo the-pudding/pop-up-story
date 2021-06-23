@@ -73,8 +73,6 @@
 
     const songId = stripSpecialChar(this.id);
 
-    console.log(songId)
-
     songData = previews.filter(d => d.shortname == songId)[0];
 
     songUrl = songData.preview
@@ -85,7 +83,6 @@
 
     // equal + not playing
     if (prevEvent == currEvent && $songPlayingSTORE) {
-      console.log(prevEvent, currEvent, "1")
       audioEl.pause();
       songSpans.classed("spanplay", false);
       this.classList.remove("spanplay");
@@ -98,7 +95,6 @@
     }
     // not equal + not playing
     else if (prevEvent !== currEvent && $songPlayingSTORE) {
-      console.log(prevEvent, currEvent, "2")
       audioEl.play();
       songSpans.classed("spanplay", false);
       this.classList.add("spanplay");
@@ -111,7 +107,6 @@
     }
     // equal + playing
     else if (prevEvent == currEvent && !$songPlayingSTORE) {
-      console.log(prevEvent, currEvent, "3")
       audioEl.play();
       songSpans.classed("spanplay", false);
       this.classList.add("spanplay");
@@ -124,7 +119,6 @@
     }
     // not equal + playing
     else {
-      console.log(prevEvent, currEvent, "4")
       audioEl.play();
       songSpans.classed("spanplay", false);
       this.classList.add("spanplay");

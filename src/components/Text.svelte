@@ -18,8 +18,6 @@
         lilNasX = select("#pole .lil-nas-x");
         bubble = select("#pole .bubble");
         pole = select("#pole .line");
-
-        console.log(w)
 	});
 
     function animationIn3() {
