@@ -16,7 +16,7 @@
         <div class="lil-nas-x">
             <div transition:fly="{{ y: -200, duration: 1000 }}" class="bubble">
                 <p class="text">can’t believe i haven’t said bussy in a song yet. something has to be done about this.</p>
-                <a href="https://twitter.com/LilNasX/status/1397356243560255489?s=20" target=_blank><p class="credit">Lil Nas X on <Icon name="twitter" /></p></a>
+                <p class="credit"><a href="https://twitter.com/LilNasX/status/1397356243560255489?s=20" target=_blank>Lil Nas X on <Icon name="twitter" /></a></p>
             </div>
         </div>
     </div>
@@ -27,7 +27,7 @@
         position: fixed;
         top: 0;
         right: 6rem;
-        z-index: 100;
+        z-index: 999;
         height: 100vh;
     }
 
@@ -35,11 +35,20 @@
         position: relative;
     }
 
+    .full-height {
+        height: 100vh; 
+    }
+
     .line {
         position: absolute;
-        width: 10px;
-        height: 100vh;
+        width: 6px;
+        height: 0;
         background-image: linear-gradient(90deg, var(--gray), var(--gray-light), var(--gray), var(--gray-dark), var(--gray), var(--gray-light), var(--gray));
+        transition: height 0.5s ease-out;
+    }
+
+    .full-height {
+        height: 100vh !important; 
     }
 
     .lil-nas-x {
@@ -57,7 +66,7 @@
         padding: 1rem;
         background-color: rgba(255, 255, 255, 0.7);
         position: absolute;
-        left: -10px;
+        left: -1rem;
         top: -80px;
         width: 110%;
         border-radius: 0.25rem;
@@ -123,7 +132,7 @@
 
     @media only screen and (max-width: 400px) {
         #pole {
-            right: 3rem;
+            right: 3.5rem;
         }
 
         .line {
@@ -131,9 +140,13 @@
         }
 
         .lil-nas-x {
-            right: -50px;
+            right: -52px;
             height: 100px;
             width: 100px;
+        }
+
+        .bubble {
+            display:  none;
         }
 
         @keyframes poleCycle {

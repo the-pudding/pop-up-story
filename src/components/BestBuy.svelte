@@ -50,7 +50,7 @@
 
     .dvd {
         position: absolute;
-        left: 30%;
+        left: 40%;
         bottom: 10%;
         background-image: url("../assets/images/dvd_drawing.png");
         width: 10%;
@@ -72,13 +72,41 @@
 
     .car {
         position: absolute;
-        left: 28%;
+        left: 30%;
         bottom: 0;
         background-image: url("../assets/images/sunfire_drawing.png");
         width: 35%;
         height: 45%;
         background-size: contain;
         background-repeat: no-repeat;
+    }
+
+    @media only screen and (max-width: 950px) {
+        #bestbuy {
+            height: 350px;
+        }
+
+        .building {
+            width: 45%;
+            top: 10%;
+        }
+
+        .dvd {
+            left: 55%;
+            bottom: 8%;
+            width: 8%;
+        }
+
+        .flag {
+            top: -10%;
+            left: 5%;
+            width: 10%;
+        }
+
+        .car {
+            left: 45%;
+            width: 40%;
+        }
     }
 
     @media only screen and (max-width: 700px) {

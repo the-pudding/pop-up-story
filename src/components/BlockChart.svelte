@@ -84,7 +84,7 @@
         width: 100%;
         padding: 0 2rem;
         margin: 1rem auto;
-        z-index: 1000;
+        z-index: 998;
     }
 
     .step.is-active {

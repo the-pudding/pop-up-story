@@ -77,7 +77,7 @@
 
    @media only screen and (max-width: 450px) {
         h1 {
-            font-size: 5.25rem;
+            font-size: 4.25rem;
         }
 
         h2 {

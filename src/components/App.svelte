@@ -325,7 +325,7 @@
     justify-self: center;
   }
 
-  @media only screen and (max-width: 850px) {
+  @media only screen and (max-width: 800px) {
     .playing {
       display: none;
     }

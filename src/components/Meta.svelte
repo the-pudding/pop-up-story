@@ -1,7 +1,7 @@
 <script>
   import copy from "../data/doc.json";
 
-  let url = "https://pudding.cool";
+  let url = "https://pudding.cool/2021/06/same-gender-lyrics";
 </script>
 
 <svelte:head>

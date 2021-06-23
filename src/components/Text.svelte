@@ -11,13 +11,19 @@
     let poleDancing = false;
     let lilNasX;
     let bubble;
+    let pole;
+    let w;
 
     onMount(() => {
         lilNasX = select("#pole .lil-nas-x");
         bubble = select("#pole .bubble");
+        pole = select("#pole .line");
+
+        console.log(w)
 	});
 
     function animationIn3() {
+        pole.classed("full-height", true);
         lilNasX.classed("with-animation", true);
         lilNasX.style("top", "30vh");
         poleDancing = !poleDancing;
@@ -27,6 +33,7 @@
         if (poleDancing) {
             lilNasX.classed("with-animation", false);
             lilNasX.style("top", "80vh");
+            if (w < 700) { bubble.style("top", "-100px"); }
             setTimeout(function() {
                 bubble.style("opacity", 1);
             }, 1000);
@@ -34,6 +41,7 @@
     }
 
     function animationIn5() {
+        pole.classed("full-height", true);
         lilNasX.classed("with-animation", true);
         lilNasX.style("top", "30vh");
         bubble.style("opacity", 0);
@@ -44,7 +52,8 @@
         if (poleDancing) {
             lilNasX.classed("with-animation", false);
             lilNasX.style("top", "80vh");
-            bubble.style("top", "-110px");
+            if (w < 700) { bubble.style("top", "-130px"); }
+            else { bubble.style("top", "-110px"); }
             bubble.select(".text").text("y’all love saying i’m being gay for success but can’t name 5 successful gay male artists in the last 10 years to save your life")
             bubble.select("a").attr("href", "https://twitter.com/LilNasX/status/1384516504310272000?s=20")
             setTimeout(function() {
@@ -54,10 +63,12 @@
     }
 
     function animationIn7() {
+        pole.classed("full-height", true);
         bubble.style("opacity", 0);
         setTimeout(function() {
             bubble.style("opacity", 1);
-            bubble.style("top", "-60px");
+            if (w < 700) { bubble.style("top", "-80px"); }
+            else { bubble.style("top", "-60px"); }
         bubble.select(".text").text("happy pride month. i will be having sex with 100 lucky fans to celebrate.")
         bubble.select("a").attr("href", "https://twitter.com/LilNasX/status/1399688353021263872")
         }, 1000);
@@ -72,6 +83,7 @@
     }
 </script>
 
+<svelte:window bind:innerWidth={w}/>
 
 {#if sectionNum == 3}
 <section class="text" id="text-{sectionNum}"
@@ -147,6 +159,12 @@
 
     .method p {
         font-size: 1rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+        .prose {
+            padding: 0 6rem 0 1rem;
+        }
     }
 
     @media only screen and (max-width: 450px) {

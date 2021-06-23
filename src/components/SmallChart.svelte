@@ -3,6 +3,7 @@
     import { onMount } from 'svelte';
     import inView from "../actions/inView.js";
     import { songPlayingSTORE } from "../stores/global.js";
+    import Icon from "./helpers/Icon.svelte";
 
     export let data;
     let songs;
@@ -26,9 +27,10 @@
         }
     }
 
-    function songClick(artist, song) {
+    function songClick(artist, song, year) {
         artist[2] = song.song;
         artist[3] = song.sampleLyrics;
+        artist[4] = song.year;
         data = data;
 
         const artistNoSpaces = artist[0].replace(/[^A-Z0-9]/ig, '')
@@ -52,6 +54,7 @@
         <p class="unspecified-gender">Unspecified gender lyrics</p>
         <p class="no-relationship">No relationship lyrics</p>
     </div>
+    <p class="directions">Click or tap on the colored recetangles below to see the songs and sample lyrics</p>
     <div class="cards">
         {#each data as artist, i}
             {#if artist[1].length > 4}
@@ -75,12 +78,12 @@
                 </div>
                 {#if artist.length > 2}
                     <div class="tooltip">
-                        <p class="title">"{artist[2]}"</p>
+                        <p class="title">"{artist[2]}" ({artist[4]})</p>
                         <p class="lyrics">🎵{@html artist[3]}🎵</p>
                     </div>
                 {:else}
                     <div class="tooltip">
-                        <p class="title">"{artist[1][0].song}"</p>
+                        <p class="title">"{artist[1][0].song}" ({artist[1][0].year})</p>
                         <p class="lyrics">🎵{@html artist[1][0].sampleLyrics}🎵</p>
                     </div>
                 {/if}
@@ -91,6 +94,23 @@
 </section>
 
 <style>
+    .directions {
+        padding: 0 1rem;
+        margin: 1rem auto;
+        text-align: center;
+    }
+
+    .directions:before {
+        content: url("../assets/images/hand.svg");
+        width: 1.25rem;
+        height: 1.25rem;
+        display: inline-block;
+        position: relative;
+        top: 0.3rem;
+        left: 0rem;
+        margin: 0 0.5rem 0 0;
+    }
+
     #smallchart {
         margin: 0 auto;
     }
@@ -141,7 +161,7 @@
         margin: 0 auto;
         justify-content: center;
         position: sticky;
-        height: 2.5rem;
+        height: 4.25rem;
         top: 0;
         flex-wrap: wrap;
         z-index: 999;
@@ -243,14 +263,14 @@
     }
 
     @media only screen and (max-width: 800px) {
-        .key p {
+        .key p, .directions {
             font-size: 0.8rem;
         }
     }
 
     @media only screen and (max-width: 600px) {
         .key {
-            height: 10rem;
+            height: 12rem;
         }
         .key p {
             width: 100%;
