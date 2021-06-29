@@ -54,7 +54,7 @@
         <p class="unspecified-gender">Unspecified gender lyrics</p>
         <p class="no-relationship">No relationship lyrics</p>
     </div>
-    <p class="directions">Click or tap on the colored recetangles below to see the songs and sample lyrics</p>
+    <p class="directions">Click or tap on the colored rectangles below to see the songs and sample lyrics</p>
     <div class="cards">
         {#each data as artist, i}
             {#if artist[1].length > 4}
