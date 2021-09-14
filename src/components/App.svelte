@@ -20,6 +20,8 @@
   import _ from "lodash";
   import { songPlayingSTORE } from "../stores/global.js";
 
+  console.log(copy);
+
   // AUDIO
   let audioEl;
   let songSpans;

@@ -24,7 +24,7 @@
     on:enter={() => showChapstick()}
     on:exit={() => showChapstick()}
 >
-    <h1>{copy[0].headline}</h1>
+    <h1>{@html copy[0].headline}</h1>
     <h2>{copy[0].subhed}</h2>
     <div>
         <p class="byline byline-bold">{@html copy[0].byline1}</p>

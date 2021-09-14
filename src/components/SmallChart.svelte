@@ -50,7 +50,8 @@
     <div class="key">
         <p class="same-gender">Same- & opposite-gender lyrics</p>
         <p class="opposite-gender">Opposite-gender lyrics only</p>
-        <p class="nb-relationship">Non-binary artist & masculine pronoun lyrics</p>
+        <p class="nb-both">Non-binary artist, masculine & feminine lyrics</p>
+        <p class="nb-relationship">Non-binary artist, masculine lyrics</p>
         <p class="unspecified-gender">Unspecified gender lyrics</p>
         <p class="no-relationship">No relationship lyrics</p>
     </div>
@@ -148,6 +149,10 @@
 
     .nb-relationship {
         background: lime;
+    }
+
+    .nb-both, .song-Non-Binary-Both {
+        background: orange;
     }
 
     .song:hover, .song.selected {

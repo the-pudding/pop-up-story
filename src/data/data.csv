@@ -1025,7 +1025,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2018,24,Taylor Swift,Delicate,woman,0,0,,,
 2018,25,Lil Baby & Drake,Yes Indeed,man,0,0,,,
 2018,26,Marshmello & Anne-Marie,Friends,mixed,1,0,Opposite,,Anne-Marie
-2018,27,Halsey,Bad At Love,woman,1,1,Both,"Got a <span class=same-gender>girl</span> with California eyes, And I thought that <span class=same-gender>she</span> could really be the one this time",Halsey
+2018,27,Halsey,Bad At Love,woman,1,1,Non-Binary-Both,"Got a <span class=nb-both>girl</span> with California eyes, And I thought that <span class=nb-both>she</span> could really be the one this time",Halsey
 2018,28,Tyga Featuring Offset,Taste,man,0,0,,,
 2018,29,NF,Let You Down,man,0,0,,,
 2018,30,G-Eazy Featuring A$AP Rocky & Cardi B,No Limit,mixed,1,0,Opposite,"Put a white <span class=opposite-gender>boy</span> on Sazón, I might turn G-Eazy out",Cardi B
@@ -1043,7 +1043,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2018,42,Travis Scott,Sicko Mode,man,0,0,,,
 2018,43,Migos Featuring Drake,Walk It Talk It,man,0,0,,,
 2018,44,Lil Pump,Gucci Gang,man,0,0,,,
-2018,45,G-Eazy & Halsey,Him & I,mixed,1,0,Opposite,"<span class=opposite-gender>He</span> said ""be true,"" I swear I'll try, In the end, it's <span class=opposite-gender>him</span> and I",Halsey
+2018,45,G-Eazy & Halsey,Him & I,mixed,1,0,Non-Binary-Masc,"<span class=nb-relationship>He</span> said ""be true,"" I swear I'll try, In the end, it's <span class=nb-relationship>him</span> and I",Halsey
 2018,46,Shawn Mendes,In My Blood,man,0,0,,,
 2018,47,Kendrick Lamar & SZA,All The Stars,mixed,0,0,,,
 2018,48,Migos,Stir Fry,man,0,0,,,
@@ -1075,7 +1075,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2018,74,A$AP Ferg Featuring Nicki Minaj,Plain Jane,mixed,0,0,,,
 2018,75,Miguel Featuring Travis Scott,Sky Walker,man,0,0,,,
 2018,76,Thomas Rhett,Marry Me,man,0,0,,,
-2018,77,"benny blanco, Halsey & Khalid",Eastside,mixed,1,0,Opposite,"<span class=opposite-gender>He</span> used to meet me on the Eastside, In the city where the sun don't set",Halsey
+2018,77,"benny blanco, Halsey & Khalid",Eastside,mixed,1,0,Non-Binary-Masc,"<span class=nb-relationship>He</span> used to meet me on the Eastside, In the city where the sun don't set",Halsey
 2018,78,The Weeknd,Call Out My Name,man,0,0,,,
 2018,79,"Jay Rock, Kendrick Lamar, Future & James Blake",King's Dead,man,0,0,,,
 2018,80,Marshmello & Bastille,Happier,man,0,0,,,
@@ -1115,7 +1115,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2019,14,Sam Smith & Normani,Dancing With A Stranger,nb,1,0,Non-Binary-Masc,"I wasn't even going out tonight, But, <span class=nb-relationship>boy</span>, I need to get you off of my mind",Sam Smith
 2019,15,Shawn Mendes & Camila Cabello,Senorita,mixed,0,0,,,
 2019,16,Ed Sheeran & Justin Bieber,I Don't Care,man,0,0,,,
-2019,17,"benny blanco, Halsey & Khalid",Eastside,mixed,1,0,Opposite,"<span class=opposite-gender>He</span> used to meet me on the Eastside, In the city where the sun don't set",Halsey
+2019,17,"benny blanco, Halsey & Khalid",Eastside,mixed,1,0,Non-Binary-Masc,"<span class=nb-relationship>He</span> used to meet me on the Eastside, In the city where the sun don't set",Halsey
 2019,18,Meek Mill Featuring Drake,Going Bad,man,0,0,,,
 2019,19,Lady Gaga & Bradley Cooper,Shallow,mixed,1,0,Opposite,"Tell me something, <span class=opposite-gender>boy</span>, Aren't you tired tryna fill that void?",Lady Gaga
 2019,20,Khalid,Better,man,0,0,,,
@@ -1280,7 +1280,7 @@ year,rank,artist,song,gender,queerFlag,lyricFlag,relationshipType,sampleLyrics,a
 2020,79,Lil Baby,Sum 2 Prove,man,0,0,,,
 2020,80,Ariana Grande & Justin Bieber,Stuck With U,mixed,0,0,,,
 2020,81,Pop Smoke Featuring Lil Tjay,Mood Swings,man,0,0,,,
-2020,82,Halsey,You Should Be Sad,woman,1,0,Opposite,"No, you're not half the <span class=opposite-gender>man</span> you think that you are",Halsey
+2020,82,Halsey,You Should Be Sad,woman,1,0,Non-Binary-Masc,"No, you're not half the <span class=nb-relationship>man</span> you think that you are",Halsey
 2020,83,Pop Smoke,Dior,man,0,0,,,
 2020,84,BENEE Featuring Gus Dapperton,Supalonely,mixed,0,0,,,
 2020,85,Luke Combs,Even Though I'm Leaving,man,0,0,,,
