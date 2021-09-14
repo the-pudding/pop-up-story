@@ -241,6 +241,10 @@ body {
 	background: lime;
 }
 
+.nb-both {
+	background: orange;
+}
+
 @keyframes poleCycle {
 	100%   { background-position: 0 -450px ;}
 }

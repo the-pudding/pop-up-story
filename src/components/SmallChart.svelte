@@ -50,8 +50,8 @@
     <div class="key">
         <p class="same-gender">Same- & opposite-gender lyrics</p>
         <p class="opposite-gender">Opposite-gender lyrics only</p>
-        <p class="nb-both">Non-binary artist, masculine & feminine lyrics</p>
-        <p class="nb-relationship">Non-binary artist, masculine lyrics</p>
+        <p class="nb-both">Non-binary/genderfluid artist, masculine & feminine lyrics</p>
+        <p class="nb-relationship">Non-binary/genderfluid artist, masculine lyrics</p>
         <p class="unspecified-gender">Unspecified gender lyrics</p>
         <p class="no-relationship">No relationship lyrics</p>
     </div>
@@ -166,7 +166,7 @@
         margin: 0 auto;
         justify-content: center;
         position: sticky;
-        height: 4.25rem;
+        height: 6.25rem;
         top: 0;
         flex-wrap: wrap;
         z-index: 999;
@@ -181,12 +181,13 @@
     .key p {
         margin: 0;
         padding: 0.5rem 0.5rem;
-        width: 20%;
+        width: 33.333%;
         font-weight: 700;
         display: flex;
         text-align: center;
         align-items: center;
         justify-content: center;
+        font-size: 0.8rem;
     }
 
     .cards {
@@ -258,15 +259,6 @@
         font-size: 1rem;
     }
 
-    @media only screen and (max-width: 1050px) {
-        .key {
-            height: 6rem;
-        }
-        .key p {
-            width: 50%;
-        }
-    }
-
     @media only screen and (max-width: 800px) {
         .key p, .directions {
             font-size: 0.8rem;
@@ -275,7 +267,7 @@
 
     @media only screen and (max-width: 600px) {
         .key {
-            height: 12rem;
+            height: 12.5rem;
         }
         .key p {
             width: 100%;
